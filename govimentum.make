@@ -54,8 +54,9 @@ projects[jcarousel][subdir] = "contrib"
 
 
 ; Modulos Contribuidos por grupo desarrollo Distribucion Distrital CMS
-projects[custom_widgets][type] = "module"
-projects[custom_widgets][subdir] = "contrib"
-projects[custom_widgets][download][type] = "git"
-projects[custom_widgets][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_links_destacados.git"
-projects[custom_widgets][download][branch] = "master"
+
+projects[feature_news_list][type] = "module"
+projects[feature_news_list][subdir] = "features"
+projects[feature_news_list][download][type] = "git"
+projects[feature_news_list][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_links_destacados.git"
+projects[feature_news_list][download][branch] = "master"
