@@ -19,7 +19,11 @@ accesibilidad y gestión de calidad, quienes a su vez están comprometidos con
 la construcción de un instrumento de gestión de información pública que promueva
 la transparencia, la participación ciudadana y el gobierno electrónico.
 
-## Características técnicas
+## Requerimientos técnicos
 
- * Drupal CMS 7.x
- * Sistema de Grillas y módulos CSS: Pure CSS
+ * Nginx >= 1.8 (Recomendado)
+ * PHP y PHP-FPM >= 5.3
+ * Mariadb >= 10.0 ó MySQL >= 5.5
+ * [Drush](https://github.com/drush-ops/drush) >= 7.0-dev
+ * Git >= 1.8
+ * [Composer](https://getcomposer.org/) >= 1.0-dev (Opcional)
