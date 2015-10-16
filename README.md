@@ -27,3 +27,7 @@ la transparencia, la participación ciudadana y el gobierno electrónico.
  * [Drush](https://github.com/drush-ops/drush) >= 7.0-dev
  * Git >= 1.8
  * [Composer](https://getcomposer.org/) >= 1.0-dev (Opcional)
+
+## Wiki de la comunidad de desarrollo
+ 
+ * Para conocer el detalle de este proyecto desde sus requerimientos, buenas prácticas y recomendaciones de desarrollo visite la [Wiki] (https://gitlab.com/distribucion_distrital_cms/govimentum_semilla/wikis/home)
