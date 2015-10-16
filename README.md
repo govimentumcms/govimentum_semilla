@@ -2,7 +2,7 @@
 
 Es la Distribución Distrital CMS basada en el CMS Drupal, que permite la 
 implementación, despliegue y mantenimiento de sitios y portales distritales, 
-teniendo en cuenta las recomendaciones de gobierno en línea, estándares de 
+teniendo en cuenta la [Estrategia de Gobierno en Línea](http://estrategia.gobiernoenlinea.gov.co/623/articles-7943_manualGEL.pdf), estándares de 
 accesibilidad y criterios de usabilidad, que a su vez estandariza los componentes 
 funcionales e interfaces gráficas en las implementaciones web de las Entidades 
 del Distrito Capital.
@@ -15,7 +15,7 @@ a la información pública que se gestiona a través del portal.
 Govimentum es una plataforma desarrollada de manera colaborativa en donde 
 participan varias entidades distritales que conforman un equipo de trabajo 
 multidisciplinar especializado en las áreas de: diseño, desarrollo web,
-accesibilidad y gestión de calidad, quienes a su vez están comprometidos con
+accesibilidad web y gestión de calidad, quienes a su vez están comprometidos con
 la construcción de un instrumento de gestión de información pública que promueva
 la transparencia, la participación ciudadana y el gobierno electrónico.
 
