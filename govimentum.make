@@ -34,6 +34,13 @@ projects[govi_perfil][download][branch] = "master"
 ;projects[govi_perfil][download][type] = "get"
 ;projects[govi_perfil][download][url] = "../profiles/profile_pdtic.tar"
 
+; Tema base Govimentum
+projects[govi_tema][type] = "theme"
+projects[govi_tema][download][type] = "git"
+;projects[govi_tema][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_tema.git"
+projects[govi_tema][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_tema.git"
+projects[govi_tema][download][branch] = "master"
+
 ; Módulo de desarrollo
 
 projects[devel][subdir] = "dev"
