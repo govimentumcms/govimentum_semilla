@@ -13,7 +13,7 @@ api = 2
 ; Drupal Core
 
 projects[drupal][type] = "core"
-projects[drupal][version] = "7.39"
+projects[drupal][version] = "7.40"
 
 ; Perfil de instalación
 ;
