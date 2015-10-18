@@ -53,10 +53,11 @@ projects[scrollbar][subdir] = "contrib"
 projects[jcarousel][subdir] = "contrib"
 
 
-; Modulos Contribuidos por grupo desarrollo Distribucion Distrital CMS
+; Características Funcionales contribuidas por grupo desarrollo
+; de la Distribucion Distrital CMS
 
-projects[feature_news_list][type] = "module"
-projects[feature_news_list][subdir] = "features"
-projects[feature_news_list][download][type] = "git"
-projects[feature_news_list][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_links_destacados.git"
-projects[feature_news_list][download][branch] = "master"
+projects[govi_links_destacados][type] = "module"
+projects[govi_links_destacados][subdir] = "features"
+projects[govi_links_destacados][download][type] = "git"
+projects[govi_links_destacados][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_links_destacados.git"
+projects[govi_links_destacados][download][branch] = "master"
