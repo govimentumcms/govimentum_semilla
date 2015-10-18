@@ -75,3 +75,14 @@ projects[govi_noticias][download][type] = "git"
 projects[govi_noticias][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_noticias.git"
 ;projects[govi_noticias][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_noticias.git"
 projects[govi_noticias][download][branch] = "master"
+
+; Librerias externas
+
+libraries[jQueryCycle][download][type] = "get"
+libraries[jQueryCycle][download][url] = "http://malsup.github.io/jquery.cycle.all.js"
+libraries[jQueryCycle][destination] = "libraries"
+libraries[jQueryCycle][directory_name] = "jquery.cycle"
+
+; Parches
+
+projects[views_slideshow][patch][] = "https://www.drupal.org/files/theme_prev_next-1949118-1.patch"
