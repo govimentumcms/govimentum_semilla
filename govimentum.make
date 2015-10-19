@@ -34,6 +34,8 @@ projects[govi_perfil][download][branch] = "master"
 ;projects[govi_perfil][download][type] = "get"
 ;projects[govi_perfil][download][url] = "../profiles/profile_pdtic.tar"
 
+projects[govi_perfil][directory_name] = "govi"
+
 ; Tema base Govimentum
 projects[govi_tema][type] = "theme"
 projects[govi_tema][download][type] = "git"
