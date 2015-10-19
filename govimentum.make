@@ -25,21 +25,22 @@ projects[govi_perfil][type] = "profile"
 ; Descarga remota
 
 projects[govi_perfil][download][type] = "git"
-;projects[govi_perfil][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_perfil.git"
-projects[govi_perfil][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_perfil.git"
+projects[govi_perfil][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_perfil.git"
+;projects[govi_perfil][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_perfil.git"
 projects[govi_perfil][download][branch] = "master"
 ;
 ; Descarga local
 
 ;projects[govi_perfil][download][type] = "get"
 ;projects[govi_perfil][download][url] = "../profiles/profile_pdtic.tar"
+
 projects[govi_perfil][directory_name] = "govi"
 
 ; Tema base Govimentum
 projects[govi_tema][type] = "theme"
 projects[govi_tema][download][type] = "git"
-;projects[govi_tema][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_tema.git"
-projects[govi_tema][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_tema.git"
+projects[govi_tema][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_tema.git"
+;projects[govi_tema][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_tema.git"
 projects[govi_tema][download][branch] = "master"
 
 ; Módulo de desarrollo
@@ -74,29 +75,29 @@ projects[jcarousel][subdir] = "contrib"
 projects[govi_links_destacados][type] = "module"
 projects[govi_links_destacados][subdir] = "features"
 projects[govi_links_destacados][download][type] = "git"
-;projects[govi_links_destacados][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_links_destacados.git"
-projects[govi_links_destacados][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_links_destacados.git"
+projects[govi_links_destacados][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_links_destacados.git"
+;projects[govi_links_destacados][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_links_destacados.git"
 projects[govi_links_destacados][download][branch] = "master"
 
 projects[govi_noticias][type] = "module"
 projects[govi_noticias][subdir] = "features"
 projects[govi_noticias][download][type] = "git"
-;projects[govi_noticias][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_noticias.git"
-projects[govi_noticias][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_noticias.git"
+projects[govi_noticias][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_noticias.git"
+;projects[govi_noticias][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_noticias.git"
 projects[govi_noticias][download][branch] = "master"
 
 projects[govi_slideshow_principal][type] = "module"
 projects[govi_slideshow_principal][subdir] = "features"
 projects[govi_slideshow_principal][download][type] = "git"
-;projects[govi_slideshow_principal][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_slideshow_principal.git"
-projects[govi_slideshow_principal][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_slideshow_principal.git"
+projects[govi_slideshow_principal][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_slideshow_principal.git"
+;projects[govi_slideshow_principal][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_slideshow_principal.git"
 projects[govi_slideshow_principal][download][branch] = "master"
 
 projects[govi_encabezado_institucional][type] = "module"
 projects[govi_encabezado_institucional][subdir] = "features"
 projects[govi_encabezado_institucional][download][type] = "git"
-;projects[govi_encabezado_institucional][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_encabezado_institucional.git"
-projects[govi_encabezado_institucional][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_encabezado_institucional.git"
+projects[govi_encabezado_institucional][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_encabezado_institucional.git"
+;projects[govi_encabezado_institucional][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_encabezado_institucional.git"
 projects[govi_encabezado_institucional][download][branch] = "master"
 
 ; Librerias externas
