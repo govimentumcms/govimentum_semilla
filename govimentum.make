@@ -47,7 +47,7 @@ projects[govi_tema][download][branch] = "master"
 
 projects[devel][subdir] = "dev"
 
-; Módulos contribuidos
+; Módulos contribuidos proyectos drupal.org
 
 projects[features][subdir] = "contrib"
 projects[libraries][subdir] = "contrib"
@@ -68,6 +68,15 @@ projects[entityreference][subdir] = "contrib"
 projects[scrollbar][subdir] = "contrib"
 projects[jcarousel][subdir] = "contrib"
 
+; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
+
+projects[es_custom_widgets][type] = "module"
+projects[es_custom_widgets][subdir] = "features"
+projects[es_custom_widgets][download][type] = "git"
+projects[es_custom_widgets][download][url] = "https://gitlab.com/snaphuman/es_custom_widgets.git"
+;projects[es_custom_widgets][download][url] = "git@gitlab.com:snaphuman/es_custom_widgets.git"
+projects[es_custom_widgets][download][branch] = "master"
+projects[es_custom_widgets][directory_name] = "custom_widgets"
 
 ; Características Funcionales contribuidas por grupo desarrollo
 ; de la Distribucion Distrital CMS
