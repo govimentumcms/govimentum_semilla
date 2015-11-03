@@ -13,7 +13,7 @@ impulsar los servicios de atención al ciudadano y brindar accesibilidad univers
 a la información pública que se gestiona a través del portal.
 
 Govimentum es una plataforma desarrollada de manera colaborativa en donde 
-participan varias entidades distritales que conforman un equipo de trabajo 
+participan varias entidades distritales que conforman un [equipo de trabajo](https://gitlab.com/distribucion_distrital_cms/govimentum_semilla/wikis/12-equipo-de-desarrollo) 
 multidisciplinar especializado en las áreas de: diseño, desarrollo web,
 accesibilidad web y gestión de calidad, quienes a su vez están comprometidos con
 la construcción de un instrumento de gestión de información pública que promueva
