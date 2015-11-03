@@ -68,6 +68,7 @@ projects[entity][subdir] = "contrib"
 projects[entityreference][subdir] = "contrib"
 projects[scrollbar][subdir] = "contrib"
 projects[jcarousel][subdir] = "contrib"
+projects[defaultcontent][subdir] = "contrib"
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
