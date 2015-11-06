@@ -84,6 +84,13 @@ projects[es_custom_widgets][directory_name] = "custom_widgets"
 ; Características Funcionales contribuidas por grupo desarrollo
 ; de la Distribucion Distrital CMS
 
+projects[govi_contenido_predeterminado][type] = "module"
+projects[govi_contenido_predeterminado][subdir] = "features"
+projects[govi_contenido_predeterminado][download][type] = "git"
+;projects[govi_contenido_predeterminado][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_contenido_predeterminado.git"
+projects[govi_contenido_predeterminado][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_contenido_predeterminado.git"
+projects[govi_contenido_predeterminado][download][branch] = "master"
+
 projects[govi_links_destacados][type] = "module"
 projects[govi_links_destacados][subdir] = "features"
 projects[govi_links_destacados][download][type] = "git"
