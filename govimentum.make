@@ -82,6 +82,13 @@ projects[es_custom_widgets][download][url] = "git@gitlab.com:snaphuman/es_custom
 projects[es_custom_widgets][download][branch] = "master"
 projects[es_custom_widgets][directory_name] = "custom_widgets"
 
+projects[barra_institucional][type] = "module"
+projects[barra_institucional][subdir] = "contrib"
+projects[barra_institucional][download][type] = "git"
+;projects[barra_institucional][download][url] = "https://gitlab.com/distribucion_distrital_cms/barra_institucional.git"
+projects[barra_institucional][download][url] = "git@gitlab.com:distribucion_distrital_cms/barra_institucional.git"
+projects[barra_institucional][download][branch] = "master"
+
 ; Características Funcionales contribuidas por grupo desarrollo
 ; de la Distribucion Distrital CMS
 
