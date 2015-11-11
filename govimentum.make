@@ -75,7 +75,7 @@ projects[menu_attributes][subdir] = "contrib"
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
 projects[es_custom_widgets][type] = "module"
-projects[es_custom_widgets][subdir] = "features"
+projects[es_custom_widgets][subdir] = "contrib"
 projects[es_custom_widgets][download][type] = "git"
 ;projects[es_custom_widgets][download][url] = "https://gitlab.com/snaphuman/es_custom_widgets.git"
 projects[es_custom_widgets][download][url] = "git@gitlab.com:snaphuman/es_custom_widgets.git"
