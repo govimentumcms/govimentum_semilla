@@ -127,6 +127,13 @@ projects[govi_encabezado_institucional][download][type] = "git"
 projects[govi_encabezado_institucional][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_encabezado_institucional.git"
 projects[govi_encabezado_institucional][download][branch] = "master"
 
+projects[govi_encabezado_institucional][type] = "module"
+projects[govi_encabezado_institucional][subdir] = "features"
+projects[govi_encabezado_institucional][download][type] = "git"
+;projects[govi_encabezado_institucional][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_informaci_n_institucional.git"
+projects[govi_encabezado_institucional][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_informaci_n_institucional.git"
+projects[govi_encabezado_institucional][download][branch] = "master"
+
 ; Librerias externas
 
 libraries[jQueryCycle][download][type] = "get"
