@@ -71,6 +71,7 @@ projects[jcarousel][subdir] = "contrib"
 projects[defaultcontent][subdir] = "contrib"
 projects[field_slideshow][subdir] = "contrib"
 projects[menu_attributes][subdir] = "contrib"
+projects[uuid][subdir] = "contrib"
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
