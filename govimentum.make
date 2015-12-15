@@ -135,6 +135,13 @@ projects[govi_informaci_n_institucional][download][type] = "git"
 projects[govi_informaci_n_institucional][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_informaci_n_institucional.git"
 projects[govi_informaci_n_institucional][download][branch] = "master"
 
+projects[govi_enventos][type] = "module"
+projects[govi_enventos][subdir] = "features"
+projects[govi_enventos][download][type] = "git"
+;projects[govi_enventos][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_eventos.git"
+projects[govi_enventos][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_eventos.git"
+projects[govi_enventos][download][branch] = "master"
+
 ; Librerias externas
 
 libraries[jQueryCycle][download][type] = "get"
