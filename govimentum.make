@@ -72,6 +72,7 @@ projects[defaultcontent][subdir] = "contrib"
 projects[field_slideshow][subdir] = "contrib"
 projects[menu_attributes][subdir] = "contrib"
 projects[uuid][subdir] = "contrib"
+projects[context][subdir] = "contrib"
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
@@ -134,6 +135,13 @@ projects[govi_informaci_n_institucional][download][type] = "git"
 ;projects[govi_informaci_n_institucional][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_informaci_n_institucional.git"
 projects[govi_informaci_n_institucional][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_informaci_n_institucional.git"
 projects[govi_informaci_n_institucional][download][branch] = "master"
+
+projects[govi_directorio_funcionarios][type] = "module"
+projects[govi_directorio_funcionarios][subdir] = "features"
+projects[govi_directorio_funcionarios][download][type] = "git"
+;projects[govi_directorio_funcionarios][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_directorio_funcionarios.git"
+projects[govi_directorio_funcionarios][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_directorio_funcionarios.git"
+projects[govi_directorio_funcionarios][download][branch] = "master"
 
 projects[govi_enventos][type] = "module"
 projects[govi_enventos][subdir] = "features"
