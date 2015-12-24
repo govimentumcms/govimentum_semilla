@@ -74,6 +74,7 @@ projects[menu_attributes][subdir] = "contrib"
 projects[uuid][subdir] = "contrib"
 projects[context][subdir] = "contrib"
 projects[field_validation][subdir] = "contrib"
+projects[field_group][subdir] = "contrib"
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
