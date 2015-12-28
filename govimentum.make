@@ -152,6 +152,13 @@ projects[govi_normatividad][download][type] = "git"
 projects[govi_normatividad][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_normatividad.git"
 projects[govi_normatividad][download][branch] = "master"
 
+projects[govi_presupuesto][type] = "module"
+projects[govi_presupuesto][subdir] = "features"
+projects[govi_presupuesto][download][type] = "git"
+;projects[govi_presupuesto][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_presupuesto.git"
+projects[govi_presupuesto][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_presupuesto.git"
+projects[govi_presupuesto][download][branch] = "master"
+
 projects[govi_enventos][type] = "module"
 projects[govi_enventos][subdir] = "features"
 projects[govi_enventos][download][type] = "git"
