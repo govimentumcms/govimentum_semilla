@@ -79,6 +79,7 @@ projects[conditional_fields][subdir] = "contrib"
 projects[colorbox][subdir] = "contrib"
 projects[wsclient][subdir] = "contrib"
 projects[http_client][subdir] = "contrib"
+projects[rules][subdir] = "contrib"
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
@@ -199,3 +200,5 @@ libraries[colorbox][directory_name] = "colorbox"
 ; Parches
 
 projects[views_slideshow][patch][] = "https://www.drupal.org/files/theme_prev_next-1949118-1.patch"
+
+projects[wsclient][patch][] = "https://gitlab.com/snaphuman/wsclient/raw/master/patches/0002-fix-typo-defines-connection-options-to-soap-client.patch"
