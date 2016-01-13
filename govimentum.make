@@ -78,6 +78,7 @@ projects[field_group][subdir] = "contrib"
 projects[conditional_fields][subdir] = "contrib"
 projects[colorbox][subdir] = "contrib"
 projects[wsclient][subdir] = "contrib"
+projects[http_client][subdir] = "contrib"
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
