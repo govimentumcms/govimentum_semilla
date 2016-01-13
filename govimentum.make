@@ -76,6 +76,8 @@ projects[context][subdir] = "contrib"
 projects[field_validation][subdir] = "contrib"
 projects[field_group][subdir] = "contrib"
 projects[conditional_fields][subdir] = "contrib"
+projects[colorbox][subdir] = "contrib"
+projects[wsclient][subdir] = "contrib"
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
@@ -93,6 +95,13 @@ projects[barra_institucional][download][type] = "git"
 ;projects[barra_institucional][download][url] = "https://gitlab.com/distribucion_distrital_cms/barra_institucional.git"
 projects[barra_institucional][download][url] = "git@gitlab.com:distribucion_distrital_cms/barra_institucional.git"
 projects[barra_institucional][download][branch] = "master"
+
+projects[govi_sdqs][type] = "module"
+projects[govi_sdqs][subdir] = "contrib"
+projects[govi_sdqs][download][type] = "git"
+;projects[govi_sdqs][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_sdqs.git"
+projects[govi_sdqs][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_sdqs.git"
+projects[govi_sdqs][download][branch] = "master"
 
 ; Características Funcionales contribuidas por grupo desarrollo
 ; de la Distribucion Distrital CMS
@@ -180,6 +189,11 @@ libraries[jQueryCycle][download][type] = "get"
 libraries[jQueryCycle][download][url] = "http://malsup.github.io/jquery.cycle.all.js"
 libraries[jQueryCycle][destination] = "libraries"
 libraries[jQueryCycle][directory_name] = "jquery.cycle"
+
+libraries[colorbox][download][type] = "get"
+libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/archive/1.x.zip"
+libraries[colorbox][destination] = "libraries"
+libraries[colorbox][directory_name] = "colorbox"
 
 ; Parches
 
