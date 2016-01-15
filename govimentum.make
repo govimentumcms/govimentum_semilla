@@ -202,4 +202,4 @@ libraries[colorbox][directory_name] = "colorbox"
 
 projects[views_slideshow][patch][] = "https://www.drupal.org/files/theme_prev_next-1949118-1.patch"
 
-projects[wsclient][patch][] = "https://gitlab.com/snaphuman/wsclient/raw/master/patches/0002-fix-typo-defines-connection-options-to-soap-client.patch"
+projects[wsclient][patch][] = "https://gitlab.com/snaphuman/wsclient/raw/master/patches/0003-validate-proxy-definition-before-apply-opts.patch"
