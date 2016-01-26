@@ -179,6 +179,13 @@ projects[govi_enventos][download][type] = "git"
 projects[govi_enventos][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_eventos.git"
 projects[govi_enventos][download][branch] = "master"
 
+projects[govi_servicio_al_ciudadano][type] = "module"
+projects[govi_servicio_al_ciudadano][subdir] = "features"
+projects[govi_servicio_al_ciudadano][download][type] = "git"
+;projects[govi_servicio_al_ciudadano][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_servicio_al_ciudadano.git"
+projects[govi_servicio_al_ciudadano][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_servicio_al_ciudadano.git"
+projects[govi_servicio_al_ciudadano][download][branch] = "master"
+
 projects[govi_pie_de_pagina_institucional][type] = "module"
 projects[govi_pie_de_pagina_institucional][subdir] = "features"
 projects[govi_pie_de_pagina_institucional][download][type] = "git"
