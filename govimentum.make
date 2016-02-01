@@ -210,3 +210,5 @@ libraries[colorbox][directory_name] = "colorbox"
 projects[views_slideshow][patch][] = "https://www.drupal.org/files/theme_prev_next-1949118-1.patch"
 
 projects[wsclient][patch][] = "https://gitlab.com/snaphuman/wsclient/raw/master/patches/0004-avoid-cant-use-method-return-value-in-write-context.patch"
+
+projects[menu_token][patch][] = "https://www.drupal.org/files/issues/2063113-menu_token_active_trail-7.patch"
