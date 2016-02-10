@@ -84,6 +84,7 @@ projects[rules][subdir] = "contrib"
 projects[path_breadcrumbs][subdir] = "contrib"
 projects[pathauto][subdir] = "contrib"
 projects[color_field][subdir] = "contrib"
+projects[maxlength][subdir] = "contrib"
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
