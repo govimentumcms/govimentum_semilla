@@ -216,3 +216,5 @@ projects[views_slideshow][patch][] = "https://www.drupal.org/files/theme_prev_ne
 projects[wsclient][patch][] = "https://gitlab.com/snaphuman/wsclient/raw/master/patches/0004-avoid-cant-use-method-return-value-in-write-context.patch"
 
 projects[menu_token][patch][] = "https://www.drupal.org/files/issues/2063113-menu_token_active_trail-7.patch"
+
+projects[print][patch][] = "https://gitlab.com/trdavid/print/blob/master/patches/001-establece-seleccion-icono-formato.patch"
