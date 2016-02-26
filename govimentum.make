@@ -171,6 +171,13 @@ projects[govi_marco_legal][download][type] = "git"
 projects[govi_marco_legal][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_marco_legal.git"
 projects[govi_marco_legal][download][branch] = "master"
 
+projects[govi_contratacion][type] = "module"
+projects[govi_contratacion][subdir] = "features"
+projects[govi_contratacion][download][type] = "git"
+;projects[govi_contratacion][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_contratacion.git"
+projects[govi_contratacion][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_contratacion.git"
+projects[govi_contratacion][download][branch] = "master"
+
 projects[govi_gestion_institucional][type] = "module"
 projects[govi_gestion_institucional][subdir] = "features"
 projects[govi_gestion_institucional][download][type] = "git"
