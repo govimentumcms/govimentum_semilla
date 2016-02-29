@@ -178,6 +178,13 @@ projects[govi_contratacion][download][type] = "git"
 projects[govi_contratacion][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_contratacion.git"
 projects[govi_contratacion][download][branch] = "master"
 
+projects[govi_presupuesto][type] = "module"
+projects[govi_presupuesto][subdir] = "features"
+projects[govi_presupuesto][download][type] = "git"
+;projects[govi_presupuesto][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_presupuesto.git"
+projects[govi_presupuesto][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_presupuesto.git"
+projects[govi_presupuesto][download][branch] = "master"
+
 projects[govi_gestion_institucional][type] = "module"
 projects[govi_gestion_institucional][subdir] = "features"
 projects[govi_gestion_institucional][download][type] = "git"
