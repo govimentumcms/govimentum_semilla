@@ -206,6 +206,13 @@ projects[govi_pie_de_pagina_institucional][download][type] = "git"
 projects[govi_pie_de_pagina_institucional][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_pie_de_pagina_institucional.git"
 projects[govi_pie_de_pagina_institucional][download][branch] = "master"
 
+projects[govi_planeacion][type] = "module"
+projects[govi_planeacion][subdir] = "features"
+projects[govi_planeacion][download][type] = "git"
+;projects[govi_planeacion][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_planeacion.git"
+projects[govi_planeacion][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_planeacion.git"
+projects[govi_planeacion][download][branch] = "master"
+
 ; Librerias externas
 
 libraries[jQueryCycle][download][type] = "get"
