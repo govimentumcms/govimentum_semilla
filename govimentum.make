@@ -87,6 +87,8 @@ projects[color_field][subdir] = "contrib"
 projects[maxlength][subdir] = "contrib"
 projects[print][subdir] = "contrib"
 projects[cami][subdir] = "contrib"
+projects[capcha][subdir] = "contrib"
+projects[recapcha][subdir] = "contrib"
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
