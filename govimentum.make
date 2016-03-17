@@ -87,6 +87,8 @@ projects[color_field][subdir] = "contrib"
 projects[maxlength][subdir] = "contrib"
 projects[print][subdir] = "contrib"
 projects[cami][subdir] = "contrib"
+projects[captcha][subdir] = "contrib"
+projects[recaptcha][subdir] = "contrib"
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
@@ -218,6 +220,13 @@ projects[govi_planeacion][subdir] = "features"
 projects[govi_planeacion][download][type] = "git"
 ;projects[govi_planeacion][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_planeacion.git"
 projects[govi_planeacion][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_planeacion.git"
+projects[govi_planeacion][download][branch] = "master"
+
+projects[govi_tramites_servicios][type] = "module"
+projects[govi_tramites_servicios][subdir] = "features"
+projects[govi_tramites_servicios][download][type] = "git"
+;projects[govi_tramites_servicios][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_tramites_servicios.git"
+projects[govi_tramites_servicios][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_tramites_servicios.git"
 projects[govi_planeacion][download][branch] = "master"
 
 ; Librerias externas
