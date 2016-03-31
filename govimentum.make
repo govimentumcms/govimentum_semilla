@@ -235,7 +235,17 @@ projects[govi_tramites_servicios][subdir] = "features"
 projects[govi_tramites_servicios][download][type] = "git"
 ;projects[govi_tramites_servicios][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_tramites_servicios.git"
 projects[govi_tramites_servicios][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_tramites_servicios.git"
-projects[govi_planeacion][download][branch] = "master"
+projects[govi_tramites_servicios][download][branch] = "master"
+
+;modulos forks
+
+projects[site_map][type] = "module"
+projects[site_map][subdir] = "contrib"
+projects[site_map][download][type] = "git"
+;projects[site_map][download][url] = "https://gitlab.com/trdavid/site_map.git"
+projects[site_map][download][url] = "git@gitlab.com:trdavid/site_map.git"
+projects[site_map][download][branch] = "master"
+
 
 ; Librerias externas
 
