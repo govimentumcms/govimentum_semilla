@@ -202,12 +202,12 @@ projects[govi_gestion_institucional][download][url] = "https://gitlab.com/distri
 ;projects[govi_gestion_institucional][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_gestion_institucional.git"
 projects[govi_gestion_institucional][download][branch] = "master"
 
-projects[govi_enventos][type] = "module"
-projects[govi_enventos][subdir] = "features"
-projects[govi_enventos][download][type] = "git"
-projects[govi_enventos][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_eventos.git"
-;projects[govi_enventos][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_eventos.git"
-projects[govi_enventos][download][branch] = "master"
+projects[govi_eventos][type] = "module"
+projects[govi_eventos][subdir] = "features"
+projects[govi_eventos][download][type] = "git"
+projects[govi_eventos][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_eventos.git"
+;projects[govi_eventos][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_eventos.git"
+projects[govi_eventos][download][branch] = "master"
 
 projects[govi_servicio_al_ciudadano][type] = "module"
 projects[govi_servicio_al_ciudadano][subdir] = "features"
