@@ -90,6 +90,7 @@ projects[cami][subdir] = "contrib"
 projects[captcha][subdir] = "contrib"
 projects[recaptcha][subdir] = "contrib"
 projects[smpt][subdir] = "contrib"
+projects[youtube][subdir] = "contrib"
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
