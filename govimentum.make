@@ -245,7 +245,7 @@ projects[govi_transparencia][download][type] = "git"
 projects[govi_transparencia][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_transparencia.git"
 projects[govi_transparencia][download][branch] = "master"
 
-;modulos forks
+; Modulos forks
 
 projects[site_map][type] = "module"
 projects[site_map][subdir] = "contrib"
@@ -253,7 +253,6 @@ projects[site_map][download][type] = "git"
 ;projects[site_map][download][url] = "https://gitlab.com/trdavid/site_map.git"
 projects[site_map][download][url] = "git@gitlab.com:trdavid/site_map.git"
 projects[site_map][download][branch] = "master"
-
 
 ; Librerias externas
 
@@ -276,4 +275,3 @@ projects[wsclient][patch][] = "https://gitlab.com/snaphuman/wsclient/raw/master/
 ;projects[menu_token][patch][] = "https://www.drupal.org/files/issues/2063113-menu_token_active_trail-7.patch"
 
 projects[print][patch][] = "https://gitlab.com/trdavid/print/raw/master/patches/001-establece-seleccion-icono-formato.patch"
-projects[conditional_fields][patch][] = "https://www.drupal.org/files/issues/exporting_conditional-2373347-20.patch"
