@@ -1,0 +1,105 @@
+<?php
+
+function _enable_theme($theme, &$context) {
+    theme_enable(array($theme));
+    variable_set('theme_default', $theme);
+
+    $context['message'] = st('Instalado el tema default');
+}
+
+function _enable_module($module, $module_name, &$context) {
+    module_enable(array($module), FALSE);
+    $context['message'] = st('Modulo %module instalado.', array('%module' => $module_name));
+}
+
+function _configure_pathauto(&$context) {
+    $context['message'] = 'Configurando gestor de url\'s limpias [Pathauto]';
+
+    variable_set('pathauto_ignore_words',
+                 'un, una, que, en, antes, pero, por, para, de, es, en, en, como, encendido, apagado, encendido, en, por, ya que, entonces, el, esto, aquello que, arriba, a través, con');
+    variable_set('pathauto_node_organizacion_pattern',
+                 'transparencia/organizacion/[node:title]');
+    variable_set('pathauto_node_directorio_funcionarios_pattern',
+                 'transparencia/organizacion/directorio-funcionarios/funcionario/[node:title]');
+    variable_set('pathauto_node_marco_legal_pattern',
+                 'transparencia/marco-legal/[node:field_legal_clasificacion]/[node:title]');
+    variable_set('pathauto_node_contratacion_pattern',
+                 'transparencia/contratacion/[node:field_contratacion_clasificacion]/[node:title]');
+    variable_set('pathauto_node_instrumentos_gestion_informacion_pattern',
+                 'transparencia/instrumentos-gestion-informacion-publica/[node:field_instrumentos_clasificacion]/[node:title]');
+    variable_set('pathauto_node_planeacion_pattern',
+                 'transparencia/planeacion/[node:field_planeacion_clasificacion]/[node:title]');
+    variable_set('pathauto_node_tramites_servicios_pattern',
+                 'transparencia/tramites-servicios/[node:title]');            
+    variable_set('pathauto_node_noticia_pattern',
+                 'noticias/[node:title]');
+    variable_set('pathauto_node_eventos_pattern',
+    'eventos/[node:title]');
+}
+
+function _configure_print(&$context){
+
+    $context['message'] = ' Configurando variables del módulo print';
+
+    variable_set('print_html_book_link ','1');
+    variable_set('print_html_show_link','2');
+    variable_set('print_html_sys_link_pages','noticias/* \n eventos/*');
+    variable_set('print_html_sys_link_visibility','1');
+
+    variable_set('print_mail_book_link','1');
+    variable_set('print_mail_show_link','2');
+    variable_set('print_mail_sys_link_pages','noticias/* \n eventos/*');
+    variable_set('print_mail_sys_link_visibility','1');
+}
+
+function _configure_easy_social(&$context){
+
+    $context['message'] = ' Configurando variables del módulo easy social';
+    $easy_social_global_order =array(
+        'facebook_icon' => 'facebook_icon',
+        'twitter_icon' => 'twitter_icon',
+        'youtube_icon' => 'youtube_icon',
+    );
+    $easy_social_noticia_widgets = array(
+        'twitter' => 'twitter',
+        'facebook' => 'facebook',
+        'googleplus' => 'googleplus',
+    );
+ 
+    variable_set('easy_social_facebook_icon_image','3');
+    variable_set('easy_social_global_order', $easy_social_global_order);
+    variable_set('easy_social_noticia_count','1');
+    variable_set('easy_social_noticia_enable','1');
+    variable_set('easy_social_noticia_type','0');
+    variable_set('easy_social_noticia_widgets', $easy_social_noticia_widgets);
+    variable_set('easy_social_twitter_account_description','twitter');
+    variable_set('easy_social_twitter_account_related','');
+    variable_set('easy_social_twitter_icon_image','3');
+    variable_set('easy_social_youtube_icon_image','4');
+}
+
+function _configure_smtp (&$context) {
+
+    $context['message'] = 'Configurando el agente de transferencia de correos SMTP';
+
+    $site_mail = variable_get('site_mail');
+
+    variable_set('smtp_from', $site_mail);
+    variable_set('smtp_host', 'smtp.gmail.com');
+    variable_set('smtp_on', '1');
+    variable_set('smtp_port', '465');
+    variable_set('smtp_protocol', 'ssl');
+    variable_set('smtp_username', $site_mail);
+}
+
+function _configure_site_map (&$context) {
+    $context['message'] = 'Configurando el mapa de sitio transparencia';
+
+    $site_map_conf = array(
+       'menu-menu-transparencia' => 'menu-menu-transparencia',
+    );
+
+    variable_set('site_map_page_title', 'Transparencia');
+    variable_set('site_map_show_front', 0);
+    variable_set('site_map_show_menus',  $site_map_conf);
+}

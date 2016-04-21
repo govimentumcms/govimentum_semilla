@@ -1,0 +1,12 @@
+name = Widgets personalizados de redes sociales
+description = Un pequeño módulo que extiende de easy_social para ofrecer nuevas opciones de visualización y de personalización de iconos y botones de las redes sociales
+package = Other
+core = 7.x
+configure = admin/config/content/easy_social
+tags[] = social
+tags[] = share
+tags[] = OpenGraph
+dependencies[] = easy_social
+dependencies[] = variable
+project = custom_widgets
+version = 7.x-1.0
