@@ -468,7 +468,7 @@ function govi_instrumentos_gestion_info_views_default_views() {
   $handler->display->display_options['filters']['field_instrumentos_clasificacion_tid']['table'] = 'field_data_field_instrumentos_clasificacion';
   $handler->display->display_options['filters']['field_instrumentos_clasificacion_tid']['field'] = 'field_instrumentos_clasificacion_tid';
   $handler->display->display_options['filters']['field_instrumentos_clasificacion_tid']['value'] = array(
-    0 => '57',
+    0 => '52',
   );
   $handler->display->display_options['filters']['field_instrumentos_clasificacion_tid']['vocabulary'] = 'instrumentos_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/instrumentos-gestion-informacion-publica/Informe-pqr-denuncias-solicitudes';
