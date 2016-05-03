@@ -245,6 +245,13 @@ projects[govi_transparencia][download][url] = "https://gitlab.com/distribucion_d
 ;projects[govi_transparencia][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_transparencia.git"
 projects[govi_transparencia][download][branch] = "master"
 
+projects[govi_control][type] = "module"
+projects[govi_control][subdir] = "features"
+projects[govi_control][download][type] = "git"
+projects[govi_control][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_control.git"
+;projects[govi_control][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_control.git"
+projects[govi_control][download][branch] = "master"
+
 ; Modulos forks
 
 projects[site_map][type] = "module"
