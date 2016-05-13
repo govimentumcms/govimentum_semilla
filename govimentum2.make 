@@ -217,12 +217,12 @@ projects[govi_servicio_al_ciudadano][download][url] = "https://gitlab.com/distri
 ;projects[govi_servicio_al_ciudadano][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_servicio_al_ciudadano.git"
 projects[govi_servicio_al_ciudadano][download][branch] = "master"
 
-projects[govi_pie_de_pagina_institucional][type] = "module"
-projects[govi_pie_de_pagina_institucional][subdir] = "features"
-projects[govi_pie_de_pagina_institucional][download][type] = "git"
-projects[govi_pie_de_pagina_institucional][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_pie_de_pagina_institucional.git"
-;projects[govi_pie_de_pagina_institucional][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_pie_de_pagina_institucional.git"
-projects[govi_pie_de_pagina_institucional][download][branch] = "master"
+projects[govi_mecanismos_contacto][type] = "module"
+projects[govi_mecanismos_contacto][subdir] = "features"
+projects[govi_mecanismos_contacto][download][type] = "git"
+projects[govi_mecanismos_contacto][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_mecanismos_contacto.git"
+;projects[govi_mecanismos_contacto][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_mecanismos_contacto.git"
+projects[govi_mecanismos_contacto][download][branch] = "master"
 
 projects[govi_planeacion][type] = "module"
 projects[govi_planeacion][subdir] = "features"
