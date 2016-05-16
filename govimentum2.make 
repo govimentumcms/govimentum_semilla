@@ -94,7 +94,6 @@ projects[youtube][subdir] = "contrib"
 projects[webform][subdir] = "contrib"
 projects[webform_features][subdir] = "contrib"
 
-
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
 
 projects[es_custom_widgets][type] = "module"
@@ -254,6 +253,13 @@ projects[govi_control][download][type] = "git"
 projects[govi_control][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_control.git"
 ;projects[govi_control][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_control.git"
 projects[govi_control][download][branch] = "master"
+
+projects[govi_informacion_interes][type] = "module"
+projects[govi_informacion_interes][subdir] = "features"
+projects[govi_informacion_interes][download][type] = "git"
+projects[govi_informacion_interes][download][url] = "https://gitlab.com/distribucion_distrital_cms/govi_informacion_interes.git"
+;projects[govi_informacion_interes][download][url] = "git@gitlab.com:distribucion_distrital_cms/govi_informacion_interes.git"
+projects[govi_informacion_interes][download][branch] = "master"
 
 ; Modulos forks
 
