@@ -92,6 +92,7 @@ projects[recaptcha][subdir] = "contrib"
 projects[smtp][subdir] = "contrib"
 projects[youtube][subdir] = "contrib"
 projects[webform][subdir] = "contrib"
+projects[webform_features][subdir] = "contrib"
 
 
 ; Módulos contribuidos miembros del equipo de la Distribución Distrital CMS
