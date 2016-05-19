@@ -1,4 +1,4 @@
 www/sites/default/settings.php
 www/sites/default/files/*
-www/govimentum2.make
-www/govimentum.make
+www/govimentum_https.make
+www/govimentum_git.make
