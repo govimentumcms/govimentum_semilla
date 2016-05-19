@@ -169,11 +169,60 @@ function govi_encabezado_institucional_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'node-organizacion-field_field_organizacion_ancla'.
+  $field_instances['node-organizacion-field_field_organizacion_ancla'] = array(
+    'bundle' => 'organizacion',
+    'default_value' => array(
+      0 => array(
+        'value' => 'mision',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Utilice este campo para definir el id del Item que será usado como ancla en la navegación de la sección organización. El nombre no puede contener espacios o caracteres especiales y debe coincidir con la url definida en el item de menu para permitir el desplazamiento vertical en la página',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_field_organizacion_ancla',
+    'label' => 'Ancla',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 31,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('Ancla');
   t('Enlace');
   t('Imagen');
   t('Link');
+  t('Utilice este campo para definir el id del Item que será usado como ancla en la navegación de la sección organización. El nombre no puede contener espacios o caracteres especiales y debe coincidir con la url definida en el item de menu para permitir el desplazamiento vertical en la página');
 
   return $field_instances;
 }

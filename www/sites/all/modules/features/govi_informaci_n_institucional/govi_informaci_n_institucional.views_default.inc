@@ -28,19 +28,77 @@ function govi_informaci_n_institucional_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['view_mode'] = 'full';
-  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Ancla */
+  $handler->display->display_options['fields']['field_field_organizacion_ancla']['id'] = 'field_field_organizacion_ancla';
+  $handler->display->display_options['fields']['field_field_organizacion_ancla']['table'] = 'field_data_field_field_organizacion_ancla';
+  $handler->display->display_options['fields']['field_field_organizacion_ancla']['field'] = 'field_field_organizacion_ancla';
+  $handler->display->display_options['fields']['field_field_organizacion_ancla']['label'] = '';
+  $handler->display->display_options['fields']['field_field_organizacion_ancla']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_field_organizacion_ancla']['alter']['text'] = '[field_field_organizacion_ancla-value]';
+  $handler->display->display_options['fields']['field_field_organizacion_ancla']['element_label_colon'] = FALSE;
+  /* Field: Global: Fieldset */
+  $handler->display->display_options['fields']['fieldset']['id'] = 'fieldset';
+  $handler->display->display_options['fields']['fieldset']['table'] = 'views';
+  $handler->display->display_options['fields']['fieldset']['field'] = 'fieldset';
+  $handler->display->display_options['fields']['fieldset']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['fieldset']['alter']['text'] = '[field_field_organizacion_ancla]';
+  $handler->display->display_options['fields']['fieldset']['children'] = array(
+    0 => 'title',
+    1 => 'field_organizacion_archivo',
+    2 => 'body',
+    3 => 'field_organizacion_imagen',
+  );
+  $handler->display->display_options['fields']['fieldset']['fieldset']['type'] = 'div';
+  $handler->display->display_options['fields']['fieldset']['fieldset']['id'] = '[field_field_organizacion_ancla]';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_class'] = '[field_field_organizacion_ancla-value]';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
+  /* Field: Content: Archivo */
+  $handler->display->display_options['fields']['field_organizacion_archivo']['id'] = 'field_organizacion_archivo';
+  $handler->display->display_options['fields']['field_organizacion_archivo']['table'] = 'field_data_field_organizacion_archivo';
+  $handler->display->display_options['fields']['field_organizacion_archivo']['field'] = 'field_organizacion_archivo';
+  $handler->display->display_options['fields']['field_organizacion_archivo']['label'] = '';
+  $handler->display->display_options['fields']['field_organizacion_archivo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_organizacion_archivo']['click_sort_column'] = 'fid';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Field: Content: Imagen */
+  $handler->display->display_options['fields']['field_organizacion_imagen']['id'] = 'field_organizacion_imagen';
+  $handler->display->display_options['fields']['field_organizacion_imagen']['table'] = 'field_data_field_organizacion_imagen';
+  $handler->display->display_options['fields']['field_organizacion_imagen']['field'] = 'field_organizacion_imagen';
+  $handler->display->display_options['fields']['field_organizacion_imagen']['label'] = '';
+  $handler->display->display_options['fields']['field_organizacion_imagen']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_organizacion_imagen']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_organizacion_imagen']['type'] = 'colorbox';
+  $handler->display->display_options['fields']['field_organizacion_imagen']['settings'] = array(
+    'colorbox_node_style' => 'medium',
+    'colorbox_node_style_first' => '',
+    'colorbox_image_style' => '',
+    'colorbox_gallery' => 'post',
+    'colorbox_gallery_custom' => '',
+    'colorbox_caption' => 'auto',
+    'colorbox_caption_custom' => '',
+  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -68,6 +126,9 @@ function govi_informaci_n_institucional_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('[field_field_organizacion_ancla-value]'),
+    t('Fieldset'),
+    t('[field_field_organizacion_ancla]'),
     t('Page'),
   );
   $export['organizaci_n'] = $view;

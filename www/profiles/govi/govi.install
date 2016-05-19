@@ -192,6 +192,8 @@ function govi_install_aditional_modules() {
         'smtp',
         'site_map',
         'youtube',
+        'webform',
+        'webform_features',
     );
 
     $files = system_rebuild_module_data();
@@ -363,6 +365,40 @@ function govi_install_institutional_features() {
         'Secretaría General / Alta Consejería Distrital de TIC',
     );
 
+    $terminos['control_clasificacion'] = array(
+        'Informes de gestión, evaluación y auditoria',
+        'Reportes de control interno',
+        'Planes de mejoramiento',
+        'Entes de control, vigilancia y mecanismos de supervición',
+        'Información para población vulnerable',
+        'Defensa judicial',
+    );
+
+    $terminos['control_tipo_de_informes_de_gestion'] = array(
+        'Informe de rendición de cuentas a los ciudadanos',
+        'Informe de rendición de la cuenta fiscal a la CGR o a los organismos de control territorial',
+        'Informe enviado al Congreso/Asamblea/Consejo',
+        'Informes a organismos de inspección, vigilancia y control',
+    );
+
+    $terminos['clasificacion_convocatoria'] = array(
+        'Cultural',
+        'Deportiva',
+        'Economica',
+        'Empleo',
+    );
+
+    $terminos['clasificacion_documentos'] = array(
+        'Estudios',
+        'Investigaciones',
+        'Otras publicaciones',
+        'Información Adicional',
+    );
+
+    $terminos['clasificacion_faqs'] = array(
+        'General',
+    );
+
     $operations = array();
 
     $operations[] = array('_institutional_header', array());
@@ -383,7 +419,7 @@ function govi_install_institutional_features() {
 
     $operations[] = array('_servicio_ciudadano', array());
 
-    $operations[] = array('_pie_institucional', array(array('pie_de_pagina_institucional'), $terminos['footer']));
+    $operations[] = array('_mecanismos_contacto', array(array('pie_de_pagina_institucional'), $terminos['footer']));
 
     $operations[] = array('_marco_legal', array());
 
@@ -427,9 +463,25 @@ function govi_install_institutional_features() {
 
     $operations[] = array('_directorio_de_funcionarios_dependencia_oficina', array(array('directorio_de_funcionarios_dependencia_oficina'), $terminos['directorio_de_funcionarios_dependencia_oficina']));
 
+    $operations[] = array('_control', array());
+
+    $operations[] = array('_control_clasificacion', array(array('control_clasificacion'), $terminos['control_clasificacion']));
+
+    $operations[] = array('_control_tipo_de_informes_de_gestion', array(array('control_tipo_de_informes_de_gestion'), $terminos['control_tipo_de_informes_de_gestion']));
+   
+    $operations[] = array('_informacion_interes', array());
+
+    $operations[] = array('_clasificacion_convocatoria', array(array('clasificacion_convocatoria'), $terminos['clasificacion_convocatoria']));
+
+    $operations[] = array('_clasificacion_documentos', array(array('clasificacion_documentos'), $terminos['clasificacion_documentos']));
+
+    $operations[] = array('_clasificacion_faqs', array(array('clasificacion_faqs'), $terminos['clasificacion_faqs']));
+ 
     if (variable_get('enable_content')) {
         $operations[] = array('_default_content', array());
     }
+
+    $operations[] = array('_form_notificacion_judicial', array());
 
     $batch = array(
         'title' => 'Instalando caracteristicas funcionales institucionales',
@@ -470,6 +522,7 @@ function govi_institutional_header_form () {
             'educacion' => 'Secretaría de Educación',
             'planeacion' => 'Secretaría de Planeación',
             'desarrollo_economico' => 'Secretaría de Desarrollo Económico',
+            'habitat' => 'Secretaría de Hábitat',
             'bomberos' => 'Cuerpo Oficial de Bomberos',
             'espacio_publico' => 'Departamento administrativo de la defensoria del espacio público'
         ),
@@ -1197,5 +1250,23 @@ function govi_update_7100() {
     }
 }
 
+function govi_update_7101() {
 
+    $query = new EntityFieldQuery();
 
+    $query->entityCondition('entity_type', 'node')
+        ->entityCondition('bundle', 'webform')
+        ->propertyCondition('status', 1)
+        ->propertyCondition('title','Correo electrónico para notificaciones judiciales');
+
+    $result = $query->execute();
+
+    $node = node_load(array_values($result['node'])[0]->nid);
+    // normaliza el machine name
+    $node->webform['machine_name'] = $node->machine_name = 'form_notificaciones_judiciales';
+    // Define el path adecuado
+    $node->path['alias'] = 'transparencia/atencion-ciudadano/notificaciones-judiciales';
+
+    node_save($node);
+
+}

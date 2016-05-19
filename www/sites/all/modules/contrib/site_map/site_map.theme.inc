@@ -133,13 +133,13 @@ function template_preprocess_site_map_menu_tree(&$variables) {
  *   - tree: An HTML string containing the tree's items.
  *
  * @return string
- *   Returns the html string with the <ul> for the menu tree.
+ *   Returns the html string with the <ol> for the menu tree.
  *
  * @see template_preprocess_menu_tree()
  * @ingroup themeable
  */
 function theme_site_map_menu_tree($variables) {
-  return '<ul class="site-map-menu">' . $variables['tree'] . '</ul>';
+  return '<ol class="site-map-menu">' . $variables['tree'] . '</ol>';
 }
 
 

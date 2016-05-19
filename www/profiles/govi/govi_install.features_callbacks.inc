@@ -6,7 +6,30 @@ function _default_content(&$context){
     $context['message'] = 'Instalando Contenido Predeterminado';
 
 }
- 
+
+function _form_notificacion_judicial(&$context){
+
+    $context['message'] = 'Configurando formulario de notificaciones judiciales';
+
+    $query = new EntityFieldQuery();
+
+    $query->entityCondition('entity_type', 'node')
+        ->entityCondition('bundle', 'webform')
+        ->propertyCondition('status', 1)
+        ->propertyCondition('title','Correo electrónico para notificaciones judiciales');
+
+    $result = $query->execute();
+
+    $node = node_load(array_values($result['node'])[0]->nid);
+    // normaliza el machine name
+    $node->webform['machine_name'] = $node->machine_name = 'form_notificaciones_judiciales';
+    // Define el path adecuado
+    $node->path['alias'] = 'transparencia/atencion-ciudadano/notificaciones-judiciales';
+
+    node_save($node);
+
+}
+
 function _institutional_header(&$context) {
     module_enable(array('govi_encabezado_institucional'));
 
@@ -23,7 +46,7 @@ function _institutional_header(&$context) {
 
 
     // Agrega contenido al Boton Contacto
-    // TODO: buscar forma para desacoplar la gestión de nodos 
+    // TODO: buscar forma para desacoplar la gestión de nodos
     // en archivos
     global $user;
 
@@ -45,7 +68,7 @@ function _institutional_header(&$context) {
     $node->field_tipo['und'][0]['value'] = "boton";
 
     node_save($node);
- 
+
     // TODO: Habilita logo Administracion Distrital default
 }
 
@@ -252,6 +275,63 @@ function _directorio_de_funcionarios_dependencia_oficina($vocabularios, $termino
     }
 }
 
+function _control(&$context) {
+    module_enable(array('govi_control'));
+
+    $context['message'] = 'Instalando gestor de control';
+
+}
+
+function _control_clasificacion($vocabularios, $terminos, &$context) {
+
+    $context['message'] = 'Generando términos para la clasificación de control';
+
+    if (!empty($vocabularios) && !empty($terminos)) {
+        set_default_terms($vocabularios, $terminos);
+    }
+}
+
+function _control_tipo_de_informes_de_gestion($vocabularios, $terminos, &$context) {
+
+    $context['message'] = 'Generando términos para la clasificación de tippo de informes de gestión para control';
+
+    if (!empty($vocabularios) && !empty($terminos)) {
+        set_default_terms($vocabularios, $terminos);
+    }
+}
+
+function _clasificacion_convocatoria($vocabularios, $terminos, &$context) {
+
+    $context['message'] = 'Generando términos para la clasificación de convocatorias';
+
+    if (!empty($vocabularios) && !empty($terminos)) {
+        set_default_terms($vocabularios, $terminos);
+    }
+}
+function _informacion_interes(&$context) {
+    module_enable(array('govi_informacion_interes'));
+
+    $context['message'] = 'Instalando gestor de informacion de interes';
+}
+
+function _clasificacion_documentos($vocabularios, $terminos, &$context) {
+
+    $context['message'] = 'Generando términos para la clasificación de informacion de interes';
+
+    if (!empty($vocabularios) && !empty($terminos)) {
+        set_default_terms($vocabularios, $terminos);
+    }
+}
+
+function _clasificacion_faqs($vocabularios, $terminos, &$context) {
+
+    $context['message'] = 'Generando términos para la clasificación de faqs';
+
+    if (!empty($vocabularios) && !empty($terminos)) {
+        set_default_terms($vocabularios, $terminos);
+    }
+}
+
 // Implementa Slideshow principal
 
 function _main_slideshow(&$context) {
@@ -262,33 +342,29 @@ function _main_slideshow(&$context) {
 
     chequear_bloque('views', 'main_slideshow-block', 'posicion_a_1');
 
-    if (!variable_get('enable_content')) { 
+    if (!variable_get('enable_content')) {
         global $user;
-        
-        for ($i=0; $i<4; $i++) { 
+
+        for ($i=0; $i<4; $i++) {
             $node = new stdClass();
-            
+
             $node->title = 'Imagen destacada '. $i;
             $node->body = 'Lorem ipsum dolor sit amet consectur ...';
             $node->type = 'main_slideshow';
             node_object_prepare($node);
-            
+
             $node->language = LANGUAGE_NONE;
             $node->uid = $user->uid;
             $node->status = 1;
             $node->promote = 0;
             $node->comment = 0;
-            
             // Agrega contenido dummy
             $node->field_main_slideshow_image['und'][0]['width'] = 970;
             $node->field_main_slideshow_image['und'][0]['height'] = 270;
-            
             $file = system_retrieve_file('http://ipsumimage.appspot.com/970x270.png', 'public://slideshow-principal', TRUE);
-            
             if ($file->fid) {
                 $node->field_main_slideshow_image['und'][0]['fid'] = $file->fid;
             }
-            
             node_save($node);
         }
     }
@@ -335,11 +411,11 @@ function _servicio_ciudadano(&$context) {
     chequear_bloque('govi_sdqs', 'govi_sdqs_block', 'posicion_d_1', FALSE);
 }
 
-function _pie_institucional($vocabularios, $terminos, &$context) {
+function _mecanismos_contacto($vocabularios, $terminos, &$context) {
     module_enable(array('barra_institucional', FALSE));
-    module_enable(array('govi_pie_de_pagina_institucional'));
+    module_enable(array('govi_mecanismos_contacto'));
 
-    $context['message'] = 'Instalando pie de página con barra institucional';
+    $context['message'] = 'Instalando módulo transparencia, mecanismos de contacto';
 
     if (!empty($vocabularios) && !empty($terminos)) {
 
@@ -363,7 +439,7 @@ function _flush_caches($operation, &$context) {
 /* Función Establecer Términos Predeterminados
  *
  * Utilice este método para crear la lista de términos para un vocabulario dado
- * 
+ *
  * @param $vocabularios Array con los machine names que definen los vocabularios a utilizar
  * @param $terminos Array con los términos que serán creados en los vocabularios dados
  */
@@ -404,7 +480,7 @@ function set_default_terms($vocabularios, $terminos) {
  * Función Chequear Bloque
  *
  * Utilice este método para verificar el estado del un bloque
- * con el fin de evitar queries que puedan romper la integridad 
+ * con el fin de evitar queries que puedan romper la integridad
  * de la base de datos a causa de entradas duplicadas.
  *
  * @param $module String con el nombre del módulo que habitará el bloque
@@ -432,7 +508,7 @@ function chequear_bloque($module, $delta, $region, $drop_title = TRUE) {
 }
 
 function habilitar_bloque($block, $region, $drop_title) {
-    
+
     db_update('block')
         ->fields(array(
             'status' => 1,
@@ -459,7 +535,7 @@ function crear_bloque($module, $delta, $region, $drop_title) {
         'pages' => '',
         'cache' => -1,
     );
-    
+
     $query->values($block);
     $query->execute();
 }

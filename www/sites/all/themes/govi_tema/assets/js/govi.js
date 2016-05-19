@@ -46,3 +46,35 @@ jQuery(document).ready(function($) {
         });
 
 });
+
+jQuery(document).ready(function($) {
+
+    hash = window.location.hash;
+    search = window.location.search.match("organizacion");
+
+    // El suavizado aplicara solamente para los elementos
+    // de la sección Organización de Transparencia
+    if (search !== null) {
+
+	el = $(hash);
+
+	//añade clases al menu tipo anchor
+	$(".region-posicion-e-3 .block-menu a[href*='#']").addClass("scroll");
+
+	if (el.length) {
+	    console.log("Entra");
+	    $('html,body').animate({scrollTop:(el.offset().top)-225}, 800);
+	}
+	// Implementa funcionalida suavizado al desplazamiento de anchor
+	$(".scroll").click(function(event){
+	    event.preventDefault();
+	    // Calcula el offset del hash y deduce 225px para evitar el
+	    // sobrelapamiento de la navegación superior
+	    $('html,body').animate({scrollTop:($(this.hash).offset().top)-225}, 800);
+	});
+    }
+});
+
+jQuery(document).ready(function($) {
+    $('.colorbox-inline').colorbox({inline:true});
+});

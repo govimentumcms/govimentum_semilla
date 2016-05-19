@@ -39,6 +39,27 @@ function govi_encabezado_institucional_field_default_field_bases() {
     'type' => 'link_field',
   );
 
+  // Exported field_base: 'field_field_organizacion_ancla'.
+  $field_bases['field_field_organizacion_ancla'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_field_organizacion_ancla',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_imagen'.
   $field_bases['field_imagen'] = array(
     'active' => 1,

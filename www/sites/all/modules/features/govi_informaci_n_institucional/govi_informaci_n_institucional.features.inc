@@ -29,7 +29,7 @@ function govi_informaci_n_institucional_views_api($module = NULL, $api = NULL) {
 function govi_informaci_n_institucional_node_info() {
   $items = array(
     'organizacion' => array(
-      'name' => t('Organización'),
+      'name' => t('Estructura orgánica y talento humano'),
       'base' => 'node_content',
       'description' => t('Utilice este tipo de contenido para gestionar información relacionada con la Entidad, ej: misión, visión, objetivos, funciones y organigrama'),
       'has_title' => '1',

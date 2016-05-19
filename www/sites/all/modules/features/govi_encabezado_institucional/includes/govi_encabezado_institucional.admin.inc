@@ -39,6 +39,7 @@ function govi_encabezado_institucional_admin_config_main() {
             'educacion' => 'Secretaría de Educación',
             'planeacion' => 'Secretaría de Planeación',
             'desarrollo_economico' => 'Secretaría de Desarrollo Económico',
+            'habitat' => 'Secretaría de Habitat',
             'bomberos' => 'Cuerpo Oficial de Bomberos',
             'espacio_publico' => 'Departamento administrativo de la defensoria del espacio público'
         ),

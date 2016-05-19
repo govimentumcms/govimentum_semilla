@@ -20,11 +20,16 @@ function govi_encabezado_institucional_context_default_contexts() {
     'node' => array(
       'values' => array(
         'contratacion' => 'contratacion',
+        'control' => 'control',
+        'convocatoria' => 'convocatoria',
         'directorio_funcionarios' => 'directorio_funcionarios',
+        'documento' => 'documento',
+        'glosario' => 'glosario',
         'instrumentos_gestion_informacion' => 'instrumentos_gestion_informacion',
         'marco_legal' => 'marco_legal',
         'organizacion' => 'organizacion',
         'planeacion' => 'planeacion',
+        'preguntas_frecuentes' => 'preguntas_frecuentes',
         'presupuesto' => 'presupuesto',
         'tramites_servicios' => 'tramites_servicios',
       ),
@@ -48,6 +53,10 @@ function govi_encabezado_institucional_context_default_contexts() {
         'transparencia/instrumentos-gestion-informacion-publica' => 'transparencia/instrumentos-gestion-informacion-publica',
         'transparencia/tramites-servicios/*' => 'transparencia/tramites-servicios/*',
         'transparencia/tramites-servicios' => 'transparencia/tramites-servicios',
+        'transparencia/control' => 'transparencia/control',
+        'transparencia/control/*' => 'transparencia/control/*',
+        'transparencia/informacion-interes' => 'transparencia/informacion-interes',
+        'transparencia/informacion-interes/*' => 'transparencia/informacion-interes/*',
       ),
     ),
   );

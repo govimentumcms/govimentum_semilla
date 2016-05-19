@@ -34,7 +34,17 @@ function _configure_pathauto(&$context) {
     variable_set('pathauto_node_noticia_pattern',
                  'noticias/[node:title]');
     variable_set('pathauto_node_eventos_pattern',
-    'eventos/[node:title]');
+                'eventos/[node:title]');
+    variable_set('pathauto_node_control_pattern',
+                 'transparencia/control/[node:field_control_clasificacion]/[node:title]');  
+    variable_set('pathauto_node_convocatoria_pattern',
+                 'transparencia/informacion-interes/convocatoria/[node:title]');   
+    variable_set('pathauto_node_documento_pattern',
+                 'transparencia/informacion-interes/publicacion/[node:field_documento_clasificacion]/[node:title]');   
+    variable_set('pathauto_node_glosario_pattern',
+                 'transparencia/informacion-interes/glosario/[node:title]');   
+    variable_set('pathauto_node_preguntas_frecuentes_pattern',
+                 'transparencia/informacion-interes/faqs/[node:title]');   
 }
 
 function _configure_print(&$context){
