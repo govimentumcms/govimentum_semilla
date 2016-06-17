@@ -22,7 +22,7 @@ la transparencia, la participación ciudadana y el gobierno electrónico.
 ## Requerimientos técnicos
 
  * Nginx >= 1.8 (Recomendado)
- * PHP y PHP-FPM >= 5.3
+ * PHP y PHP-FPM >= 5.4
  * Mariadb >= 10.0 ó MySQL >= 5.5
  * [Drush](https://github.com/drush-ops/drush) >= 7.0-dev
  * Git >= 1.8
