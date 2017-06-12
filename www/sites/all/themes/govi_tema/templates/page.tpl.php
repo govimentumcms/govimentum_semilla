@@ -1,6 +1,7 @@
-<div class="contenedor">
+
     <header id="encabezado">
       <section class="encabezado-a pure-g">
+      <div class="contenedor">
         <?php if (!empty($page['encabezado_a_1'])): ?>
             <div class="encabezado-a-1 pure-u-sm-1 pure-u-md-1-3 pure-u-lg-1-3 pure-u-xl-1-3">
                 <?php print render($page['encabezado_a_1']); ?>
@@ -18,10 +19,11 @@
                 <?php print render($page['encabezado_a_3']); ?>
             </div>
         <?php endif; ?>
+        </div>
       </section>
 
       <section class="encabezado-b pure-g">
-
+          <div class="contenedor">
             <?php if (!empty($page['header_entidad'])): ?>
                 <?php if (!empty($page['logo_entidad'])): ?>
                     <div class="pure-u-sm-1 pure-u-md-1-5 pure-u-lg-1-5 pure-u-xl-1-5">
@@ -61,15 +63,18 @@
                     </div>
                 <?php endif; ?> 
             <?php endif; ?>
+            </div>
       </section>
 
       <section class="encabezado-c pure-g">
+     
                 <div class="encabezado-c-1 pure-u-sm-1 pure-u-md-1 pure-u-lg-1 pure-u-xl-1" role="navigation" aria-label="Menu">
                     <a href="#" id="toggles" class="menu-toggle custom-toggle"><s class="bar"></s><s class="bar"></s></a>
                     <div id="menu-principal" class="pure-menu pure-menu-horizontal custom-can-transform menu-transform">
                         <?php print render($main_menu); ?>
                     </div>
-                </div>               
+                </div>   
+
       </section>
 
     </header>
@@ -81,7 +86,6 @@
 	</div></div> <!-- /.section, /#messages -->
     <?php endif; ?>
 
-    <div id="posicion"> 
 
 	<?php if ($is_front): ?>
         <section class="posicion-a pure-g">
@@ -91,7 +95,12 @@
             </div>
           <?php endif; ?>
         </section>
+            <?php endif; ?>
 
+             
+<div class="contenedor">
+ <div id="posicion"> 
+ <?php if ($is_front): ?>
         <section class="posicion-b pure-g">
           <?php if (!empty($page['posicion_b_1'])): ?>
             <div class="posicion-b-1 pure-u-md-1 pure-u-sm-1" >
@@ -138,7 +147,7 @@
 
 	<?php endif; ?>
 
-        <section class="posicion-e pure-g">
+   <section class="posicion-e pure-g">
 	    <!-- Define marcado para el home -->
             <?php if (drupal_is_front_page()): ?>
               <?php if (!empty($page['posicion_e_1'])): ?>
@@ -170,9 +179,29 @@
 		      </div>
 		  </div>
               <?php endif; ?>
-              <div class="posicion-e-2 pure-2-3 pure-u-md-2-3 pure-u-sm-1 pure-u-lg-2-3 pure-u-xl-2-3">
+
+           
+     <?php if (!empty($page['posicion_e_3'])): ?>
+   <div class="posicion-e-2 pure-2-3 pure-u-md-2-3 pure-u-sm-1 pure-u-lg-2-3 pure-u-xl-2-3">
+               <?php if (!empty($tabs['#primary'])): ?>
+                  <div class="block-tabs">
+                    <?php print render($tabs); ?>
+                  </div>
+                  <?php endif; ?>
                 <?php print render($page['content']);?>
               </div>
+  <?php endif; ?>
+    <?php if (empty($page['posicion_e_3'])): ?>
+   <div class="posicion-e-2 pure-2-3 pure-u-md-2-3 pure-u-sm-1 pure-u-lg-2-3 pure-u-xl-1">
+               <?php if (!empty($tabs['#primary'])): ?>
+                  <div class="block-tabs">
+                    <?php print render($tabs); ?>
+                  </div>
+                  <?php endif; ?>
+                <?php print render($page['content']);?>
+              </div>
+  <?php endif; ?>
+
               <?php if (!empty($page['posicion_e_3'])): ?>
 		  <div class="posicion-e-3 pure-1-3 pure-u-md-1-3 pure-u-sm-1 pure-u-lg-1-3 pure-u-xl-1-3">
                 <?php print render($page['posicion_e_3']); ?>
@@ -180,11 +209,14 @@
               <?php endif; ?>
             <?php endif; ?>
         </section>
-
+      </div>
     </div>
+
+
 
     <footer id="pie">
         <section class="pie-a pure-g">
+        <div class="contenedor">
             <?php if (!empty($page['pie_a_1'])): ?>
                 <div class="pie-a-1 pure-u-md-1-4 pure-u-sm-1 pure-u-lg-1-4 pure-u-xl-1-4">
                     <?php print render($page['pie_a_1']); ?>
@@ -205,9 +237,11 @@
                     <?php print render($page['pie_a_4']); ?>
                 </div>
             <?php endif; ?>
+            </div>
         </section>
 
         <section class="pie-b pure-g">
+        <div class="contenedor">
             <?php if (!empty($page['pie_b_1'])): ?>
                 <div class="pie-b-1 pure-u-2-3 pure-u-sm-2-3 pure-u-md-2-3 pure-u-lg-2-3 pure-u-xl-2-3">
                     <?php print render($page['pie_b_1']); ?>
@@ -223,8 +257,10 @@
                     </div>
                 </div>
             <?php endif; ?>
+            </div>
         </section>
         <section class="pie-c pure-g">
+        <div class="contenedor">
             <?php if (!empty($page['pie_c_1'])): ?>
                 <?php print render($page['pie_c_1']);?>
             <?php endif; ?>
@@ -237,6 +273,7 @@
                 </div>
                 <a href="#" class="created_by">By Govimentum</a>
             </div>
+            </div>
         </section>
 
         <section class="pie-d pure-g">
@@ -248,4 +285,3 @@
         </section>
 
     </footer>
-</div>
