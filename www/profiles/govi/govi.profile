@@ -16,12 +16,16 @@
 
 function govi_form_install_configure_form_alter(&$form, $form_state) {
 	
-    // Modifica los formularios para ser collapsables
-    $form['site_information']['#collapsible'] = FALSE;
+  // Modifica los formularios para ser collapsables
+    $form['site_information']['#collapsible'] = TRUE;
     $form['site_information']['#collapsed'] = TRUE;
     $form['admin_account']['#collapsible'] = TRUE;
     $form['admin_account']['#collapsed'] = TRUE;
     $form['update_notificacions']['#collapsible'] = TRUE;
+    $form['update_notifications']['#collapsed'] = TRUE;
+	$form['server_settings']['#collapsible'] = TRUE;
+    $form['server_settings']['#collapsed'] = TRUE;
+	$form['update_notifications']['#collapsible'] = TRUE;
     $form['update_notifications']['#collapsed'] = TRUE;
 
     // Desactiva elementos del formulario en esta parte del proceso
