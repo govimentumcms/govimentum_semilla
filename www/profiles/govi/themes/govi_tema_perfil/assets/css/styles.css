@@ -32,7 +32,16 @@ h2, h3 {
 
 h2 { color: #0A3A62; }
 
-h3 { color: #666666; }
+ h3 {
+    color: #485462;
+    background: #dbe1e6 url('../imagenes/gear.png') no-repeat;
+	background-position: 8px 6px;
+    margin-bottom: 1em;
+    font-family: unset;
+    font-size: 1.3em;
+    padding: 6px 39px;
+    border-radius: 7px;
+} 
 
 .maintenance-page .contenedor {
   background: #fff;
@@ -48,8 +57,8 @@ h3 { color: #666666; }
 
 fieldset.form-wrapper legend,
 fieldset.collapsible legend {
-    background: #0083B3;
-}
+background: #033452;
+    border-radius: 9px 10px 0px 0px;}
 
 fieldset.form-wrapper span.fieldset-legend {
     padding-left: 15px;
@@ -76,7 +85,7 @@ fieldset.collapsed .fieldset-legend {
 }
 
 .pure-form fieldset {
-    border: 1px solid #0083b3;
+    border: 5px solid #e4e8ec;
     margin-bottom: 16px;
 }
 
@@ -114,7 +123,7 @@ fieldset.collapsed .fieldset-legend {
 /* ------------ */
 
 #slide div {
-    height: 591px;
+    height: 1px;
     width: 960px;
 }
 
@@ -166,7 +175,7 @@ fieldset.collapsed .fieldset-legend {
 }
 
 #contenido {
-    background-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.23);
     padding: 30px;
     margin: 0 auto;
     width: 720px;

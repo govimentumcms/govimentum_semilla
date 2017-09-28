@@ -62,31 +62,7 @@ function _configure_print(&$context){
     variable_set('print_mail_sys_link_visibility','1');
 }
 
-function _configure_easy_social(&$context){
 
-    $context['message'] = ' Configurando variables del módulo easy social';
-    $easy_social_global_order =array(
-        'facebook_icon' => 'facebook_icon',
-        'twitter_icon' => 'twitter_icon',
-        'youtube_icon' => 'youtube_icon',
-    );
-    $easy_social_noticia_widgets = array(
-        'twitter' => 'twitter',
-        'facebook' => 'facebook',
-        'googleplus' => 'googleplus',
-    );
- 
-    variable_set('easy_social_facebook_icon_image','3');
-    variable_set('easy_social_global_order', $easy_social_global_order);
-    variable_set('easy_social_noticia_count','1');
-    variable_set('easy_social_noticia_enable','1');
-    variable_set('easy_social_noticia_type','0');
-    variable_set('easy_social_noticia_widgets', $easy_social_noticia_widgets);
-    variable_set('easy_social_twitter_account_description','twitter');
-    variable_set('easy_social_twitter_account_related','');
-    variable_set('easy_social_twitter_icon_image','3');
-    variable_set('easy_social_youtube_icon_image','4');
-}
 
 function _configure_smtp (&$context) {
 

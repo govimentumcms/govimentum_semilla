@@ -9,35 +9,25 @@
  *
  * Allows the profile to alter the site configuration form.
  */
-function govi_form_install_configure_form_alter(&$form, $form_state) {
+ 
+ 
 
+
+
+function govi_form_install_configure_form_alter(&$form, $form_state) {
+	
     // Modifica los formularios para ser collapsables
     $form['site_information']['#collapsible'] = FALSE;
-    $form['site_information']['#collapsed'] = FALSE;
+    $form['site_information']['#collapsed'] = TRUE;
     $form['admin_account']['#collapsible'] = TRUE;
     $form['admin_account']['#collapsed'] = TRUE;
     $form['update_notificacions']['#collapsible'] = TRUE;
     $form['update_notifications']['#collapsed'] = TRUE;
 
     // Desactiva elementos del formulario en esta parte del proceso
-    $form['site_information']['site_name']['#access'] = FALSE;
-    $form['server_settings']['#access'] = FALSE;
-    $form['update_notifications']['#access'] = FALSE;
-
-    $form['configure_language'] = array(
-        '#type' => 'fieldset',
-        '#title' => 'Configuración del Idioma',
-        '#collapsible' => TRUE,
-        '#collapsed' => TRUE,
-        '#prefix' => '<div class="grupo container-inline">',
-        '#suffix' => '</div>',
-    );
-
-    $form['configure_language']['enable_es'] = array(
-        '#type' => 'checkbox',
-        '#title' => 'Traducir el sitio a Español',
-        '#description' => 'Tenga en cuenta que traducir el sitio desde el proceso de instalación hará que tome más tiempo y requiera configurar la directiva timeout del webserver para soportar mayor tiempo de petición',
-    );
+	$form['site_information']['site_name']['#default_value'] = 'NOMBRE ENTIDAD';
+    $form['server_settings']['#access'] = TRUE;
+    $form['update_notifications']['#access'] = TRUE;
 
     $form['configure_content'] = array(
         '#type' => 'fieldset',
@@ -99,7 +89,6 @@ function govi_form_install_configure_form_alter_submit ($form, &$form_state) {
         array_push($urls, trim($exceptions));
     }
 
-    variable_set('enable_es', $form_state['values']['enable_es']);
     variable_set('enable_content', $form_state['values']['enable_content']);
 
     // Define el proxy para el perfil de instalación

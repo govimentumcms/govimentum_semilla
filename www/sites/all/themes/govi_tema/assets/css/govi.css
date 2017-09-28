@@ -183,6 +183,10 @@ a{
 	font-size: 1em;
 	font-family: 'robotolight';
 }
+a:visited { 
+    color: #68075b;
+}
+
 
 .centrar {
     text-align: center;
@@ -214,7 +218,9 @@ a.active-trail:hover {
 	font-size: 0.8em;
 	color:#666;
 }
-
+.region-posicion-e-3 .block-menu .content ul li a:visited {
+    color:#68075b;
+}
 
 #encabezado .encabezado-a-1 .block {
     float: left;
@@ -223,13 +229,19 @@ a.active-trail:hover {
     width: 50%;
 }
 
+#encabezado h2{
+	color:#999;
+	font-family: 'robotomedium';
+	font-size: 1.2em;
+	line-height: 0.4em;
+}
 a{
 	color: rgba(0,62,101,1);
 	text-decoration: underline;
 }
 
 a:hover{
-	color: rgb(0,62,101);;
+	color: rgb(0,62,101);
 	text-decoration: underline;
 }
 
@@ -245,7 +257,7 @@ body{
 #posicion{
 	background-color: #ffffff;
 	bottom: 12px;
-	padding: 5px 27px 20px;
+	padding: 10px 15px 15px;
 	position: relative;
 }
 .breadcrumb{
@@ -291,7 +303,7 @@ body{
 }
 
 .encabezado-c-1{
-	background-color: rgba(0,159,227,1);
+	background-color: #007DB3;
     border: none;
     padding: 2px 0;
     width: 100%;
@@ -438,7 +450,7 @@ list-style-type: none;
     white-space: initial;
 }
 #menu-principal ul.pure-menu-children{
-    background-color: rgba(0,159,227,1);
+    background-color: #007DB3;
     border-left: 2px solid #fff;
     z-index: 9000;
 }
@@ -453,7 +465,7 @@ list-style-type: none;
 	min-width: 250px;
 }
 #menu-principal ul.pure-menu-children ul.pure-menu-children{
-	background-color: rgba(0,159,227,1);
+	background-color: #007DB3;
 	color: #ffffff;
 	left: 100%; 
 	position: absolute; 
@@ -595,7 +607,7 @@ list-style-type: none;
 	margin-left: 0;
 } 
 #block-views-main-slideshow-block .views-field-counter{
-	background: rgba(0,159,227,1);
+	background: #007DB3;
     border: 2px solid #fff;
     border-radius: 1em;
     cursor: pointer;
@@ -628,7 +640,7 @@ list-style-type: none;
     width: 100%;
 }
 #block-views-main-slideshow-block #views_slideshow_controls_text_main_slideshow-block span{
-  	background-color: rgba(0,159,227,1) ;
+  	background-color: #007DB3 ;
     border: 2px solid #fff;
     border-radius: 17px;
     height: 29px;
@@ -678,9 +690,11 @@ list-style-type: none;
 /*-------------*/
 
 #encabezado .encabezado-b-2 h1{
+
     margin-top: 0px;
     margin-bottom: 0;
-    color: #656667;
+    color: rgba(0,62,101,1);
+    text-transform: uppercase;
 }
 
  #block-views-db425925bfe11f9c35824a11f164700a .field-content{
@@ -709,9 +723,9 @@ list-style-type: none;
     margin-right: 8px;
 }
 #encabezado .form-item-search-block-form .form-text{
-    min-width: 220px;
-	max-width: 250px;
-    min-height: 25px;
+    min-width: 150px;
+    max-width: 160px;
+    min-height: 26px;
     padding: 0.15em 1em;
     border-radius: 0.2em;
     border: 1px solid rgba(128, 128, 128, 0.5);
@@ -789,6 +803,11 @@ list-style-type: none;
 .view-otras-noticias .views-field-title a, .view-pagina-noticias .views-field-title a{
 	color: rgba(0,62,101,1)
 }
+
+.view-otras-noticias .views-field-title a:visited, .view-pagina-noticias .views-field-title a:visited{
+	color:#68075b;
+}
+
 .view-otras-noticias .views-field-field-copete p, .view-pagina-noticias .views-field-field-copete p{
 	margin-top: 5px;
 }
@@ -852,15 +871,6 @@ list-style-type: none;
 	max-width: 220px;
 }
 
-select {
-	-moz-appearance: none;
- 	-webkit-appearance: none;
- 	appearance: none;
-	background: url(../imagenes/navegacion_aba_a.png) no-repeat 65px 14px #fff !important;
-    color: #0085d2;
-    border: 1px solid #999;
-    width: 94px;
-}
 
 #block-views-noticias-relacionadas-block ul li{
 	color: rgba(0,62,101,1); 
@@ -1082,7 +1092,7 @@ select {
 } 
 #block-views-eventos-block-1 .pager a,
 .view-eventos .pager a{
-    background-color: rgba(0,159,227,1);
+    background-color: #007DB3;
     border: 2px solid #fff;
     border-radius: 17px;
     height: 29px;
@@ -1110,7 +1120,7 @@ select {
 	background-image: url('../imagenes/navegacion_pos.png');
 }
 
-.view-eventos .date-heading h3,{
+.view-eventos .date-heading h3{
 	font-family: 'robotoregular';
 	font-size: 19px;
 }
@@ -1144,7 +1154,7 @@ select {
 	text-align: center;
 }
 .view-eventos .calendar-calendar .today{
-	background: rgba(0,159,227,1) !important;
+	background: #007DB3 !important;
 	color: #fff !important;
 	font-family: 'robotobold' !important;
 }
@@ -1357,7 +1367,7 @@ select {
 }
 /* pie de pagina*/
 footer{
-	background-color: rgba(0,159,227,1);
+	background-color: #007DB3;
 	margin-bottom: 2em;
 	padding-bottom: 0.8em;
 }
@@ -1696,7 +1706,7 @@ form#search-form .form-wrapper input[type="submit"] {
     float: left;
     position: relative;
     overflow: hidden;
-    border: 2px solid rgba(0,159,227,1);
+    border: 2px solid #007DB3;
     margin-bottom: 0.5em; 
 }
 
@@ -1863,6 +1873,28 @@ div#nodo-contenido-perfil .field-label {
 .scrollToTop:hover{
         text-decoration:none;
 }
+ul.primary li a {
+    background-color: #007db3;
+    border-color: #bbb;
+    border-style: solid solid none solid;
+    border-width: 0px;
+    height: auto;
+    margin-right: 0.2em;
+    padding: 0 1em;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 7px 7px 0px 0px;
+}
+ul.primary li a:hover {
+    background-color: #6d6d6d;
+    border-color: #ccc;
+    border-bottom-color: #eee;
+}
+ul.primary li.active a {
+    background-color: #06587b;
+    border: 1px solid #bbb;
+    border-bottom: 1px solid #fff;
+}
 
 /* ---------------------- Responsive Class -------------------- */
 
@@ -1966,6 +1998,56 @@ div#nodo-contenido-perfil .field-label {
         width: 100%;
         max-width: 100% !important;
     }
+	
+	ul.primary li a {
+    background-color: #007db3;
+    border-color: #bbb;
+    border-style: solid solid none solid;
+    border-width: 0px;
+    height: auto;
+    margin-right: 0em;
+    padding: 0 0.9em;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 7px 7px 0px 0px;
+}
+ul.primary {
+    border-bottom: 1px solid #bbb;
+    border-collapse: collapse;
+    height: auto;
+    line-height: normal;
+    list-style: none;
+    margin: 0px;
+    padding: 0 0 0 0em;
+    white-space: nowrap;
+}
+.item-list .pager {
+    clear: both;
+    text-align: left;
+    display: none;
+}
+#posicion table td {
+    padding: 0px 8px;
+}
+#encabezado h2 {
+    color: #999;
+    font-family: 'robotomedium';
+    font-size: 1.2em;
+    line-height: 0.4em;
+    display: none;
+}
+#encabezado h1 {
+    font-family: 'robotoregular';
+    font-size: 1em;
+}
+.encabezado-a-1 {
+	display:none;
+}
+#posicion section div:first-child .region {
+    padding-right: 10px;
+    padding-left: 0;
+    display: none;
+}
 }
 
 /* -- caracteristica funcional transparencia --*/
@@ -1989,7 +2071,7 @@ ol.site-map-menu { counter-reset: item }
 }
 
 .views-slideshow-controls-top  span {
-    background-color: rgba(0,159,227,1);
+    background-color: #007DB3;
     border: 2px solid #fff;
     border-radius: 17px;
     height: 29px;
@@ -2009,3 +2091,4 @@ ol.site-map-menu { counter-reset: item }
     margin: 0 auto;
     width: 100% !important;
 }
+

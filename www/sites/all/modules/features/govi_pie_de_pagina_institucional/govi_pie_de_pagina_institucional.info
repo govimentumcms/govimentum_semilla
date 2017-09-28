@@ -3,7 +3,6 @@ description = Característica Funcional que Implementa los elementos del pie de 
 core = 7.x
 package = Govimentum
 version = 7.x-1.0-beta1
-dependencies[] = barra_institucional
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = govi_encabezado_institucional

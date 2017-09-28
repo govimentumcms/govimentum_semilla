@@ -32,7 +32,7 @@ drupal_set_title(st('La instalación de @drupal ha sido completada', array('@dru
 	</div>
     </div>
     <div class="pure-u-1-5">
-	<a class="btn accion2" href="<?php echo $url_getting_started; ?>" target="_blank"></a>
+	<a class="btn accion2" href="http://ticbogota.gov.co/tutoriales-tic" target="_blank"></a>
 	<div class="accion-titulo">
 	    Consultar ayuda
 	</div>

@@ -24,7 +24,6 @@ dependencies[] = path_breadcrumbs
 dependencies[] = print
 dependencies[] = print_mail
 dependencies[] = print_ui
-dependencies[] = scrollbar
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views

@@ -48,11 +48,6 @@ function govi_tema_perfil_form_alter(&$form, &$form_state, $form_id) {
         break;
 
     case 'govi_institutional_header_form':
-        $form['info_basica_entidad']['logo']['#process'] = array('procesar_boton_upload');
-        $form['info_redes_entidad']['facebook_group']['facebook_icon']['#process'] = array('procesar_boton_upload');
-        $form['info_redes_entidad']['twitter_group']['twitter_icon']['#process'] = array('procesar_boton_upload');
-        $form['info_redes_entidad']['youtube_group']['youtube_icon']['#process'] = array('procesar_boton_upload');
-
         $form['submit']['#attributes']['class'][] = 'pure-button';
         break;
 

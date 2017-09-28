@@ -13,10 +13,12 @@
 
 function govi_encabezado_institucional_admin_config_main() {
     $form = array();
-    
+	
     $form['intro'] = array(
         '#markup' => '<h3>Información del sitio web Institucional</h3> <p>Por favor complete los siguientes campos:',
+		
     );
+
                       
     $form['info_basica_entidad'] = array(
         '#type' => 'fieldset',
@@ -24,11 +26,14 @@ function govi_encabezado_institucional_admin_config_main() {
         '#collapsible' => TRUE,
         '#collapsed' => FALSE,
     );
-                      
+            
+ 
+	
     $form['info_basica_entidad']['sector'] = array(
         '#type' => 'select',
-        '#title' => 'Seleccione el sector',
+        '#title' => 'Cambiar de Sector',
         '#options' => array(
+			'Seleccionar' => 'Seleccionar',
             'hacienda' => 'Secretaría de Hacienda',
             'mujer' => 'Secretaría Distrital de la Mujer',
             'integracion_social' => 'Secretaría de Integración Social',
@@ -44,44 +49,26 @@ function govi_encabezado_institucional_admin_config_main() {
             'espacio_publico' => 'Departamento administrativo de la defensoria del espacio público'
         ),
         '#default_value' => variable_get('header_sector'),
-        '#description' => 'Seleccione el sector al que pertenece su entidad',
+        '#description' => variable_get('header_sector'),
         '#required' => TRUE
     );
-                      
+  
+                   
     $form['info_basica_entidad']['nombre'] = array(
         '#type' => 'textfield',
         '#title' => 'Nombre de la entidad',
         '#default_value' => variable_get('header_entidad'),
-        '#required' => FALSE
-    );
-                      
+        '#required' => FALSE,
+		 '#disabled' => TRUE,
+		 '#description' => 'Cambiar Nombre de la entidad en la <a href="admin/config/system/site-information">Informacion del sitio<a>'
+    );       
     $form['info_basica_entidad']['logo'] = array(
-        '#type' => 'managed_file',
-        '#title' => 'Logo entidad',
-        '#description' => 'La imagen subida será mostrada en el encabezado del sitio junto al logo de la Bogotá Humana <br/> <b>Tipos de archivos permitidos:</b> gif, png, jpg, jpeg <br/> <b>Tamaño máximo:</b> 50Kb',
-        '#upload_location' => 'public://header-institucional/',
-        '#progress_indicator' => 'bar',
-        '#upload_validators' => array(
-            'file_validate_extensions' => array('gif png jpg jpeg'),
-            'file_validate_size' => array(150*1024),
-            'file_validate_image_resolution' => array('110x60'),
-        ),
-        '#default_value' => variable_get('logo_entidad'),
-        '#required' => FALSE
+        '#markup' => '<a href="admin/appearance/settings/govi_tema">Modificar el logo de la entidad</a>',
+		
     );
-                      
-    $form['info_redes_entidad'] = array(
-        '#type' => 'fieldset',
-        '#title' => 'Información de redes sociales',
-        '#collapsible' => TRUE
-    );
-                      
-    $form['info_redes_entidad']['redes_sociales'] = array(
-        '#markup' => '<p>Ingrese a <a href="/admin/config/content/easy_social" title="Configuración de redes sociales">este enlace</a> para realizar la configuración
-                              global de las redes sociales</p>',
-    );
-                      
-    // Crea nuevo campo para configuración del proxy
+	
+ 
+ // Crea nuevo campo para configuración del proxy
     $form['proxy_configuration'] = array(
         '#type' => 'fieldset',
         '#title' => 'Configuración del Proxy',
@@ -124,12 +111,8 @@ function govi_encabezado_institucional_admin_config_main() {
 function govi_encabezado_institucional_admin_config_main_submit($form, &$form_state) {
     variable_set('header_sector', $form_state['complete form']['info_basica_entidad']['sector']['#options'][$form_state['values']['sector']]);
     variable_set('header_entidad', $form_state['values']['nombre']);
-    variable_set('logo_entidad', $form_state['values']['logo']);
     variable_set('proxy_server', $form_state['values']['http_server']);
     variable_set('proxy_port', $form_state['values']['http_port']);
     variable_set('proxy_exceptions', $form_state['values']['http_exceptions']);
-                      
-    $image = file_load($form_state['values']['logo']);
-    $image->status = FILE_STATUS_PERMANENT;
-    file_save($image);
+
 }

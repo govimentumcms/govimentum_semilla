@@ -62,7 +62,7 @@
 	    if (params.id == 2) addProgressSlide(3, 4);
 	    if (params.id == 3) addProgressSlide(4, 5);
 
-	    slide3 = (titulo === 'Configurar sitio') ? true : false;
+	    slide3 = (titulo === 'Inicia la configuración del sitio Web') ? true : false;
 	    if (slide3 === true) {
 
 		footerBox.remove();

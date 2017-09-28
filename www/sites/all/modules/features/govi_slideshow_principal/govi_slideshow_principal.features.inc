@@ -24,8 +24,8 @@ function govi_slideshow_principal_image_default_styles() {
       1 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 970,
-          'height' => 270,
+          'width' => 1600,
+          'height' => 400,
           'upscale' => 0,
         ),
         'weight' => 1,

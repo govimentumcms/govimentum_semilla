@@ -15,6 +15,7 @@ stylesheets[all][] = assets/css/formularios.css
 stylesheets[all][] = assets/css/menus.css
 stylesheets[all][] = assets/css/menus-dropdown.css
 stylesheets[all][] = assets/css/govi.css
+stylesheets[all][] = assets/css/micss.css
 
 ;-------------------------------
 scripts[] = assets/js/govi.js

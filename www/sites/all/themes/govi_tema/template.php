@@ -5,15 +5,11 @@
  */
 
 function govi_tema_preprocess_page(&$vars) {
-    $fid = variable_get('logo_entidad');
     $entidad = variable_get('header_entidad');
-    $file = (array)file_load($fid);
-
     // Encontrar una forma más estructura de de hacer esto
-    $vars['page']['logo_entidad'] = "<a href ='#'><img src='".file_create_url($file['uri'])."' alt='Logo ".$entidad."'/></a>";
-
     $vars['page']['header_sector'] = variable_get('header_sector');
     $vars['page']['header_entidad'] = variable_get('header_entidad');
+
 
     // main-menu.
     $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));

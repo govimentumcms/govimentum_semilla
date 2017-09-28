@@ -469,11 +469,11 @@ transparencia/informacion-interes/convocatoria',
     'customized' => 1,
     'parent_identifier' => 'main-menu_transparencia:<front>',
   );
-  // Exported menu link: main-menu_eventos:calendario/ano.
-  $menu_links['main-menu_eventos:calendario/ano'] = array(
+  // Exported menu link: main-menu_eventos:calendario.
+  $menu_links['main-menu_eventos:calendario'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'calendario/ano',
-    'router_path' => 'calendario/ano',
+    'link_path' => 'calendario',
+    'router_path' => 'calendario',
     'link_title' => 'Eventos',
     'options' => array(
       'cami' => array(
@@ -492,7 +492,7 @@ transparencia/informacion-interes/convocatoria',
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'main-menu_eventos:calendario/ano',
+      'identifier' => 'main-menu_eventos:calendario',
     ),
     'module' => 'menu',
     'hidden' => 0,

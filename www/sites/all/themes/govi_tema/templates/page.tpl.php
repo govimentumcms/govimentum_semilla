@@ -3,19 +3,19 @@
       <section class="encabezado-a pure-g">
       <div class="contenedor">
         <?php if (!empty($page['encabezado_a_1'])): ?>
-            <div class="encabezado-a-1 pure-u-sm-1 pure-u-md-1-3 pure-u-lg-1-3 pure-u-xl-1-3">
+            <div class="encabezado-a-1 pure-u-sm-1 pure-u-md-1-2 pure-u-lg-1-2 pure-u-xl-1-2">
                 <?php print render($page['encabezado_a_1']); ?>
             </div>
         <?php endif; ?>
 
         <?php if (!empty($page['encabezado_a_2'])): ?>
-            <div class="encabezado-a-2 pure-u-sm-1 pure-u-md-1-3 pure-u-lg-1-3 pure-u-xl-1-3">
+            <div class="encabezado-a-2 pure-u-sm-1 pure-u-md-1-2 pure-u-lg-1-2 pure-u-xl-1-2">
                 <?php print render($page['encabezado_a_2']); ?>
             </div>
         <?php endif; ?>
 
         <?php if (!empty($page['encabezado_a_3'])): ?>
-            <div class="encabezado-a-3 pure-u-sm-1 pure-u-md-1-3 pure-u-lg-1-3 pure-u-xl-1-3">
+            <div class="encabezado-a-3 pure-u-sm-1 pure-u-md-1-2 pure-u-lg-1-3 pure-u-xl-1-2">
                 <?php print render($page['encabezado_a_3']); ?>
             </div>
         <?php endif; ?>
@@ -25,18 +25,29 @@
       <section class="encabezado-b pure-g">
           <div class="contenedor">
             <?php if (!empty($page['header_entidad'])): ?>
-                <?php if (!empty($page['logo_entidad'])): ?>
-                    <div class="pure-u-sm-1 pure-u-md-1-5 pure-u-lg-1-5 pure-u-xl-1-5">
-                        <div class="logo_entidad"><?php print render($page['logo_entidad']); ?></div>
-                    </div>
-                <?php endif; ?>
+            
+			<?php if ($logo): ?>
+				<div class="pure-u-sm-1 pure-u-md-1-5 pure-u-lg-1-5 pure-u-xl-1-5">
+					<div class="logo_entidad">
+						<img src="<?php print $logo ?>" alt="<?php print $site_name?>" title="<?php print $site_name?>" id="logo" />
+					</div>
+				</div>
+            <?php endif; ?>
+				
+				
                 <?php if (!empty($page['header_sector'])): ?>
                     <div class="encabezado-b-2 pure-u-sm-1 pure-u-md-3-5 pure-u-lg-3-5 pure-u-xl-3-5">
                         <h1 class="nombre-sitio">
                            <?php if (!empty($page['header_entidad'])): ?>
-                               <span><?php print render($page['header_entidad']); ?></span>
                            <?php endif; ?>
+								<span><?php print $site_name?></span>   
+								<?php endif; ?>
                         </h1>
+						  <h2 class="nombre-sitio">
+                           <?php if (!empty($page['header_entidad'])): ?>
+						    <span><?php print render($page['header_sector']); ?></span>
+                             
+                        </h2>
                     </div>
                 <?php endif; ?>
                 <?php if (!empty($page['encabezado_b_1'])): ?>
@@ -69,7 +80,10 @@
       <section class="encabezado-c pure-g">
      
                 <div class="encabezado-c-1 pure-u-sm-1 pure-u-md-1 pure-u-lg-1 pure-u-xl-1" role="navigation" aria-label="Menu">
-                    <a href="#" id="toggles" class="menu-toggle custom-toggle"><s class="bar"></s><s class="bar"></s></a>
+                   
+				    <a href="#" id="toggles" class="menu-toggle custom-toggle">&nbsp;<hr class="bar">
+		<hr class="bar"></a>
+					
                     <div id="menu-principal" class="pure-menu pure-menu-horizontal custom-can-transform menu-transform">
                         <?php print render($main_menu); ?>
                     </div>

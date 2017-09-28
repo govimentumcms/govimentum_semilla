@@ -37,7 +37,6 @@ function _institutional_header(&$context) {
 
     chequear_bloque('menu', 'menu-menu-secundario', 'encabezado_a_1');
     chequear_bloque('system', 'user-menu', 'encabezado_a_1');
-    chequear_bloque('easy_social', 'easy_social_block_1', 'encabezado_a_2');
     chequear_bloque('search', 'form', 'encabezado_a_3');
     chequear_bloque('views', '6de055f9878424326340a60a96078651', 'encabezado_b_1');
     chequear_bloque('views', 'db425925bfe11f9c35824a11f164700a', 'encabezado_b_3');

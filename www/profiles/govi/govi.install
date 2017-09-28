@@ -153,9 +153,6 @@ function govi_install_aditional_modules() {
         'entity',
         'entity_token',
         'entityreference',
-        'scrollbar',
-        'easy_social',
-        'custom_widgets',
         'features',
         'jcarousel',
         'defaultcontent',
@@ -188,6 +185,8 @@ function govi_install_aditional_modules() {
         'print_mail',
         'cami',
         'captcha',
+		'ckeditor',
+		'imce',
         'recaptcha',
         'smtp',
         'site_map',
@@ -229,8 +228,6 @@ function govi_install_aditional_modules() {
     $operations[] = array('_configure_pathauto', array());
 
     $operations[] = array('_configure_print', array());
-
-    $operations[] = array('_configure_easy_social', array());
 
     $operations[] = array('_configure_smtp', array());
 
@@ -512,6 +509,7 @@ function govi_institutional_header_form () {
         '#type' => 'select',
         '#title' => 'Seleccione el sector',
         '#options' => array(
+		    'Seleccionar' => 'Seleccionar',
             'hacienda' => 'Secretaría de Hacienda',
             'mujer' => 'Secretaría Distrital de la Mujer',
             'integracion_social' => 'Secretaría de Integración Social',
@@ -526,7 +524,7 @@ function govi_institutional_header_form () {
             'bomberos' => 'Cuerpo Oficial de Bomberos',
             'espacio_publico' => 'Departamento administrativo de la defensoria del espacio público'
         ),
-        '#default_value' => '',
+        '#default_value' => 'Seleccionar',
         '#description' => 'Seleccione el sector al que pertenece su entidad',
         '#required' => TRUE
     );
@@ -534,190 +532,12 @@ function govi_institutional_header_form () {
     $form['info_basica_entidad']['nombre'] = array(
         '#type' => 'textfield',
         '#title' => 'Nombre de la entidad',
+		  '#default_value' => variable_get('site_name', 'Drupal'),
+		   '#disabled' => TRUE,
         '#required' => FALSE,
-        '#description' => 'Definir nombre y logo de Entidad hará que la presentación del encabezado institucional varíe para este tipo de implementación y se diferencie con respecto a la implementacion de un sitio Cabeza de Sector'
+        '#description' => 'Definir nombre de la Entidad hará que la presentación del encabezado institucional varíe para este tipo de implementación y se diferencie con respecto a la implementacion de un sitio Cabeza de Sector'
     );
 
-    $form['info_basica_entidad']['logo'] = array(
-        '#type' => 'managed_file',
-        '#title' => 'Logo entidad',
-        '#description' => 'La imagen subida será mostrada en el encabezado del sitio junto al logo de la Administración Distrital <br/> <b>Tipos de archivos permitidos:</b> gif, png, jpg, jpeg <br/> <b>Tamaño máximo:</b> 50Kb',
-        '#progress_message' => 'Cargando',
-        '#progress_indicator' => 'bar',
-        '#upload_location' => 'public://header-institucional/',
-        '#required' => FALSE,
-        '#upload_validators' => array(
-            'file_validate_extensions' => array('gif png jpg jpeg'),
-            'file_validate_size' => array(150*1024),
-            'file_validate_image_resolution' => array('110x60'),
-        ),
-    );
-
-    $form['info_redes_entidad'] = array(
-        '#type' => 'fieldset',
-        '#title' => 'Información de redes sociales',
-        '#collapsible' => TRUE,
-        '#collapsed' => TRUE
-    );
-
-    $form['info_redes_entidad']['redes_sociales'] = array(
-        '#type' => 'vertical_tabs',
-    );
-
-    $form['info_redes_entidad']['facebook_group'] = array(
-        '#type' => 'fieldset',
-        '#title' => 'Facebook',
-        '#collapsible' => TRUE,
-        '#group' => 'redes_sociales',
-    );
-
-    $form['info_redes_entidad']['facebook_group']['facebook_enable'] = array (
-        '#type' => 'radios',
-        '#title' => 'Habilitar icono?',
-        '#default_value' => 1,
-        '#options' => array(
-            0 => t('no'),
-            1 => t('yes'),
-        ),
-        '#description' => 'Habilia o deshabilita el  ícono de esta red social en el header institucional'
-    );
-
-    $form['info_redes_entidad']['facebook_group']['facebook_icon'] = array(
-        '#type' => 'managed_file',
-        '#title' => 'Icono Facebook',
-        '#description' => 'La imagen subida será mostrada en el bloque de redes sociales dentro del encabezado del sitio <br/> <b>Tipos de archivos permitidos:</b> gif, png, jpg, jpeg <br/> <b>Tamaño máximo:</b> 50Kb',
-        '#upload_location' => 'public://header-institucional/',
-        '#progress_indicator' => 'bar',
-        '#progress_message' => 'Cargando',
-        '#upload_validators' => array(
-            'file_validate_extensions' => array('gif png jpg jpeg'),
-            'file_validate_size' => array(150*1024),
-            'file_validate_image_resolution' => array('30x30'),
-        ),
-    );
-
-    $form['info_redes_entidad']['facebook_group']['facebook_account'] = array(
-        '#type' => 'textfield',
-        '#title' => 'Nombre de la cuenta de Facebook',
-        '#description' => 'ingresa el nombre del perfil de facebook, nosotros construimos la url por ti',
-        '#default_value' => 'AlcaldiaDeBogota'
-    );
-
-    $form['info_redes_entidad']['facebook_group']['facebook_target'] = array(
-        '#type' => 'select',
-        '#title' => 'Seleccione el target del enlace',
-        '#options' => array(
-            '_blank' => '_blank',
-            '_self' => '_self',
-            '_parent' => '_parent',
-            '_top' => '_top',
-        ),
-        '#default_value' => '_blank',
-    );
-
-    $form['info_redes_entidad']['twitter_group'] = array(
-        '#type' => 'fieldset',
-        '#title' => 'Twitter',
-        '#collapsible' => TRUE,
-        '#collapsed' => TRUE,
-        '#group' => 'redes_sociales',
-    );
-
-    $form['info_redes_entidad']['twitter_group']['twitter_enable'] = array (
-        '#type' => 'radios',
-        '#title' => 'Habilitar icono?',
-        '#default_value' => 1,
-        '#options' => array(
-            0 => t('no'),
-            1 => t('yes'),
-        ),
-        '#description' => 'Habilia o deshabilita el  ícono de esta red social en el header institucional'
-    );
-
-    $form['info_redes_entidad']['twitter_group']['twitter_icon'] = array(
-        '#type' => 'managed_file',
-        '#title' => 'Icono Twitter',
-        '#description' => 'La imagen subida será mostrada en el bloque de redes sociales dentro del encabezado del sitio <br/> <b>Tipos de archivos permitidos:</b> gif, png, jpg, jpeg <br/> <b>Tamaño máximo:</b> 50Kb',
-        '#upload_location' => 'public://header-institucional/',
-        '#progress_indicator' => 'bar',
-        '#progress_message' => 'Cargando',
-        '#upload_validators' => array(
-            'file_validate_extensions' => array('gif png jpg jpeg'),
-            'file_validate_size' => array(150*1024),
-            'file_validate_image_resolution' => array('30x30'),
-        ),
-    );
-
-    $form['info_redes_entidad']['twitter_group']['twitter_account'] = array(
-        '#type' => 'textfield',
-        '#title' => 'Nombre de la cuenta de Twitter',
-        '#description' => 'ingresa el nombre del perfil de twitter, nosotros construimos la url por ti',
-        '#default_value' => 'bogota_dc'
-    );
-
-    $form['info_redes_entidad']['twitter_group']['twitter_target'] = array(
-        '#type' => 'select',
-        '#title' => 'Seleccione el target del enlace',
-        '#options' => array(
-            '_blank' => '_blank',
-            '_self' => '_self',
-            '_parent' => '_parent',
-            '_top' => '_top',
-        ),
-        '#default_value' => '_blank',
-    );
-
-    $form['info_redes_entidad']['youtube_group'] = array(
-        '#type' => 'fieldset',
-        '#title' => 'Youtube',
-        '#collapsible' => TRUE,
-        '#group' => 'redes_sociales',
-    );
-
-    $form['info_redes_entidad']['youtube_group']['youtube_enable'] = array (
-        '#type' => 'radios',
-        '#title' => 'Habilitar icono?',
-        '#default_value' => 1,
-        '#options' => array(
-            0 => t('no'),
-            1 => t('yes'),
-        ),
-        '#description' => 'Habilia o deshabilita el  ícono de esta red social en el header institucional'
-    );
-
-
-    $form['info_redes_entidad']['youtube_group']['youtube_icon'] = array(
-        '#type' => 'managed_file',
-        '#title' => 'Icono Youtube',
-        '#description' => 'La imagen subida será mostrada en el bloque de redes sociales dentro del encabezado del sitio <br/> <b>Tipos de archivos permitidos:</b> gif, png, jpg, jpeg <br/> <b>Tamaño máximo:</b> 50Kb',
-        '#upload_location' => 'public://header-institucional/',
-        '#progress_indicator' => 'bar',
-        '#progress_message' => 'Cargando',
-        '#upload_validators' => array(
-            'file_validate_extensions' => array('gif png jpg jpeg'),
-            'file_validate_size' => array(150*1024),
-            'file_validate_image_resolution' => array('30x30'),
-        ),
-    );
-
-    $form['info_redes_entidad']['youtube_group']['youtube_account'] = array(
-        '#type' => 'textfield',
-        '#title' => 'Nombre de la cuenta de Youtube',
-        '#description' => 'ingresa el nombre del perfil de twitter, nosotros construimos la url por ti',
-        '#default_value' => ''
-    );
-
-    $form['info_redes_entidad']['youtube_group']['youtube_target'] = array(
-        '#type' => 'select',
-        '#title' => 'Seleccione el target del enlace',
-        '#options' => array(
-            '_blank' => '_blank',
-            '_self' => '_self',
-            '_parent' => '_parent',
-            '_top' => '_top',
-        ),
-        '#default_value' => '_blank',
-    );
 
     $form['submit'] = array(
         '#type' => 'submit',
@@ -728,75 +548,9 @@ function govi_institutional_header_form () {
 }
 
 function govi_institutional_header_form_submit ($form, &$form_state) {
-
     // Nuevas variables persistentes
     variable_set('header_sector', $form_state['complete form']['info_basica_entidad']['sector']['#options'][$form_state['values']['sector']]);
     variable_set('header_entidad', $form_state['values']['nombre']);
-    // Variables modulo custom_widgtets
-    if ($form_state['values']['facebook_enable']) {
-        variable_set('easy_social_facebook_icon_account', $form_state['values']['facebook_account']);
-        variable_set('easy_social_facebook_icon_target', $form_state['values']['facebook_target']);
-    }
-
-    if ($form_state['values']['twitter_enable']) {
-        variable_set('easy_social_twitter_icon_account', $form_state['values']['twitter_account']);
-        variable_set('easy_social_twitter_icon_target', $form_state['values']['twitter_target']);
-    }
-
-    if ($form_state['values']['youtube_enable']) {
-        variable_set('easy_social_youtube_icon_account', $form_state['values']['youtube_account']);
-        variable_set('easy_social_youtube_icon_target', $form_state['values']['youtube_target']);
-    }
-
-    $easy_social_global_widgets = array(
-        'facebook_icon' => $form_state['values']['facebook_enable'] ? 'facebook_icon' : '',
-        'twitter_icon' => $form_state['values']['twitter_enable'] ? 'twitter_icon': '',
-        'youtube_icon' => $form_state['values']['youtube_enable'] ? 'youtube_icon' : '',
-    );
-    variable_set('easy_social_global_widgets', $easy_social_global_widgets);
-
-    $files = array(
-        'logo', 'facebook_icon', 'twitter_icon', 'youtube_icon'
-    );
-
-    //Almacena permanentemente los archivos de imágen subidos por el formulario
-    foreach ($files as $file) {
-
-        if (empty($form_state['values'][$file])) {
-
-            $directorio = 'public://header-institucional/';
-
-            file_prepare_directory($directorio, FILE_CREATE_DIRECTORY);
-
-            if (preg_match('/icon/', $file) === 1) {
-                $filename = '30x30.png';
-                $uri = $directorio.$filename;
-                $image = system_retrieve_file('http://ipsumimage.appspot.com/'.$filename, $uri, TRUE);
-
-                variable_set('easy_social_'.$file.'_image',$image->fid);
-            } elseif (preg_match('/logo/', $file) === 1) {
-                $filename = '107x60.png';
-                $uri = $directorio.$filename;
-                $image = system_retrieve_file('http://ipsumimage.appspot.com/'.$filename, $uri, TRUE);
-
-                variable_set('logo_entidad',$image->fid);
-            }
-        } else {
-
-            $image = file_load($form_state['values'][$file]);
-            if(!empty($image)) {
-                $image->status = FILE_STATUS_PERMANENT;
-            }
-
-            file_save($image);
-
-            if (preg_match('/icon/', $file) === 1) {
-                variable_set('easy_social_'.$file.'_image', $form_state['values'][$file]);
-            } elseif (preg_match('/logo/', $file) === 1) {
-                variable_set('logo_entidad', $form_state['values']['logo']);
-            }
-        }
-    }
 }
 
 function govi_install_finished(&$install_state) {
@@ -911,7 +665,7 @@ function govi_install() {
   filter_format_save($full_html_format);
 
   // Cambia el peso al módulo content
-   db_update('system')
+      db_update('system')
     ->fields(array('weight' => -1))
     ->condition('name', 'content', '=')
     ->execute();

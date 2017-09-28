@@ -53,7 +53,7 @@
     
     <footer id="pie" class="pure-g">
 	<div class="pure-u-1">
-	    Pie
+	   
 	</div>
     </footer>
     </div>
