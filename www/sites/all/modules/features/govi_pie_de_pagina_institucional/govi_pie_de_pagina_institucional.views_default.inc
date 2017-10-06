@@ -11,363 +11,18 @@ function govi_pie_de_pagina_institucional_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'enlaces_institucionales_pie_1';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Enlaces institucionales pie de pagina 1';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'ALCALDÍA MAYOR DE BOGOTÁ';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Enlace */
-  $handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
-  $handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    13 => '13',
-  );
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['block_description'] = 'ALCALDÍA MAYOR DE BOGOTÁ';
-  $translatables['enlaces_institucionales_pie_1'] = array(
-    t('Master'),
-    t('ALCALDÍA MAYOR DE BOGOTÁ'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Block'),
-  );
-  $export['enlaces_institucionales_pie_1'] = $view;
-
-  $view = new view();
-  $view->name = 'enlaces_institucionales_pie_de_pagina_2';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Enlaces institucionales pie de pagina 2';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'ENTIDADES DE CONTROL ';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Enlace */
-  $handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
-  $handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pie_enlace']['empty'] = 'Proximamente';
-  $handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    14 => '14',
-  );
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['block_description'] = 'ENTIDADES DE CONTROL';
-  $translatables['enlaces_institucionales_pie_de_pagina_2'] = array(
-    t('Master'),
-    t('ENTIDADES DE CONTROL '),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Proximamente'),
-    t('Block'),
-    t('ENTIDADES DE CONTROL'),
-  );
-  $export['enlaces_institucionales_pie_de_pagina_2'] = $view;
-
-  $view = new view();
-  $view->name = 'enlaces_institucionales_pie_de_pagina_3';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Enlaces institucionales pie de pagina 3';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Enlaces obligatorios';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Enlace */
-  $handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
-  $handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    15 => '15',
-  );
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
-  /* Filter criterion: Content: Enlace (field_pie_enlace:title) */
-  $handler->display->display_options['filters']['field_pie_enlace_title']['id'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['field'] = 'field_pie_enlace_title';
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'VÍNCULOS DE INTERÉS';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    15 => '15',
-  );
-  $handler->display->display_options['filters']['tid']['group'] = 1;
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
-  /* Filter criterion: Content: Enlace (field_pie_enlace:title) */
-  $handler->display->display_options['filters']['field_pie_enlace_title']['id'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['field'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['operator'] = 'not';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['value'] = 'Términos';
-  /* Filter criterion: Content: Enlace (field_pie_enlace:title) */
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['id'] = 'field_pie_enlace_title_1';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['field'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['operator'] = 'not';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['value'] = 'Políticas';
-  $handler->display->display_options['block_description'] = 'VÍNCULOS DE INTERÉS';
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block_1');
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    15 => '15',
-  );
-  $handler->display->display_options['filters']['tid']['group'] = 1;
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
-  /* Filter criterion: Content: Enlace (field_pie_enlace:title) */
-  $handler->display->display_options['filters']['field_pie_enlace_title']['id'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['field'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['operator'] = 'contains';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['value'] = 'Términos';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['group'] = 1;
-  /* Filter criterion: Content: Enlace (field_pie_enlace:title) */
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['id'] = 'field_pie_enlace_title_1';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['field'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['operator'] = 'contains';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['value'] = 'Políticas';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['group'] = 1;
-  $translatables['enlaces_institucionales_pie_de_pagina_3'] = array(
-    t('Master'),
-    t('Enlaces obligatorios'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Block'),
-    t('VÍNCULOS DE INTERÉS'),
-  );
-  $export['enlaces_institucionales_pie_de_pagina_3'] = $view;
-
-  $view = new view();
-  $view->name = 'enlaces_institucionales_pie_de_pagina_4';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Enlaces institucionales pie de pagina 4';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'GOBIERNO EN LÍNEA ';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Enlace */
-  $handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
-  $handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    16 => '16',
-  );
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['block_description'] = 'GOBIERNO EN LÍNEA';
-  $translatables['enlaces_institucionales_pie_de_pagina_4'] = array(
-    t('Master'),
-    t('GOBIERNO EN LÍNEA '),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Block'),
-    t('GOBIERNO EN LÍNEA'),
-  );
-  $export['enlaces_institucionales_pie_de_pagina_4'] = $view;
-
-  $view = new view();
-  $view->name = 'informacion_entidad';
+  $view->name = 'informacion_pie_de_pagina';
   $view->description = 'Presenta la información de contacto, enlaces relacionados y ubicacion y horarios en el pie de pagina';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Información Entidad';
+  $view->human_name = 'Información pie de página';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Información';
+  $handler->display->display_options['title'] = 'Sede principal';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -376,47 +31,62 @@ function govi_pie_de_pagina_institucional_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'title',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Contiene la información relacionada con los datos básicos de la entidad (sujeto obligado), en donde se especifican los canales de comunicación para la ciudadanía, usuarios y grupos de interés disponibles. Esta información también puede ser encontrada en el pie de página del sitio web de la entidad';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
   /* Field: Content: Dirección */
-  $handler->display->display_options['fields']['field_entidad_direccion']['id'] = 'field_entidad_direccion';
-  $handler->display->display_options['fields']['field_entidad_direccion']['table'] = 'field_data_field_entidad_direccion';
-  $handler->display->display_options['fields']['field_entidad_direccion']['field'] = 'field_entidad_direccion';
-  $handler->display->display_options['fields']['field_entidad_direccion']['label'] = '';
-  $handler->display->display_options['fields']['field_entidad_direccion']['element_label_colon'] = FALSE;
-  /* Field: Content: Teléfono */
-  $handler->display->display_options['fields']['field_entidad_telefono']['id'] = 'field_entidad_telefono';
-  $handler->display->display_options['fields']['field_entidad_telefono']['table'] = 'field_data_field_entidad_telefono';
-  $handler->display->display_options['fields']['field_entidad_telefono']['field'] = 'field_entidad_telefono';
+  $handler->display->display_options['fields']['field_atencion_direccion']['id'] = 'field_atencion_direccion';
+  $handler->display->display_options['fields']['field_atencion_direccion']['table'] = 'field_data_field_atencion_direccion';
+  $handler->display->display_options['fields']['field_atencion_direccion']['field'] = 'field_atencion_direccion';
+  $handler->display->display_options['fields']['field_atencion_direccion']['type'] = 'text_plain';
+  /* Field: Content: Teléfonos */
+  $handler->display->display_options['fields']['field_atencion_telefono']['id'] = 'field_atencion_telefono';
+  $handler->display->display_options['fields']['field_atencion_telefono']['table'] = 'field_data_field_atencion_telefono';
+  $handler->display->display_options['fields']['field_atencion_telefono']['field'] = 'field_atencion_telefono';
+  $handler->display->display_options['fields']['field_atencion_telefono']['label'] = 'Teléfono';
+  $handler->display->display_options['fields']['field_atencion_telefono']['delta_offset'] = '0';
   /* Field: Content: Fax */
-  $handler->display->display_options['fields']['field_entidad_fax']['id'] = 'field_entidad_fax';
-  $handler->display->display_options['fields']['field_entidad_fax']['table'] = 'field_data_field_entidad_fax';
-  $handler->display->display_options['fields']['field_entidad_fax']['field'] = 'field_entidad_fax';
+  $handler->display->display_options['fields']['field_atencion_fax']['id'] = 'field_atencion_fax';
+  $handler->display->display_options['fields']['field_atencion_fax']['table'] = 'field_data_field_atencion_fax';
+  $handler->display->display_options['fields']['field_atencion_fax']['field'] = 'field_atencion_fax';
+  $handler->display->display_options['fields']['field_atencion_fax']['delta_offset'] = '0';
   /* Field: Content: Linea Gratuita */
-  $handler->display->display_options['fields']['field_entidad_linea_gratuita']['id'] = 'field_entidad_linea_gratuita';
-  $handler->display->display_options['fields']['field_entidad_linea_gratuita']['table'] = 'field_data_field_entidad_linea_gratuita';
-  $handler->display->display_options['fields']['field_entidad_linea_gratuita']['field'] = 'field_entidad_linea_gratuita';
+  $handler->display->display_options['fields']['field_atencion_linea_gratuita']['id'] = 'field_atencion_linea_gratuita';
+  $handler->display->display_options['fields']['field_atencion_linea_gratuita']['table'] = 'field_data_field_atencion_linea_gratuita';
+  $handler->display->display_options['fields']['field_atencion_linea_gratuita']['field'] = 'field_atencion_linea_gratuita';
+  $handler->display->display_options['fields']['field_atencion_linea_gratuita']['delta_offset'] = '0';
+  /* Field: Content: Correo electrónico institucional */
+  $handler->display->display_options['fields']['field_atencion_correo']['id'] = 'field_atencion_correo';
+  $handler->display->display_options['fields']['field_atencion_correo']['table'] = 'field_data_field_atencion_correo';
+  $handler->display->display_options['fields']['field_atencion_correo']['field'] = 'field_atencion_correo';
+  $handler->display->display_options['fields']['field_atencion_correo']['click_sort_column'] = 'url';
+  /* Field: Content: Correo electrónico notificaciones judiciales */
+  $handler->display->display_options['fields']['field_correo_judicial']['id'] = 'field_correo_judicial';
+  $handler->display->display_options['fields']['field_correo_judicial']['table'] = 'field_data_field_correo_judicial';
+  $handler->display->display_options['fields']['field_correo_judicial']['field'] = 'field_correo_judicial';
   /* Field: Content: Horario de Atención */
-  $handler->display->display_options['fields']['field_entidad_horario']['id'] = 'field_entidad_horario';
-  $handler->display->display_options['fields']['field_entidad_horario']['table'] = 'field_data_field_entidad_horario';
-  $handler->display->display_options['fields']['field_entidad_horario']['field'] = 'field_entidad_horario';
-  /* Field: Content: Correo */
-  $handler->display->display_options['fields']['field_entidad_correo']['id'] = 'field_entidad_correo';
-  $handler->display->display_options['fields']['field_entidad_correo']['table'] = 'field_data_field_entidad_correo';
-  $handler->display->display_options['fields']['field_entidad_correo']['field'] = 'field_entidad_correo';
-  $handler->display->display_options['fields']['field_entidad_correo']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_entidad_correo']['type'] = 'link_url';
+  $handler->display->display_options['fields']['field_atencion_horario']['id'] = 'field_atencion_horario';
+  $handler->display->display_options['fields']['field_atencion_horario']['table'] = 'field_data_field_atencion_horario';
+  $handler->display->display_options['fields']['field_atencion_horario']['field'] = 'field_atencion_horario';
   /* Field: Content: Ciudad */
-  $handler->display->display_options['fields']['field_entidad_ciudad']['id'] = 'field_entidad_ciudad';
-  $handler->display->display_options['fields']['field_entidad_ciudad']['table'] = 'field_data_field_entidad_ciudad';
-  $handler->display->display_options['fields']['field_entidad_ciudad']['field'] = 'field_entidad_ciudad';
-  $handler->display->display_options['fields']['field_entidad_ciudad']['label'] = '';
-  $handler->display->display_options['fields']['field_entidad_ciudad']['element_label_colon'] = FALSE;
-  /* Field: Content: Apps */
-  $handler->display->display_options['fields']['field_entidad_apps']['id'] = 'field_entidad_apps';
-  $handler->display->display_options['fields']['field_entidad_apps']['table'] = 'field_data_field_entidad_apps';
-  $handler->display->display_options['fields']['field_entidad_apps']['field'] = 'field_entidad_apps';
-  $handler->display->display_options['fields']['field_entidad_apps']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_entidad_apps']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_atencion_ciudad']['id'] = 'field_atencion_ciudad';
+  $handler->display->display_options['fields']['field_atencion_ciudad']['table'] = 'field_data_field_atencion_ciudad';
+  $handler->display->display_options['fields']['field_atencion_ciudad']['field'] = 'field_atencion_ciudad';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -434,106 +104,40 @@ function govi_pie_de_pagina_institucional_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'pie_informacion_entidad' => 'pie_informacion_entidad',
+    'mecanismos_atencion_ciudadano' => 'mecanismos_atencion_ciudadano',
   );
+  /* Filter criterion: Content: Sticky */
+  $handler->display->display_options['filters']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['filters']['sticky']['table'] = 'node';
+  $handler->display->display_options['filters']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['filters']['sticky']['value'] = '1';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: Pie de página */
+  $handler = $view->new_display('block', 'Pie de página', 'block');
+  $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['block_description'] = 'Pie Información de la Entidad';
-  $translatables['informacion_entidad'] = array(
+  $translatables['informacion_pie_de_pagina'] = array(
     t('Master'),
-    t('Información'),
+    t('Sede principal'),
     t('more'),
     t('Apply'),
     t('Reset'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Contiene la información relacionada con los datos básicos de la entidad (sujeto obligado), en donde se especifican los canales de comunicación para la ciudadanía, usuarios y grupos de interés disponibles. Esta información también puede ser encontrada en el pie de página del sitio web de la entidad'),
+    t('Dirección'),
     t('Teléfono'),
     t('Fax'),
     t('Linea Gratuita'),
+    t('Correo electrónico institucional'),
+    t('Correo electrónico notificaciones judiciales'),
     t('Horario de Atención'),
-    t('Correo'),
-    t('Apps'),
-    t('Block'),
+    t('Ciudad'),
+    t('Pie de página'),
     t('Pie Información de la Entidad'),
   );
-  $export['informacion_entidad'] = $view;
-
-  $view = new view();
-  $view->name = 'logo_escudo_colombia_pie';
-  $view->description = 'Presenta el logo de la República de Colombia gestionado desde el tipo de contenido imagen simple';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Logo Escudo Colombia Pie';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Logo República de Colombia Default';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Imagen */
-  $handler->display->display_options['fields']['field_imagen']['id'] = 'field_imagen';
-  $handler->display->display_options['fields']['field_imagen']['table'] = 'field_data_field_imagen';
-  $handler->display->display_options['fields']['field_imagen']['field'] = 'field_imagen';
-  $handler->display->display_options['fields']['field_imagen']['label'] = '';
-  $handler->display->display_options['fields']['field_imagen']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_imagen']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_imagen']['settings'] = array(
-    'image_style' => 'logo_header_escudo',
-    'image_link' => '',
-  );
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'imagen_simple' => 'imagen_simple',
-  );
-  $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Title */
-  $handler->display->display_options['filters']['title']['id'] = 'title';
-  $handler->display->display_options['filters']['title']['table'] = 'node';
-  $handler->display->display_options['filters']['title']['field'] = 'title';
-  $handler->display->display_options['filters']['title']['value'] = 'Logo República de Colombia';
-  $handler->display->display_options['filters']['title']['group'] = 1;
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $translatables['logo_escudo_colombia_pie'] = array(
-    t('Master'),
-    t('Logo República de Colombia Default'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Block'),
-  );
-  $export['logo_escudo_colombia_pie'] = $view;
+  $export['informacion_pie_de_pagina'] = $view;
 
   return $export;
 }
