@@ -1395,15 +1395,17 @@ footer .pie-b {
 #block-views-informacion-entidad-block h2 {
     display: none;
 }
-.view-informacion-entidad .views-field span {
+.view-informacion-entidad .views-field .views-label {
     display: inline-block;
+    color: rgba(0,62,101,1);
+    font-family: 'robotoregular';
 }
 
 .view-informacion-entidad .views-field div.field-content {
     display: inline-block;
 }
-#pie .view-informacion-entidad {
- 
+#pie .view-informacion-entidad .views-field span.views-label{
+    color: #fff;
 }
 
 .pie-b-2 .container{
