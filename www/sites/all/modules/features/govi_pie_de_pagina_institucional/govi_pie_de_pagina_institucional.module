@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Govi Pie de Página Institucional feature.
- */
-
-include_once 'govi_pie_de_pagina_institucional.features.inc';

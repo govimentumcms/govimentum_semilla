@@ -17,6 +17,7 @@ $nids = taxonomy_select_nodes($tid);
 		    $field = $node->field_legal_descripcion['und'][0]['value'];
 		    $teaser = substr($field, 0, 150).' ...';
 		    $link = $base_url . '/node/' . $nid;
+			
 		    break;
 	    case 'noticia':
 		    $field = $node->field_copete['und'][0]['value'];
@@ -44,6 +45,11 @@ $nids = taxonomy_select_nodes($tid);
 		    $teaser = substr($field, 0, 150).' ...';
 		    $link = $base_url . '/node/' . $nid;
 			break;
+		
+		case 'enlaces_pie_de_pagina':
+		
+		    $link = $base_url . '/node/' . $nid;
+			break;
     }
     ?>
 	<div class="pure-g">
@@ -51,7 +57,7 @@ $nids = taxonomy_select_nodes($tid);
 		<h3><a href="<?php print $link; ?>" title="<?php print $title; ?>"><?php print $title; ?></a></h3>
 	    </div>
 	    <div class="pure-u-4-5">
-		<p><?php print $teaser; ?></p>
+		
 	    </div>
 	    <div class="pure-u-1-5 centrar">
 		<a href="<?php print $link; ?>" class="pure-button" title="Ir a <?php print $title; ?>">Ver</a>

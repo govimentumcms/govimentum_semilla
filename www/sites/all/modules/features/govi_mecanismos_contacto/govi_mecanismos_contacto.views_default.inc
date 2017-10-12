@@ -9,350 +9,352 @@
  */
 function govi_mecanismos_contacto_views_default_views() {
   $export = array();
+$view = new view();
+$view->name = 'enlaces_institucionales_pie_1';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'Enlaces institucionales pie de pagina 1';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
-  $view = new view();
-  $view->name = 'enlaces_institucionales_pie_1';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Enlaces institucionales pie de pagina 1';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'ALCALDÍA MAYOR DE BOGOTÁ';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['style_plugin'] = 'list';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Field: Content: Enlace */
+$handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
+$handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Has taxonomy term */
+$handler->display->display_options['filters']['tid']['id'] = 'tid';
+$handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+$handler->display->display_options['filters']['tid']['field'] = 'tid';
+$handler->display->display_options['filters']['tid']['value'] = array(
+  10 => '10',
+);
+$handler->display->display_options['filters']['tid']['type'] = 'select';
+$handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
 
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'ALCALDÍA MAYOR DE BOGOTÁ';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Enlace */
-  $handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
-  $handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    13 => '13',
-  );
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['block_description'] = 'ALCALDÍA MAYOR DE BOGOTÁ';
-  $translatables['enlaces_institucionales_pie_1'] = array(
-    t('Master'),
-    t('ALCALDÍA MAYOR DE BOGOTÁ'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Block'),
-  );
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+$handler->display->display_options['block_description'] = 'ALCALDÍA MAYOR DE BOGOTÁ';
+$translatables['enlaces_institucionales_pie_1'] = array(
+  t('Master'),
+  t('ALCALDÍA MAYOR DE BOGOTÁ'),
+  t('more'),
+  t('Apply'),
+  t('Reset'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Block'),
+);
   $export['enlaces_institucionales_pie_1'] = $view;
 
-  $view = new view();
-  $view->name = 'enlaces_institucionales_pie_de_pagina_2';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Enlaces institucionales pie de pagina 2';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+ $view = new view();
+$view->name = 'enlaces_institucionales_pie_de_pagina_2';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'Enlaces institucionales pie de pagina 2';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'ENTIDADES DE CONTROL ';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Enlace */
-  $handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
-  $handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pie_enlace']['empty'] = 'Proximamente';
-  $handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    14 => '14',
-  );
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'ENTIDADES DE CONTROL ';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'list';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Field: Content: Enlace */
+$handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
+$handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_pie_enlace']['empty'] = 'Proximamente';
+$handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Has taxonomy term */
+$handler->display->display_options['filters']['tid']['id'] = 'tid';
+$handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+$handler->display->display_options['filters']['tid']['field'] = 'tid';
+$handler->display->display_options['filters']['tid']['value'] = array(
+  11 => '11',
+);
+$handler->display->display_options['filters']['tid']['type'] = 'select';
+$handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['block_description'] = 'ENTIDADES DE CONTROL';
-  $translatables['enlaces_institucionales_pie_de_pagina_2'] = array(
-    t('Master'),
-    t('ENTIDADES DE CONTROL '),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Proximamente'),
-    t('Block'),
-    t('ENTIDADES DE CONTROL'),
-  );
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+$handler->display->display_options['block_description'] = 'ENTIDADES DE CONTROL';
+$translatables['enlaces_institucionales_pie_de_pagina_2'] = array(
+  t('Master'),
+  t('ENTIDADES DE CONTROL '),
+  t('more'),
+  t('Apply'),
+  t('Reset'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Proximamente'),
+  t('Block'),
+  t('ENTIDADES DE CONTROL'),
+);
   $export['enlaces_institucionales_pie_de_pagina_2'] = $view;
 
-  $view = new view();
-  $view->name = 'enlaces_institucionales_pie_de_pagina_3';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Enlaces institucionales pie de pagina 3';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+ $view = new view();
+$view->name = 'enlaces_institucionales_pie_de_pagina_3';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'Enlaces institucionales pie de pagina 3';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Enlaces obligatorios';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Enlace */
-  $handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
-  $handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    15 => '15',
-  );
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
-  /* Filter criterion: Content: Enlace (field_pie_enlace:title) */
-  $handler->display->display_options['filters']['field_pie_enlace_title']['id'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['field'] = 'field_pie_enlace_title';
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Enlaces obligatorios';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['style_plugin'] = 'list';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Field: Content: Enlace */
+$handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
+$handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Has taxonomy term */
+$handler->display->display_options['filters']['tid']['id'] = 'tid';
+$handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+$handler->display->display_options['filters']['tid']['field'] = 'tid';
+$handler->display->display_options['filters']['tid']['value'] = array(
+  15 => '15',
+);
+$handler->display->display_options['filters']['tid']['type'] = 'select';
+$handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
+/* Filter criterion: Content: Enlace (field_pie_enlace:title) */
+$handler->display->display_options['filters']['field_pie_enlace_title']['id'] = 'field_pie_enlace_title';
+$handler->display->display_options['filters']['field_pie_enlace_title']['table'] = 'field_data_field_pie_enlace';
+$handler->display->display_options['filters']['field_pie_enlace_title']['field'] = 'field_pie_enlace_title';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'VÍNCULOS DE INTERÉS';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    15 => '15',
-  );
-  $handler->display->display_options['filters']['tid']['group'] = 1;
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
-  /* Filter criterion: Content: Enlace (field_pie_enlace:title) */
-  $handler->display->display_options['filters']['field_pie_enlace_title']['id'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['field'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['operator'] = 'not';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['value'] = 'Términos';
-  /* Filter criterion: Content: Enlace (field_pie_enlace:title) */
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['id'] = 'field_pie_enlace_title_1';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['field'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['operator'] = 'not';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['value'] = 'Políticas';
-  $handler->display->display_options['block_description'] = 'VÍNCULOS DE INTERÉS';
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'VÍNCULOS DE INTERÉS';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Has taxonomy term */
+$handler->display->display_options['filters']['tid']['id'] = 'tid';
+$handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+$handler->display->display_options['filters']['tid']['field'] = 'tid';
+$handler->display->display_options['filters']['tid']['value'] = array(
+  12 => '12',
+);
+$handler->display->display_options['filters']['tid']['group'] = 1;
+$handler->display->display_options['filters']['tid']['type'] = 'select';
+$handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
+/* Filter criterion: Content: Enlace (field_pie_enlace:title) */
+$handler->display->display_options['filters']['field_pie_enlace_title']['id'] = 'field_pie_enlace_title';
+$handler->display->display_options['filters']['field_pie_enlace_title']['table'] = 'field_data_field_pie_enlace';
+$handler->display->display_options['filters']['field_pie_enlace_title']['field'] = 'field_pie_enlace_title';
+$handler->display->display_options['filters']['field_pie_enlace_title']['operator'] = 'not';
+$handler->display->display_options['filters']['field_pie_enlace_title']['value'] = 'Términos';
+/* Filter criterion: Content: Enlace (field_pie_enlace:title) */
+$handler->display->display_options['filters']['field_pie_enlace_title_1']['id'] = 'field_pie_enlace_title_1';
+$handler->display->display_options['filters']['field_pie_enlace_title_1']['table'] = 'field_data_field_pie_enlace';
+$handler->display->display_options['filters']['field_pie_enlace_title_1']['field'] = 'field_pie_enlace_title';
+$handler->display->display_options['filters']['field_pie_enlace_title_1']['operator'] = 'not';
+$handler->display->display_options['filters']['field_pie_enlace_title_1']['value'] = 'Políticas';
+$handler->display->display_options['block_description'] = 'VÍNCULOS DE INTERÉS';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block_1');
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    15 => '15',
-  );
-  $handler->display->display_options['filters']['tid']['group'] = 1;
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
-  /* Filter criterion: Content: Enlace (field_pie_enlace:title) */
-  $handler->display->display_options['filters']['field_pie_enlace_title']['id'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['field'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['operator'] = 'contains';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['value'] = 'Términos';
-  $handler->display->display_options['filters']['field_pie_enlace_title']['group'] = 1;
-  /* Filter criterion: Content: Enlace (field_pie_enlace:title) */
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['id'] = 'field_pie_enlace_title_1';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['field'] = 'field_pie_enlace_title';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['operator'] = 'contains';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['value'] = 'Políticas';
-  $handler->display->display_options['filters']['field_pie_enlace_title_1']['group'] = 1;
-  $translatables['enlaces_institucionales_pie_de_pagina_3'] = array(
-    t('Master'),
-    t('Enlaces obligatorios'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Block'),
-    t('VÍNCULOS DE INTERÉS'),
-  );
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block_1');
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Has taxonomy term */
+$handler->display->display_options['filters']['tid']['id'] = 'tid';
+$handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+$handler->display->display_options['filters']['tid']['field'] = 'tid';
+$handler->display->display_options['filters']['tid']['value'] = array(
+  15 => '15',
+);
+$handler->display->display_options['filters']['tid']['group'] = 1;
+$handler->display->display_options['filters']['tid']['type'] = 'select';
+$handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
+/* Filter criterion: Content: Enlace (field_pie_enlace:title) */
+$handler->display->display_options['filters']['field_pie_enlace_title']['id'] = 'field_pie_enlace_title';
+$handler->display->display_options['filters']['field_pie_enlace_title']['table'] = 'field_data_field_pie_enlace';
+$handler->display->display_options['filters']['field_pie_enlace_title']['field'] = 'field_pie_enlace_title';
+$handler->display->display_options['filters']['field_pie_enlace_title']['operator'] = 'contains';
+$handler->display->display_options['filters']['field_pie_enlace_title']['value'] = 'Términos';
+$handler->display->display_options['filters']['field_pie_enlace_title']['group'] = 1;
+/* Filter criterion: Content: Enlace (field_pie_enlace:title) */
+$handler->display->display_options['filters']['field_pie_enlace_title_1']['id'] = 'field_pie_enlace_title_1';
+$handler->display->display_options['filters']['field_pie_enlace_title_1']['table'] = 'field_data_field_pie_enlace';
+$handler->display->display_options['filters']['field_pie_enlace_title_1']['field'] = 'field_pie_enlace_title';
+$handler->display->display_options['filters']['field_pie_enlace_title_1']['operator'] = 'contains';
+$handler->display->display_options['filters']['field_pie_enlace_title_1']['value'] = 'Políticas';
+$handler->display->display_options['filters']['field_pie_enlace_title_1']['group'] = 1;
+$translatables['enlaces_institucionales_pie_de_pagina_3'] = array(
+  t('Master'),
+  t('Enlaces obligatorios'),
+  t('more'),
+  t('Apply'),
+  t('Reset'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Block'),
+  t('VÍNCULOS DE INTERÉS'),
+);
+
   $export['enlaces_institucionales_pie_de_pagina_3'] = $view;
 
   $view = new view();
-  $view->name = 'enlaces_institucionales_pie_de_pagina_4';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Enlaces institucionales pie de pagina 4';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+$view->name = 'enlaces_institucionales_pie_de_pagina_4';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'Enlaces institucionales pie de pagina 4';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'GOBIERNO EN LÍNEA ';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Enlace */
-  $handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
-  $handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
-  $handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = array(
-    16 => '16',
-  );
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'GOBIERNO EN LÍNEA ';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['style_plugin'] = 'list';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Field: Content: Enlace */
+$handler->display->display_options['fields']['field_pie_enlace']['id'] = 'field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['table'] = 'field_data_field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['field'] = 'field_pie_enlace';
+$handler->display->display_options['fields']['field_pie_enlace']['label'] = '';
+$handler->display->display_options['fields']['field_pie_enlace']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_pie_enlace']['click_sort_column'] = 'url';
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Has taxonomy term */
+$handler->display->display_options['filters']['tid']['id'] = 'tid';
+$handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+$handler->display->display_options['filters']['tid']['field'] = 'tid';
+$handler->display->display_options['filters']['tid']['value'] = array(
+  13 => '13',
+);
+$handler->display->display_options['filters']['tid']['type'] = 'select';
+$handler->display->display_options['filters']['tid']['vocabulary'] = 'pie_de_pagina_institucional';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['block_description'] = 'GOBIERNO EN LÍNEA';
-  $translatables['enlaces_institucionales_pie_de_pagina_4'] = array(
-    t('Master'),
-    t('GOBIERNO EN LÍNEA '),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Block'),
-    t('GOBIERNO EN LÍNEA'),
-  );
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+$handler->display->display_options['block_description'] = 'GOBIERNO EN LÍNEA';
+$translatables['enlaces_institucionales_pie_de_pagina_4'] = array(
+  t('Master'),
+  t('GOBIERNO EN LÍNEA '),
+  t('more'),
+  t('Apply'),
+  t('Reset'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Block'),
+  t('GOBIERNO EN LÍNEA'),
+);
+
+
   $export['enlaces_institucionales_pie_de_pagina_4'] = $view;
 
   $view = new view();
