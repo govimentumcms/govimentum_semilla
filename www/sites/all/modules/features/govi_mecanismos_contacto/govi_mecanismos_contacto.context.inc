@@ -27,8 +27,8 @@ function govi_mecanismos_contacto_context_default_contexts() {
     ),
     'path' => array(
       'values' => array(
-        'transparencia/mecanismos-contacto/*' => 'transparencia/mecanismos-contacto/*',
-        'transparencia/mecanismos-contacto' => 'transparencia/mecanismos-contacto',
+        'transparencia/atencion-ciudadano' => 'transparencia/atencion-ciudadano',
+        'transparencia/atencion-ciudadano/*' => 'transparencia/atencion-ciudadano/*',
       ),
     ),
   );

@@ -29,9 +29,7 @@
 			<?php if ($logo): ?>
 				<div class="pure-u-sm-1 pure-u-md-1-5 pure-u-lg-1-5 pure-u-xl-1-5">
 					<div class="logo_entidad">
-						<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-              <img src="<?php print $logo ?>" alt="<?php print $site_name?>" title="<?php print $site_name?>" id="logo" />
-            </a>
+						<img src="<?php print $logo ?>" alt="<?php print $site_name?>" title="<?php print $site_name?>" id="logo" />
 					</div>
 				</div>
             <?php endif; ?>

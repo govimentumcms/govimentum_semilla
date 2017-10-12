@@ -24,6 +24,14 @@ function govi_pie_de_pagina_institucional_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'pie_informacion_entidad' => array(
+      'name' => t('Pie información entidad'),
+      'base' => 'node_content',
+      'description' => t('Utilice este tipo de contenido para gestionar información de ubicación, contacto, servicios y horarios atención de la entidad'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
   );
   drupal_alter('node_info', $items);
   return $items;

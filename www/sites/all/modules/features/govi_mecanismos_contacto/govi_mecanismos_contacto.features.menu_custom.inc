@@ -13,12 +13,12 @@ function govi_mecanismos_contacto_menu_default_menu_custom() {
   // Exported menu: menu-menu-mecanismos-de-contacto.
   $menus['menu-menu-mecanismos-de-contacto'] = array(
     'menu_name' => 'menu-menu-mecanismos-de-contacto',
-    'title' => 'Mecanismos de Contacto',
+    'title' => 'Menu Mecanismos de Contacto',
     'description' => '',
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Mecanismos de Contacto');
+  t('Menu Mecanismos de Contacto');
 
   return $menus;
 }
