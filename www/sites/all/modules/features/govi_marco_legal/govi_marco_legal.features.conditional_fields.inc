@@ -221,10 +221,10 @@ function govi_marco_legal_conditional_fields_default_fields() {
       ),
       'selector' => '',
       'values_set' => 1,
-      'value_form' => 18,
+      'value_form' => 15,
       'value' => array(
         0 => array(
-          'tid' => 18,
+          'tid' => 15,
         ),
       ),
       'values' => array(),
@@ -296,10 +296,10 @@ function govi_marco_legal_conditional_fields_default_fields() {
       ),
       'selector' => '',
       'values_set' => 1,
-      'value_form' => 17,
+      'value_form' => 14,
       'value' => array(
         0 => array(
-          'tid' => 17,
+          'tid' => 14,
         ),
       ),
       'values' => array(),
@@ -371,10 +371,10 @@ function govi_marco_legal_conditional_fields_default_fields() {
       ),
       'selector' => '',
       'values_set' => 1,
-      'value_form' => 19,
+      'value_form' => 16,
       'value' => array(
         0 => array(
-          'tid' => 19,
+          'tid' => 16,
         ),
       ),
       'values' => array(),

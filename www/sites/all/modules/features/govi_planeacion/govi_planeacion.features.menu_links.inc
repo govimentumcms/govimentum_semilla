@@ -14,7 +14,7 @@ function govi_planeacion_menu_default_menu_links() {
   $menu_links['menu-menu-planeacion_informes-de-empalme:transparencia/planeacion/informes-empalme'] = array(
     'menu_name' => 'menu-menu-planeacion',
     'link_path' => 'transparencia/planeacion/informes-empalme',
-    'router_path' => 'transparencia/planeacion/informes-empalme',
+    'router_path' => 'transparencia',
     'link_title' => 'Informes de empalme',
     'options' => array(
       'cami' => array(
@@ -43,7 +43,7 @@ transparencia/planeacion/informes-empalme/*',
   $menu_links['menu-menu-planeacion_metas-objetivos-e-indicadores:transparencia/planeacion/metas-objetivos-indicadores'] = array(
     'menu_name' => 'menu-menu-planeacion',
     'link_path' => 'transparencia/planeacion/metas-objetivos-indicadores',
-    'router_path' => 'transparencia/planeacion/metas-objetivos-indicadores',
+    'router_path' => 'transparencia',
     'link_title' => 'Metas, objetivos e indicadores',
     'options' => array(
       'cami' => array(
@@ -74,7 +74,7 @@ transparencia/planeacion/metas-objetivos-e-indicadores/*',
   $menu_links['menu-menu-planeacion_participacin-ciudadana:transparencia/planeacion/participacion-ciudadana'] = array(
     'menu_name' => 'menu-menu-planeacion',
     'link_path' => 'transparencia/planeacion/participacion-ciudadana',
-    'router_path' => 'transparencia/planeacion/participacion-ciudadana',
+    'router_path' => 'transparencia',
     'link_title' => 'Participación ciudadana',
     'options' => array(
       'cami' => array(
@@ -105,7 +105,7 @@ transparencia/planeacion/participación-ciudadana/*',
   $menu_links['menu-menu-planeacion_planes:transparencia/planeacion/planes'] = array(
     'menu_name' => 'menu-menu-planeacion',
     'link_path' => 'transparencia/planeacion/planes',
-    'router_path' => 'transparencia/planeacion/planes',
+    'router_path' => 'transparencia',
     'link_title' => 'Planes',
     'options' => array(
       'cami' => array(
@@ -134,7 +134,7 @@ transparencia/planeacion/planes/*',
   $menu_links['menu-menu-planeacion_programas-y-proyectos:transparencia/planeacion/programas-proyectos'] = array(
     'menu_name' => 'menu-menu-planeacion',
     'link_path' => 'transparencia/planeacion/programas-proyectos',
-    'router_path' => 'transparencia/planeacion/programas-proyectos',
+    'router_path' => 'transparencia',
     'link_title' => 'Programas y Proyectos',
     'options' => array(
       'cami' => array(

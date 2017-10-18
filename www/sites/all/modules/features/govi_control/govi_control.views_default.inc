@@ -330,7 +330,7 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
-    0 => '66',
+    0 => '63',
   );
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['vocabulary'] = 'control_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/control/informes-gestion-evaluacion-auditoria';
@@ -436,6 +436,30 @@ function govi_control_views_default_views() {
   $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['table'] = 'field_data_field_contro_fecha_de_expedici_n';
   $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['field'] = 'field_contro_fecha_de_expedici_n_value';
   $handler->display->display_options['sorts']['field_contro_fecha_de_expedici_n_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'control' => 'control',
+  );
+  /* Filter criterion: Content: Clasificación (field_control_clasificacion) */
+  $handler->display->display_options['filters']['field_control_clasificacion_tid']['id'] = 'field_control_clasificacion_tid';
+  $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
+  $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
+  $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
+    0 => '64',
+  );
+  $handler->display->display_options['filters']['field_control_clasificacion_tid']['vocabulary'] = 'control_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/control/reportes-control-interno';
 
   /* Display: Planes de mejoramiento */
@@ -566,7 +590,7 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
-    0 => '68',
+    0 => '65',
   );
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['vocabulary'] = 'control_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/control/planes-mejoramiento';
@@ -698,7 +722,7 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
-    0 => '69',
+    0 => '66',
   );
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['operator_id'] = 'field_control_clasificacion_tid_op';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['label'] = 'Clasificación (field_control_clasificacion)';
@@ -835,7 +859,7 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
-    0 => '70',
+    0 => '67',
   );
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['operator_id'] = 'field_control_clasificacion_tid_op';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['label'] = 'Clasificación (field_control_clasificacion)';
@@ -972,7 +996,7 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
-    0 => '71',
+    0 => '68',
   );
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['operator_id'] = 'field_control_clasificacion_tid_op';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['label'] = 'Clasificación (field_control_clasificacion)';

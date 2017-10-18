@@ -14,7 +14,7 @@ function govi_presupuesto_menu_default_menu_links() {
   $menu_links['menu-menu-presupuesto_informes-de-ejecucin-presupuestal:transparencia/presupuesto/ejecucion-presupuestal'] = array(
     'menu_name' => 'menu-menu-presupuesto',
     'link_path' => 'transparencia/presupuesto/ejecucion-presupuestal',
-    'router_path' => 'transparencia/presupuesto/ejecucion-presupuestal',
+    'router_path' => 'transparencia',
     'link_title' => 'Informes de ejecución presupuestal',
     'options' => array(
       'cami' => array(
@@ -45,7 +45,7 @@ transparencia/presupuesto/ejecución-presupuestal/*',
   $menu_links['menu-menu-presupuesto_informes-de-estados-financieros:transparencia/presupuesto/estados-financieros'] = array(
     'menu_name' => 'menu-menu-presupuesto',
     'link_path' => 'transparencia/presupuesto/estados-financieros',
-    'router_path' => 'transparencia/presupuesto/estados-financieros',
+    'router_path' => 'transparencia',
     'link_title' => 'Informes de estados financieros',
     'options' => array(
       'cami' => array(
@@ -74,7 +74,7 @@ transparencia/presupuesto/estados-financieros/*',
   $menu_links['menu-menu-presupuesto_presupuesto-general:transparencia/presupuesto/general'] = array(
     'menu_name' => 'menu-menu-presupuesto',
     'link_path' => 'transparencia/presupuesto/general',
-    'router_path' => 'transparencia/presupuesto/general',
+    'router_path' => 'transparencia',
     'link_title' => 'Presupuesto General',
     'options' => array(
       'cami' => array(

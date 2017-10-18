@@ -99,7 +99,6 @@ function govi_mecanismos_contacto_menu_default_menu_links() {
   // Included for use with string extractors like potx.
   t('Atención al ciudadano');
   t('Localización física, sucursales o regionales');
-  t('Notificaciones Judiciales');
   t('Políticas de seguridad de la información y protección de datos pesonales');
 
   return $menu_links;

@@ -360,9 +360,10 @@ Integer a erat.'),
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['operator'] = 'not';
   $handler->display->display_options['filters']['tid']['value'] = array(
-    83 => '83',
+    77 => '77',
+    78 => '78',
+    79 => '79',
   );
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'clasificacion_documentos';
@@ -406,7 +407,7 @@ Integer a erat.'),
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
   $handler->display->display_options['filters']['tid']['value'] = array(
-    83 => '83',
+    80 => '80',
   );
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['label'] = 'Has taxonomy term';

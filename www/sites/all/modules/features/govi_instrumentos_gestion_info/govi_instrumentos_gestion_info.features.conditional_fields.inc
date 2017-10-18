@@ -219,10 +219,10 @@ function govi_instrumentos_gestion_info_conditional_fields_default_fields() {
       ),
       'selector' => '',
       'values_set' => 1,
-      'value_form' => 52,
+      'value_form' => 49,
       'value' => array(
         0 => array(
-          'tid' => 52,
+          'tid' => 49,
         ),
       ),
       'values' => array(),
@@ -292,10 +292,10 @@ function govi_instrumentos_gestion_info_conditional_fields_default_fields() {
       ),
       'selector' => '',
       'values_set' => 1,
-      'value_form' => 52,
+      'value_form' => 49,
       'value' => array(
         0 => array(
-          'tid' => 52,
+          'tid' => 49,
         ),
       ),
       'values' => array(),

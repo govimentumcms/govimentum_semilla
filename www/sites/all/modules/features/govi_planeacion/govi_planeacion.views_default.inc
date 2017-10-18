@@ -330,7 +330,7 @@ Phasellus erat nisl, ornare et diam non, malesuada accumsan eros. Vestibulum a l
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['table'] = 'field_data_field_planeacion_clasificacion';
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['field'] = 'field_planeacion_clasificacion_tid';
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['value'] = array(
-    0 => '33',
+    0 => '30',
   );
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['vocabulary'] = 'planeacion_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/planeacion/informes-empalme';
@@ -467,7 +467,7 @@ Phasellus erat nisl, ornare et diam non, malesuada accumsan eros. Vestibulum a l
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['table'] = 'field_data_field_planeacion_clasificacion';
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['field'] = 'field_planeacion_clasificacion_tid';
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['value'] = array(
-    0 => '35',
+    0 => '32',
   );
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['vocabulary'] = 'planeacion_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/planeacion/participacion-ciudadana';
@@ -607,7 +607,7 @@ Phasellus erat nisl, ornare et diam non, malesuada accumsan eros. Vestibulum a l
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['table'] = 'field_data_field_planeacion_clasificacion';
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['field'] = 'field_planeacion_clasificacion_tid';
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['value'] = array(
-    0 => '36',
+    0 => '33',
   );
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['vocabulary'] = 'planeacion_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/planeacion/planes';
@@ -744,7 +744,7 @@ Phasellus erat nisl, ornare et diam non, malesuada accumsan eros. Vestibulum a l
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['table'] = 'field_data_field_planeacion_clasificacion';
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['field'] = 'field_planeacion_clasificacion_tid';
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['value'] = array(
-    0 => '37',
+    0 => '34',
   );
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['vocabulary'] = 'planeacion_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/planeacion/programas-proyectos';
@@ -890,7 +890,7 @@ Phasellus erat nisl, ornare et diam non, malesuada accumsan eros. Vestibulum a l
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['table'] = 'field_data_field_planeacion_clasificacion';
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['field'] = 'field_planeacion_clasificacion_tid';
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['value'] = array(
-    0 => '34',
+    0 => '31',
   );
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['vocabulary'] = 'planeacion_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/planeacion/metas-objetivos-indicadores';

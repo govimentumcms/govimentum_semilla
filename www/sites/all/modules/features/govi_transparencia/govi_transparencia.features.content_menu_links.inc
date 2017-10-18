@@ -35,7 +35,6 @@ function govi_transparencia_content_menu_links_defaults() {
     'expanded' => 0,
     'weight' => -50,
     'customized' => 0,
-    'parent_path' => '<front>',
   );
   // Exported menu link: menu-menu-transparencia:transparencia/atencion-ciudadano/sedes
   $menu_links['menu-menu-transparencia:transparencia/atencion-ciudadano/sedes'] = array(
@@ -62,7 +61,6 @@ function govi_transparencia_content_menu_links_defaults() {
     'expanded' => 0,
     'weight' => -49,
     'customized' => 0,
-    'parent_path' => '<front>',
   );
   // Exported menu link: menu-menu-transparencia:transparencia/contratacion
   $menu_links['menu-menu-transparencia:transparencia/contratacion'] = array(
@@ -544,7 +542,6 @@ function govi_transparencia_content_menu_links_defaults() {
     'expanded' => 0,
     'weight' => -45,
     'customized' => 0,
-    'parent_path' => 'transparencia/organizacion',
   );
   // Exported menu link: menu-menu-transparencia:transparencia/planeacion
   $menu_links['menu-menu-transparencia:transparencia/planeacion'] = array(
@@ -862,11 +859,10 @@ function govi_transparencia_content_menu_links_defaults() {
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 0,
     'weight' => -43,
     'customized' => 0,
-    'parent_path' => 'transparencia/organizacion',
   );
   // Exported menu link: menu-menu-transparencia_directorio-de-entidades:transparencia/organizacion
   $menu_links['menu-menu-transparencia_directorio-de-entidades:transparencia/organizacion'] = array(
@@ -975,7 +971,6 @@ function govi_transparencia_content_menu_links_defaults() {
     'expanded' => 0,
     'weight' => -48,
     'customized' => 0,
-    'parent_path' => 'transparencia/organizacion',
   );
   // Exported menu link: menu-menu-transparencia_informacin-de-contratacin:transparencia/contratacion/informacion_contractual
   $menu_links['menu-menu-transparencia_informacin-de-contratacin:transparencia/contratacion/informacion_contractual'] = array(
@@ -1082,7 +1077,6 @@ function govi_transparencia_content_menu_links_defaults() {
     'expanded' => 0,
     'weight' => -50,
     'customized' => 0,
-    'parent_path' => 'transparencia/organizacion',
   );
   // Exported menu link: menu-menu-transparencia_notifcaciones-judiciales:<front>
   $menu_links['menu-menu-transparencia_notifcaciones-judiciales:<front>'] = array(
@@ -1137,7 +1131,6 @@ function govi_transparencia_content_menu_links_defaults() {
     'expanded' => 0,
     'weight' => -42,
     'customized' => 0,
-    'parent_path' => 'transparencia/organizacion',
   );
   // Exported menu link: menu-menu-transparencia_organigrama:transparencia/organizacion
   $menu_links['menu-menu-transparencia_organigrama:transparencia/organizacion'] = array(
@@ -1165,7 +1158,6 @@ function govi_transparencia_content_menu_links_defaults() {
     'expanded' => 0,
     'weight' => -46,
     'customized' => 0,
-    'parent_path' => 'transparencia/organizacion',
   );
   // Exported menu link: menu-menu-transparencia_polticas-de-seguridad-de-la-informacin-y-proteccin-de-datos-personales:<front>
   $menu_links['menu-menu-transparencia_polticas-de-seguridad-de-la-informacin-y-proteccin-de-datos-personales:<front>'] = array(
@@ -1192,7 +1184,6 @@ function govi_transparencia_content_menu_links_defaults() {
     'expanded' => 0,
     'weight' => -47,
     'customized' => 0,
-    'parent_path' => '<front>',
   );
   // Exported menu link: menu-menu-transparencia_procesos-y-procedimientos:transparencia/organizacion
   $menu_links['menu-menu-transparencia_procesos-y-procedimientos:transparencia/organizacion'] = array(
@@ -1220,7 +1211,6 @@ function govi_transparencia_content_menu_links_defaults() {
     'expanded' => 0,
     'weight' => -47,
     'customized' => 0,
-    'parent_path' => 'transparencia/organizacion',
   );
   // Exported menu link: menu-menu-transparencia_visin:transparencia/organizacion
   $menu_links['menu-menu-transparencia_visin:transparencia/organizacion'] = array(
@@ -1247,7 +1237,6 @@ function govi_transparencia_content_menu_links_defaults() {
     'expanded' => 0,
     'weight' => -49,
     'customized' => 0,
-    'parent_path' => 'transparencia/organizacion',
   );
   // Translatables
   // Included for use with string extractors like potx.

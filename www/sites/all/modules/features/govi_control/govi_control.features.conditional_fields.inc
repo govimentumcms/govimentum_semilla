@@ -225,10 +225,10 @@ function govi_control_conditional_fields_default_fields() {
       ),
       'selector' => '',
       'values_set' => 1,
-      'value_form' => 66,
+      'value_form' => 63,
       'value' => array(
         0 => array(
-          'tid' => 66,
+          'tid' => 63,
         ),
       ),
       'values' => array(),

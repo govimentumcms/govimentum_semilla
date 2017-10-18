@@ -14,7 +14,7 @@ function govi_tramites_servicios_menu_default_menu_links() {
   $menu_links['menu-menu-tramites-servicios_trmites-y-servicios:transparencia/tramites-servicios'] = array(
     'menu_name' => 'menu-menu-tramites-servicios',
     'link_path' => 'transparencia/tramites-servicios',
-    'router_path' => 'transparencia/tramites-servicios',
+    'router_path' => 'transparencia',
     'link_title' => 'Trámites y Servicios',
     'options' => array(
       'cami' => array(

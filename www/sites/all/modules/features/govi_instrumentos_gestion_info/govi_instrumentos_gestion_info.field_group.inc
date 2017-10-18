@@ -24,9 +24,9 @@ function govi_instrumentos_gestion_info_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_instrumentos_clasificacion',
-      1 => 'field_instrumentos_tipo_document',
+      1 => 'field_instrumentos_fecha_exp',
       2 => 'field_instrumentos_periodicidad',
-      3 => 'field_instrumentos_fecha_exp',
+      3 => 'field_instrumentos_tipo_document',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -85,9 +85,9 @@ function govi_instrumentos_gestion_info_field_group_info() {
     'label' => 'Recurso',
     'weight' => '4',
     'children' => array(
-      0 => 'field_instrumentos_tipo_recurso',
+      0 => 'field_instrumentos_adjunto',
       1 => 'field_instrumentos_enlace',
-      2 => 'field_instrumentos_adjunto',
+      2 => 'field_instrumentos_tipo_recurso',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

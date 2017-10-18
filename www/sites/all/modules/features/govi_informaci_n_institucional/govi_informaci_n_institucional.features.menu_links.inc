@@ -14,7 +14,7 @@ function govi_informaci_n_institucional_menu_default_menu_links() {
   $menu_links['menu-menu-organizacion_directorio-de-agremiaciones-asociaciones-y-otros-grupos-de-inters:transparencia/organizacion'] = array(
     'menu_name' => 'menu-menu-organizacion',
     'link_path' => 'transparencia/organizacion',
-    'router_path' => 'transparencia/organizacion',
+    'router_path' => 'transparencia',
     'link_title' => 'Directorio de agremiaciones, asociaciones y otros grupos de interés',
     'options' => array(
       'cami' => array(
@@ -43,7 +43,7 @@ function govi_informaci_n_institucional_menu_default_menu_links() {
   $menu_links['menu-menu-organizacion_directorio-de-entidades:transparencia/organizacion'] = array(
     'menu_name' => 'menu-menu-organizacion',
     'link_path' => 'transparencia/organizacion',
-    'router_path' => 'transparencia/organizacion',
+    'router_path' => 'transparencia',
     'link_title' => 'Directorio de Entidades',
     'options' => array(
       'cami' => array(
@@ -72,7 +72,7 @@ function govi_informaci_n_institucional_menu_default_menu_links() {
   $menu_links['menu-menu-organizacion_directorio-de-informacin-de-servidores-pblicos-empleados-y-contratistas:transparencia/organizacion/directorio-funcionarios'] = array(
     'menu_name' => 'menu-menu-organizacion',
     'link_path' => 'transparencia/organizacion/directorio-funcionarios',
-    'router_path' => 'transparencia/organizacion/directorio-funcionarios',
+    'router_path' => 'transparencia',
     'link_title' => 'Directorio de información de servidores públicos, empleados y contratistas',
     'options' => array(
       'cami' => array(
@@ -101,7 +101,7 @@ transparencia/organizacion/directorio-funcionarios/*',
   $menu_links['menu-menu-organizacion_funciones-y-deberes:transparencia/organizacion'] = array(
     'menu_name' => 'menu-menu-organizacion',
     'link_path' => 'transparencia/organizacion',
-    'router_path' => 'transparencia/organizacion',
+    'router_path' => 'transparencia',
     'link_title' => 'Funciones y deberes',
     'options' => array(
       'cami' => array(
@@ -130,7 +130,7 @@ transparencia/organizacion/directorio-funcionarios/*',
   $menu_links['menu-menu-organizacion_misin:transparencia/organizacion'] = array(
     'menu_name' => 'menu-menu-organizacion',
     'link_path' => 'transparencia/organizacion',
-    'router_path' => 'transparencia/organizacion',
+    'router_path' => 'transparencia',
     'link_title' => 'Misión',
     'options' => array(
       'cami' => array(
@@ -161,7 +161,7 @@ transparencia/organizacion/directorio-funcionarios/*',
   $menu_links['menu-menu-organizacion_ofertas-de-empleo:transparencia/organizacion'] = array(
     'menu_name' => 'menu-menu-organizacion',
     'link_path' => 'transparencia/organizacion',
-    'router_path' => 'transparencia/organizacion',
+    'router_path' => 'transparencia',
     'link_title' => 'Ofertas de empleo',
     'options' => array(
       'cami' => array(
@@ -190,7 +190,7 @@ transparencia/organizacion/directorio-funcionarios/*',
   $menu_links['menu-menu-organizacion_organigrama:transparencia/organizacion'] = array(
     'menu_name' => 'menu-menu-organizacion',
     'link_path' => 'transparencia/organizacion',
-    'router_path' => 'transparencia/organizacion',
+    'router_path' => 'transparencia',
     'link_title' => 'Organigrama',
     'options' => array(
       'cami' => array(
@@ -219,7 +219,7 @@ transparencia/organizacion/directorio-funcionarios/*',
   $menu_links['menu-menu-organizacion_procesos-y-procedimientos:transparencia/organizacion'] = array(
     'menu_name' => 'menu-menu-organizacion',
     'link_path' => 'transparencia/organizacion',
-    'router_path' => 'transparencia/organizacion',
+    'router_path' => 'transparencia',
     'link_title' => 'Procesos y procedimientos',
     'options' => array(
       'cami' => array(
@@ -248,7 +248,7 @@ transparencia/organizacion/directorio-funcionarios/*',
   $menu_links['menu-menu-organizacion_visin:transparencia/organizacion'] = array(
     'menu_name' => 'menu-menu-organizacion',
     'link_path' => 'transparencia/organizacion',
-    'router_path' => 'transparencia/organizacion',
+    'router_path' => 'transparencia',
     'link_title' => 'Visión',
     'options' => array(
       'cami' => array(

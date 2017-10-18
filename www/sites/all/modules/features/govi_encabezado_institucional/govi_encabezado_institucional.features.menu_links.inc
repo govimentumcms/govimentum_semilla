@@ -42,7 +42,7 @@ function govi_encabezado_institucional_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -32,
+    'weight' => -46,
     'customized' => 1,
   );
   // Exported menu link: main-menu_atencin-al-ciudadano:transparencia/atencion-ciudadano/sede-principal.
@@ -70,7 +70,7 @@ function govi_encabezado_institucional_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -38,
     'customized' => 1,
     'parent_identifier' => 'main-menu_mecanismos-de-contacto:<front>',
   );
@@ -469,7 +469,8 @@ transparencia/informacion-interes/convocatoria',
     'customized' => 1,
     'parent_identifier' => 'main-menu_transparencia:<front>',
   );
-  // Exported menu link: main-menu_eventos:calendario.
+  
+    // Exported menu link: main-menu_eventos:calendario.
   $menu_links['main-menu_eventos:calendario'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'calendario',
@@ -499,7 +500,7 @@ transparencia/informacion-interes/convocatoria',
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -35,
+    'weight' => -47, 
     'customized' => 1,
   );
   // Exported menu link: main-menu_funciones-y-deberes:transparencia/organizacion.
@@ -1148,8 +1149,9 @@ transparencia/instrumentos-gestion-informacion-publica/Informe-pqr-denuncias-sol
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -39,
+    'weight' => -48,
     'customized' => 1,
+	
   );
   // Exported menu link: main-menu_notificaciones-judiciales:menutoken/573e2f082d2fd.
   $menu_links['main-menu_notificaciones-judiciales:menutoken/573e2f082d2fd'] = array(

@@ -150,10 +150,10 @@ function govi_planeacion_conditional_fields_default_fields() {
       ),
       'selector' => '',
       'values_set' => 1,
-      'value_form' => 34,
+      'value_form' => 31,
       'value' => array(
         0 => array(
-          'tid' => 34,
+          'tid' => 31,
         ),
       ),
       'values' => array(),
@@ -300,10 +300,10 @@ function govi_planeacion_conditional_fields_default_fields() {
       ),
       'selector' => '',
       'values_set' => 1,
-      'value_form' => 36,
+      'value_form' => 33,
       'value' => array(
         0 => array(
-          'tid' => 36,
+          'tid' => 33,
         ),
       ),
       'values' => array(),
