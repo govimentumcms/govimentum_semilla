@@ -78,3 +78,16 @@ jQuery(document).ready(function($) {
 jQuery(document).ready(function($) {
     $('.colorbox-inline').colorbox({inline:true});
 });
+
+  //Acordion
+ jQuery(document).ready(function($) {
+    $('.view-content').find('h3').click(function(){
+
+      //Expand or collapse this panel
+      $(this).next().slideToggle('fast');
+
+      //Hide the other panels
+      $(".accordion-content").not($(this).next()).slideUp('fast');
+
+    });
+  });
