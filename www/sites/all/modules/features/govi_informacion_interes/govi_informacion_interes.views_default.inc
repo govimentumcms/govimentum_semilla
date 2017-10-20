@@ -29,7 +29,7 @@ function govi_informacion_interes_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
       'field' => 'field_convocatoria_clasificacion',
@@ -37,6 +37,8 @@ function govi_informacion_interes_views_default_views() {
       'rendered_strip' => 0,
     ),
   );
+  $handler->display->display_options['style_options']['class'] = 'accordion-content';
+  $handler->display->display_options['style_options']['wrapper_class'] = 'item-list fondov2';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -52,6 +54,7 @@ Integer a erat.';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = 'Nombre';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
@@ -61,16 +64,19 @@ Integer a erat.';
   $handler->display->display_options['fields']['field_convocatoria_descripcion']['id'] = 'field_convocatoria_descripcion';
   $handler->display->display_options['fields']['field_convocatoria_descripcion']['table'] = 'field_data_field_convocatoria_descripcion';
   $handler->display->display_options['fields']['field_convocatoria_descripcion']['field'] = 'field_convocatoria_descripcion';
+  $handler->display->display_options['fields']['field_convocatoria_descripcion']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_convocatoria_descripcion']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['field_convocatoria_descripcion']['settings'] = array(
-    'trim_length' => '400',
+    'trim_length' => '300',
   );
   /* Field: Content: Fechas */
   $handler->display->display_options['fields']['field_convocatoria_fechas']['id'] = 'field_convocatoria_fechas';
   $handler->display->display_options['fields']['field_convocatoria_fechas']['table'] = 'field_data_field_convocatoria_fechas';
   $handler->display->display_options['fields']['field_convocatoria_fechas']['field'] = 'field_convocatoria_fechas';
+  $handler->display->display_options['fields']['field_convocatoria_fechas']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_convocatoria_fechas']['settings'] = array(
     'format_type' => 'short',
+    'custom_date_format' => '',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -81,6 +87,7 @@ Integer a erat.';
   $handler->display->display_options['fields']['field_convocatoria_periodicidad']['id'] = 'field_convocatoria_periodicidad';
   $handler->display->display_options['fields']['field_convocatoria_periodicidad']['table'] = 'field_data_field_convocatoria_periodicidad';
   $handler->display->display_options['fields']['field_convocatoria_periodicidad']['field'] = 'field_convocatoria_periodicidad';
+  $handler->display->display_options['fields']['field_convocatoria_periodicidad']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_convocatoria_periodicidad']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Tipo de recurso */
   $handler->display->display_options['fields']['field_convocatoria_recurso']['id'] = 'field_convocatoria_recurso';
@@ -91,8 +98,9 @@ Integer a erat.';
   $handler->display->display_options['fields']['field_convocatoria_enlace']['id'] = 'field_convocatoria_enlace';
   $handler->display->display_options['fields']['field_convocatoria_enlace']['table'] = 'field_data_field_convocatoria_enlace';
   $handler->display->display_options['fields']['field_convocatoria_enlace']['field'] = 'field_convocatoria_enlace';
+  $handler->display->display_options['fields']['field_convocatoria_enlace']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_convocatoria_enlace']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_convocatoria_enlace']['alter']['text'] = 'Ir al documento';
+  $handler->display->display_options['fields']['field_convocatoria_enlace']['alter']['text'] = 'Ver más';
   $handler->display->display_options['fields']['field_convocatoria_enlace']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_convocatoria_enlace']['alter']['path'] = '[field_convocatoria_enlace]';
   $handler->display->display_options['fields']['field_convocatoria_enlace']['alter']['alt'] = 'Ir al documento';
@@ -104,8 +112,9 @@ Integer a erat.';
   $handler->display->display_options['fields']['field_convocatoria_adjunto']['id'] = 'field_convocatoria_adjunto';
   $handler->display->display_options['fields']['field_convocatoria_adjunto']['table'] = 'field_data_field_convocatoria_adjunto';
   $handler->display->display_options['fields']['field_convocatoria_adjunto']['field'] = 'field_convocatoria_adjunto';
+  $handler->display->display_options['fields']['field_convocatoria_adjunto']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_convocatoria_adjunto']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_convocatoria_adjunto']['alter']['text'] = 'Ir al Documento';
+  $handler->display->display_options['fields']['field_convocatoria_adjunto']['alter']['text'] = ' Descargar';
   $handler->display->display_options['fields']['field_convocatoria_adjunto']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_convocatoria_adjunto']['alter']['path'] = '[field_convocatoria_adjunto]?width=800&height=800&iframe=true';
   $handler->display->display_options['fields']['field_convocatoria_adjunto']['alter']['alt'] = 'Ir al documento';
@@ -121,6 +130,29 @@ Integer a erat.';
   $handler->display->display_options['fields']['field_convocatoria_clasificacion']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_convocatoria_clasificacion']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_convocatoria_clasificacion']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-15-24">
+<span>Descripción</span>
+<p>
+[field_convocatoria_descripcion] 
+<p>
+</div>
+<div class="pure-u-xl-4-24">
+<span>Periodicidad</span>
+<p>[field_convocatoria_periodicidad]</p>
+</div>
+<div class="pure-u-xl-4-24 btnv2">
+[field_convocatoria_adjunto]
+[field_convocatoria_enlace] 
+</div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -158,9 +190,27 @@ Integer a erat.'),
     t('Periodicidad'),
     t('Tipo de recurso'),
     t('Enlace'),
+    t('Ver más'),
     t('Ir al documento'),
     t('Archivo adjunto'),
-    t('Ir al Documento'),
+    t(' Descargar'),
+    t('<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-15-24">
+<span>Descripción</span>
+<p>
+[field_convocatoria_descripcion] 
+<p>
+</div>
+<div class="pure-u-xl-4-24">
+<span>Periodicidad</span>
+<p>[field_convocatoria_periodicidad]</p>
+</div>
+<div class="pure-u-xl-4-24 btnv2">
+[field_convocatoria_adjunto]
+[field_convocatoria_enlace] 
+</div>
+</div>'),
   );
   $export['convocatorias'] = $view;
 
@@ -184,7 +234,7 @@ Integer a erat.'),
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reiniciar';
   $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
       'field' => 'field_documento_clasificacion_1',
@@ -192,6 +242,8 @@ Integer a erat.'),
       'rendered_strip' => 0,
     ),
   );
+  $handler->display->display_options['style_options']['class'] = 'accordion-content';
+  $handler->display->display_options['style_options']['wrapper_class'] = 'item-list fondov2';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -205,6 +257,7 @@ Integer a erat.'),
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = 'Titulo';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -215,6 +268,7 @@ Integer a erat.'),
   $handler->display->display_options['fields']['field_documento_descripcion']['id'] = 'field_documento_descripcion';
   $handler->display->display_options['fields']['field_documento_descripcion']['table'] = 'field_data_field_documento_descripcion';
   $handler->display->display_options['fields']['field_documento_descripcion']['field'] = 'field_documento_descripcion';
+  $handler->display->display_options['fields']['field_documento_descripcion']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_documento_descripcion']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['field_documento_descripcion']['settings'] = array(
     'trim_length' => '200',
@@ -231,8 +285,10 @@ Integer a erat.'),
   $handler->display->display_options['fields']['field_documento_fecha']['id'] = 'field_documento_fecha';
   $handler->display->display_options['fields']['field_documento_fecha']['table'] = 'field_data_field_documento_fecha';
   $handler->display->display_options['fields']['field_documento_fecha']['field'] = 'field_documento_fecha';
+  $handler->display->display_options['fields']['field_documento_fecha']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_documento_fecha']['settings'] = array(
     'format_type' => 'short',
+    'custom_date_format' => '',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -243,6 +299,7 @@ Integer a erat.'),
   $handler->display->display_options['fields']['field_docuemento_periodicidad']['id'] = 'field_docuemento_periodicidad';
   $handler->display->display_options['fields']['field_docuemento_periodicidad']['table'] = 'field_data_field_docuemento_periodicidad';
   $handler->display->display_options['fields']['field_docuemento_periodicidad']['field'] = 'field_docuemento_periodicidad';
+  $handler->display->display_options['fields']['field_docuemento_periodicidad']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_docuemento_periodicidad']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Tipo de recurso */
   $handler->display->display_options['fields']['field_documento_tipo_recurso']['id'] = 'field_documento_tipo_recurso';
@@ -254,8 +311,9 @@ Integer a erat.'),
   $handler->display->display_options['fields']['field_documento_adjunto']['table'] = 'field_data_field_documento_adjunto';
   $handler->display->display_options['fields']['field_documento_adjunto']['field'] = 'field_documento_adjunto';
   $handler->display->display_options['fields']['field_documento_adjunto']['label'] = 'Archivo Adjunto';
+  $handler->display->display_options['fields']['field_documento_adjunto']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_documento_adjunto']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_documento_adjunto']['alter']['text'] = 'Ir al documento';
+  $handler->display->display_options['fields']['field_documento_adjunto']['alter']['text'] = ' Descargar';
   $handler->display->display_options['fields']['field_documento_adjunto']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_documento_adjunto']['alter']['path'] = '[field_documento_adjunto]?width=800&height=800&iframe=true';
   $handler->display->display_options['fields']['field_documento_adjunto']['alter']['external'] = TRUE;
@@ -269,8 +327,9 @@ Integer a erat.'),
   $handler->display->display_options['fields']['field_documento_enlace']['id'] = 'field_documento_enlace';
   $handler->display->display_options['fields']['field_documento_enlace']['table'] = 'field_data_field_documento_enlace';
   $handler->display->display_options['fields']['field_documento_enlace']['field'] = 'field_documento_enlace';
+  $handler->display->display_options['fields']['field_documento_enlace']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_documento_enlace']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_documento_enlace']['alter']['text'] = 'Ir al documento';
+  $handler->display->display_options['fields']['field_documento_enlace']['alter']['text'] = 'Ver más';
   $handler->display->display_options['fields']['field_documento_enlace']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_documento_enlace']['alter']['path'] = '[field_documento_enlace]?width=800&height=800&iframe=true';
   $handler->display->display_options['fields']['field_documento_enlace']['alter']['external'] = TRUE;
@@ -280,6 +339,29 @@ Integer a erat.'),
   $handler->display->display_options['fields']['field_documento_enlace']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_documento_enlace']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_documento_enlace']['type'] = 'link_plain';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-15-24">
+<span>Descripción</span>
+<p>
+[field_documento_descripcion] 
+<p>
+</div>
+<div class="pure-u-xl-4-24">
+<span>Periodicidad</span>
+<p>[field_docuemento_periodicidad] </p>
+</div>
+<div class="pure-u-xl-4-24 btnv2">
+[field_documento_adjunto] 
+[field_documento_enlace] 
+</div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -309,12 +391,110 @@ Integer a erat.'),
   $handler = $view->new_display('page', 'Información de Interés', 'page_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Información de Interés';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Titulo';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
+  /* Field: Content: Descripcion */
+  $handler->display->display_options['fields']['field_documento_descripcion']['id'] = 'field_documento_descripcion';
+  $handler->display->display_options['fields']['field_documento_descripcion']['table'] = 'field_data_field_documento_descripcion';
+  $handler->display->display_options['fields']['field_documento_descripcion']['field'] = 'field_documento_descripcion';
+  $handler->display->display_options['fields']['field_documento_descripcion']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_descripcion']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_documento_descripcion']['settings'] = array(
+    'trim_length' => '200',
+  );
+  /* Field: Content: Clasificación del documento */
+  $handler->display->display_options['fields']['field_documento_clasificacion_1']['id'] = 'field_documento_clasificacion_1';
+  $handler->display->display_options['fields']['field_documento_clasificacion_1']['table'] = 'field_data_field_documento_clasificacion';
+  $handler->display->display_options['fields']['field_documento_clasificacion_1']['field'] = 'field_documento_clasificacion';
+  $handler->display->display_options['fields']['field_documento_clasificacion_1']['label'] = '';
+  $handler->display->display_options['fields']['field_documento_clasificacion_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_clasificacion_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_documento_clasificacion_1']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Fecha */
+  $handler->display->display_options['fields']['field_documento_fecha']['id'] = 'field_documento_fecha';
+  $handler->display->display_options['fields']['field_documento_fecha']['table'] = 'field_data_field_documento_fecha';
+  $handler->display->display_options['fields']['field_documento_fecha']['field'] = 'field_documento_fecha';
+  $handler->display->display_options['fields']['field_documento_fecha']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_fecha']['settings'] = array(
+    'format_type' => 'short',
+    'custom_date_format' => '',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  /* Field: Content: Periodicidad */
+  $handler->display->display_options['fields']['field_docuemento_periodicidad']['id'] = 'field_docuemento_periodicidad';
+  $handler->display->display_options['fields']['field_docuemento_periodicidad']['table'] = 'field_data_field_docuemento_periodicidad';
+  $handler->display->display_options['fields']['field_docuemento_periodicidad']['field'] = 'field_docuemento_periodicidad';
+  $handler->display->display_options['fields']['field_docuemento_periodicidad']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_docuemento_periodicidad']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Tipo de recurso */
+  $handler->display->display_options['fields']['field_documento_tipo_recurso']['id'] = 'field_documento_tipo_recurso';
+  $handler->display->display_options['fields']['field_documento_tipo_recurso']['table'] = 'field_data_field_documento_tipo_recurso';
+  $handler->display->display_options['fields']['field_documento_tipo_recurso']['field'] = 'field_documento_tipo_recurso';
+  $handler->display->display_options['fields']['field_documento_tipo_recurso']['exclude'] = TRUE;
+  /* Field: Content: Adjunto */
+  $handler->display->display_options['fields']['field_documento_adjunto']['id'] = 'field_documento_adjunto';
+  $handler->display->display_options['fields']['field_documento_adjunto']['table'] = 'field_data_field_documento_adjunto';
+  $handler->display->display_options['fields']['field_documento_adjunto']['field'] = 'field_documento_adjunto';
+  $handler->display->display_options['fields']['field_documento_adjunto']['label'] = 'Archivo Adjunto';
+  $handler->display->display_options['fields']['field_documento_adjunto']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_adjunto']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_adjunto']['alter']['text'] = ' Descargar';
+  $handler->display->display_options['fields']['field_documento_adjunto']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_adjunto']['alter']['path'] = '[field_documento_adjunto]?width=800&height=800&iframe=true';
+  $handler->display->display_options['fields']['field_documento_adjunto']['alter']['external'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_adjunto']['alter']['alt'] = 'Ir al documento';
+  $handler->display->display_options['fields']['field_documento_adjunto']['alter']['link_class'] = 'colorbox-load pure-button';
+  $handler->display->display_options['fields']['field_documento_adjunto']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_documento_adjunto']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_adjunto']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_documento_adjunto']['type'] = 'file_url_plain';
+  /* Field: Content: Enlace */
+  $handler->display->display_options['fields']['field_documento_enlace']['id'] = 'field_documento_enlace';
+  $handler->display->display_options['fields']['field_documento_enlace']['table'] = 'field_data_field_documento_enlace';
+  $handler->display->display_options['fields']['field_documento_enlace']['field'] = 'field_documento_enlace';
+  $handler->display->display_options['fields']['field_documento_enlace']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_enlace']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_enlace']['alter']['text'] = 'Ver más';
+  $handler->display->display_options['fields']['field_documento_enlace']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_enlace']['alter']['path'] = '[field_documento_enlace]?width=800&height=800&iframe=true';
+  $handler->display->display_options['fields']['field_documento_enlace']['alter']['external'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_enlace']['alter']['alt'] = 'Ir al documento';
+  $handler->display->display_options['fields']['field_documento_enlace']['alter']['link_class'] = 'colorbox-load pure-button ';
+  $handler->display->display_options['fields']['field_documento_enlace']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_documento_enlace']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_documento_enlace']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_documento_enlace']['type'] = 'link_plain';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -373,13 +553,7 @@ Integer a erat.'),
   $handler = $view->new_display('page', 'Información Adicional', 'page_1');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'field_documento_clasificacion_1',
-      'rendered' => 0,
-      'rendered_strip' => 0,
-    ),
-  );
+  $handler->display->display_options['style_options']['row_class'] = 'fondov2';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -432,8 +606,27 @@ Integer a erat.'),
     t('Periodicidad'),
     t('Tipo de recurso'),
     t('Archivo Adjunto'),
+    t(' Descargar'),
     t('Ir al documento'),
     t('Enlace'),
+    t('Ver más'),
+    t('<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-15-24">
+<span>Descripción</span>
+<p>
+[field_documento_descripcion] 
+<p>
+</div>
+<div class="pure-u-xl-4-24">
+<span>Periodicidad</span>
+<p>[field_docuemento_periodicidad] </p>
+</div>
+<div class="pure-u-xl-4-24 btnv2">
+[field_documento_adjunto] 
+[field_documento_enlace] 
+</div>
+</div>'),
     t('Has taxonomy term'),
     t('Información de Interés'),
     t('Información Adicional'),
@@ -460,7 +653,7 @@ Integer a erat.'),
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
       'field' => 'field_faq_clasificacion',
@@ -468,8 +661,8 @@ Integer a erat.'),
       'rendered_strip' => 0,
     ),
   );
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['class'] = 'accordion-content';
+  $handler->display->display_options['style_options']['wrapper_class'] = 'item-list fondov2';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -483,8 +676,13 @@ Integer a erat.'),
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
   /* Field: Content: Clasificacion */
   $handler->display->display_options['fields']['field_faq_clasificacion']['id'] = 'field_faq_clasificacion';
   $handler->display->display_options['fields']['field_faq_clasificacion']['table'] = 'field_data_field_faq_clasificacion';
@@ -498,10 +696,23 @@ Integer a erat.'),
   $handler->display->display_options['fields']['field_faq_respuesta']['table'] = 'field_data_field_faq_respuesta';
   $handler->display->display_options['fields']['field_faq_respuesta']['field'] = 'field_faq_respuesta';
   $handler->display->display_options['fields']['field_faq_respuesta']['label'] = '';
+  $handler->display->display_options['fields']['field_faq_respuesta']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_faq_respuesta']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_faq_respuesta']['alter']['text'] = '<i class="ref">[field_faq_respuesta]</i>';
   $handler->display->display_options['fields']['field_faq_respuesta']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_faq_respuesta']['hide_empty'] = TRUE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-1">
+<p>[field_faq_respuesta] <p>
+</div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -543,6 +754,12 @@ Integer a erat.'),
     t('last »'),
     t('In mauris. Pellentesque dui nisi, iaculis eu, rhoncus in, venenatis ac, ante. Ut odio justo, scelerisque vel, facilisis non, commodo a, pede. Cras nec massa sit amet tortor volutpat varius. Donec lacinia, neque a luctus aliquet, pede massa imperdiet ante, at varius lorem pede sed sapien. Fusce erat nibh, aliquet in, eleifend eget, commodo eget, erat.'),
     t('<i class="ref">[field_faq_respuesta]</i>'),
+    t('<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-1">
+<p>[field_faq_respuesta] <p>
+</div>
+</div>'),
   );
   $export['faqs'] = $view;
 
@@ -568,19 +785,26 @@ Integer a erat.'),
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'fondov2';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
   /* Field: Content: Definicion */
   $handler->display->display_options['fields']['field_glosario_definicion']['id'] = 'field_glosario_definicion';
   $handler->display->display_options['fields']['field_glosario_definicion']['table'] = 'field_data_field_glosario_definicion';
   $handler->display->display_options['fields']['field_glosario_definicion']['field'] = 'field_glosario_definicion';
   $handler->display->display_options['fields']['field_glosario_definicion']['label'] = '';
+  $handler->display->display_options['fields']['field_glosario_definicion']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_glosario_definicion']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_glosario_definicion']['type'] = 'text_plain';
   $handler->display->display_options['fields']['field_glosario_definicion']['settings'] = array(
@@ -591,6 +815,7 @@ Integer a erat.'),
   $handler->display->display_options['fields']['field_glosario_referencia_link']['table'] = 'field_data_field_glosario_referencia_link';
   $handler->display->display_options['fields']['field_glosario_referencia_link']['field'] = 'field_glosario_referencia_link';
   $handler->display->display_options['fields']['field_glosario_referencia_link']['label'] = '';
+  $handler->display->display_options['fields']['field_glosario_referencia_link']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_glosario_referencia_link']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_glosario_referencia_link']['alter']['text'] = '<i class="ref">Tomado de: [field_glosario_referencia_link]</i>';
   $handler->display->display_options['fields']['field_glosario_referencia_link']['element_label_colon'] = FALSE;
@@ -601,6 +826,7 @@ Integer a erat.'),
   $handler->display->display_options['fields']['field_glosario_referencia_texto']['table'] = 'field_data_field_glosario_referencia_texto';
   $handler->display->display_options['fields']['field_glosario_referencia_texto']['field'] = 'field_glosario_referencia_texto';
   $handler->display->display_options['fields']['field_glosario_referencia_texto']['label'] = '';
+  $handler->display->display_options['fields']['field_glosario_referencia_texto']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_glosario_referencia_texto']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_glosario_referencia_texto']['alter']['text'] = '<i class="ref">Tomado de: [field_glosario_referencia_texto] </i>';
   $handler->display->display_options['fields']['field_glosario_referencia_texto']['element_label_colon'] = FALSE;
@@ -610,7 +836,16 @@ Integer a erat.'),
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<hr>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-1">
+<p>[field_glosario_definicion] <p>
+</div>
+<div class="pure-u-xl-1 btnv2">
+[field_glosario_referencia_link] 
+[field_glosario_referencia_texto] 
+</div>
+</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Sort criterion: Content: Title */
@@ -646,7 +881,16 @@ Integer a erat.'),
     t('Desc'),
     t('<i class="ref">Tomado de: [field_glosario_referencia_link]</i>'),
     t('<i class="ref">Tomado de: [field_glosario_referencia_texto] </i>'),
-    t('<hr>'),
+    t('<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-1">
+<p>[field_glosario_definicion] <p>
+</div>
+<div class="pure-u-xl-1 btnv2">
+[field_glosario_referencia_link] 
+[field_glosario_referencia_texto] 
+</div>
+</div>'),
   );
   $export['glosario'] = $view;
 

@@ -30,7 +30,7 @@ function govi_tramites_servicios_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
       'field' => 'field_clasificacion_tram_serv',
@@ -38,6 +38,8 @@ function govi_tramites_servicios_views_default_views() {
       'rendered_strip' => 0,
     ),
   );
+  $handler->display->display_options['style_options']['class'] = 'accordion-content';
+  $handler->display->display_options['style_options']['wrapper_class'] = 'item-list fondov2';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -50,6 +52,7 @@ function govi_tramites_servicios_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = 'Nombre';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
@@ -59,6 +62,7 @@ function govi_tramites_servicios_views_default_views() {
   $handler->display->display_options['fields']['field_descripcion_tram_serv']['id'] = 'field_descripcion_tram_serv';
   $handler->display->display_options['fields']['field_descripcion_tram_serv']['table'] = 'field_data_field_descripcion_tram_serv';
   $handler->display->display_options['fields']['field_descripcion_tram_serv']['field'] = 'field_descripcion_tram_serv';
+  $handler->display->display_options['fields']['field_descripcion_tram_serv']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_descripcion_tram_serv']['alter']['max_length'] = '150';
   $handler->display->display_options['fields']['field_descripcion_tram_serv']['alter']['trim'] = TRUE;
   /* Field: Content: Tipo de Recurso */
@@ -71,10 +75,12 @@ function govi_tramites_servicios_views_default_views() {
   $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['table'] = 'field_data_field_enlace_externo_tram_serv';
   $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['field'] = 'field_enlace_externo_tram_serv';
   $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['label'] = 'Enlace';
+  $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['alter']['text'] = 'Ir al documento';
+  $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['alter']['text'] = 'Ver más';
   $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['alter']['path'] = '[field_enlace_externo_tram_serv-url]';
+  $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['alter']['link_class'] = 'icon-view pure-button';
   $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_enlace_externo_tram_serv']['click_sort_column'] = 'url';
@@ -83,10 +89,12 @@ function govi_tramites_servicios_views_default_views() {
   $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['table'] = 'field_data_field_archivo_adjunto_tram_serv';
   $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['field'] = 'field_archivo_adjunto_tram_serv';
   $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['label'] = '';
+  $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['alter']['text'] = 'Descargar documento';
+  $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['alter']['text'] = ' Descargar ';
   $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['alter']['path'] = '[field_archivo_adjunto_tram_serv]';
+  $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['alter']['link_class'] = 'icon-view pure-button';
   $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_archivo_adjunto_tram_serv']['click_sort_column'] = 'fid';
@@ -99,6 +107,25 @@ function govi_tramites_servicios_views_default_views() {
   $handler->display->display_options['fields']['field_clasificacion_tram_serv']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_clasificacion_tram_serv']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_clasificacion_tram_serv']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-4-5">
+<span>Descripción</span>
+<p>
+[field_descripcion_tram_serv] 
+<p>
+</div>
+<div class="pure-u-xl-4-24 btnv2">
+[field_enlace_externo_tram_serv] 
+[field_archivo_adjunto_tram_serv] 
+</div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -137,8 +164,21 @@ function govi_tramites_servicios_views_default_views() {
     t('Descripción'),
     t('Tipo de Recurso'),
     t('Enlace'),
-    t('Ir al documento'),
-    t('Descargar documento'),
+    t('Ver más'),
+    t(' Descargar '),
+    t('<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-4-5">
+<span>Descripción</span>
+<p>
+[field_descripcion_tram_serv] 
+<p>
+</div>
+<div class="pure-u-xl-4-24 btnv2">
+[field_enlace_externo_tram_serv] 
+[field_archivo_adjunto_tram_serv] 
+</div>
+</div>'),
     t('Descripción Trámites y Servicios'),
   );
   $export['tramites_servicios'] = $view;

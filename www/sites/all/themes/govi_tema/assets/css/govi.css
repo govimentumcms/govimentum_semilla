@@ -1547,7 +1547,7 @@ a.created_by {
     display: inline-block;
 }
 #posicion .view fieldset .view-grouping-content{
-	width: 90%;
+	width: 98%;
     margin: 0 auto;
     margin-bottom: 1em;
 }
@@ -1563,7 +1563,7 @@ a.created_by {
 }
 
 #posicion fieldset legend{
-	background-color: rgba(0,62,101,1);
+	background-color: rgb(3, 78, 126);
 	border-radius: 2px;
 	padding-bottom: 5px;
 	padding-top: 5px;
@@ -2099,8 +2099,8 @@ ol.site-map-menu { counter-reset: item }
 
 .acordionv2{
     border: solid 1px #e2e2e2;
-    padding: 0px 11px;
     background: white;
+	    margin-bottom: 10px;
 }
 
 
@@ -2113,7 +2113,7 @@ ol.site-map-menu { counter-reset: item }
     font-size: 14px;
     font-weight: normal;
     padding: 6px;
-    background: #003E65 url(http://govimentum.bogota.gov.co/sites/all/themes/govi_tema/assets/imagenes/navegacion_aba.png) no-repeat scroll 99% 10px !important;
+    background: #003E65 url(../../assets/imagenes/navegacion_aba.png) no-repeat scroll 99% 10px !important;
     font-family: sans-serif;
 }
 
@@ -2133,19 +2133,34 @@ ol.site-map-menu { counter-reset: item }
     background: #e6e4e4;
     font-size: 1em !important;
     font-weight: normal;
-    border-radius: 11px 11px 0px 0px;
-padding: 4px 0px 0px 8px;}
+    padding: 2px 0px 0px 4px;
+    margin: 0px 0px 4px 0px;
+}
 
 .fondov2 h2 a{
     text-decoration:none;
 	color:black;
 	}
 .fondov2 p{
-	font-weight:bold;}
+	    margin: 1px 3px;
+	}
+
+.fondov2 .pure-u-xl-15-24 p{
+    margin: 0px;
+    padding: 1px 4px;
+	}
+
+
 	
 .accordion-content li {
     margin: 0 0 0em 0em !important;
     padding: 0;
+}
+
+
+ .acordionv2 span{
+    font-weight: bold;
+    padding: 0px 4px;
 }
 
 
