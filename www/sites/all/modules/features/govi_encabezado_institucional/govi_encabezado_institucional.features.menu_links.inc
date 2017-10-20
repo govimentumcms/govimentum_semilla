@@ -1659,7 +1659,7 @@ transparencia/informacion-interes/faqs/*',
     'menu_name' => 'main-menu',
     'link_path' => '<front>',
     'router_path' => '',
-    'link_title' => 'Transparencia',
+    'link_title' => 'Entidad',
     'options' => array(
       'cami' => array(
         'pages' => '',
