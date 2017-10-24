@@ -45,35 +45,6 @@ function govi_encabezado_institucional_menu_default_menu_links() {
     'weight' => -46,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_atencin-al-ciudadano:transparencia/atencion-ciudadano/sede-principal.
-  $menu_links['main-menu_atencin-al-ciudadano:transparencia/atencion-ciudadano/sede-principal'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'transparencia/atencion-ciudadano/sede-principal',
-    'router_path' => 'transparencia',
-    'link_title' => 'Atención al ciudadano',
-    'options' => array(
-      'cami' => array(
-        'pages' => '',
-      ),
-      'attributes' => array(),
-      'item_attributes' => array(
-        'data-inner-width' => '',
-        'data-inner-height' => '',
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'identifier' => 'main-menu_atencin-al-ciudadano:transparencia/atencion-ciudadano/sede-principal',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -38,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_mecanismos-de-contacto:<front>',
-  );
   // Exported menu link: main-menu_calendario-de-actividades:calendario/month.
   $menu_links['main-menu_calendario-de-actividades:calendario/month'] = array(
     'menu_name' => 'main-menu',
@@ -905,35 +876,7 @@ transparencia/instrumentos-gestion-informacion-publica/Informe-pqr-denuncias-sol
     'customized' => 1,
     'parent_identifier' => 'main-menu_marco-legal:transparencia/marco-legal',
   );
-  // Exported menu link: main-menu_localizacin-fsica-sucursales-o-regionales:transparencia/atencion-ciudadano/sedes.
-  $menu_links['main-menu_localizacin-fsica-sucursales-o-regionales:transparencia/atencion-ciudadano/sedes'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'transparencia/atencion-ciudadano/sedes',
-    'router_path' => 'transparencia',
-    'link_title' => 'Localización física, sucursales o regionales',
-    'options' => array(
-      'cami' => array(
-        'pages' => '',
-      ),
-      'attributes' => array(),
-      'item_attributes' => array(
-        'data-inner-width' => '',
-        'data-inner-height' => '',
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'identifier' => 'main-menu_localizacin-fsica-sucursales-o-regionales:transparencia/atencion-ciudadano/sedes',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -49,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_mecanismos-de-contacto:<front>',
-  );
+
   // Exported menu link: main-menu_manual-de-contrataciones:transparencia/contratacion/manual_contrataciones.
   $menu_links['main-menu_manual-de-contrataciones:transparencia/contratacion/manual_contrataciones'] = array(
     'menu_name' => 'main-menu',
@@ -999,7 +942,7 @@ transparencia/instrumentos-gestion-informacion-publica/Informe-pqr-denuncias-sol
   // Exported menu link: main-menu_mecanismos-de-contacto:<front>.
   $menu_links['main-menu_mecanismos-de-contacto:<front>'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => '<front>',
+    'link_path' => 'transparencia/atencion-ciudadano/sede-principal',
     'router_path' => '',
     'link_title' => 'Mecanismos de contacto',
     'options' => array(
@@ -1153,49 +1096,7 @@ transparencia/instrumentos-gestion-informacion-publica/Informe-pqr-denuncias-sol
     'customized' => 1,
 	
   );
-  // Exported menu link: main-menu_notificaciones-judiciales:menutoken/573e2f082d2fd.
-  $menu_links['main-menu_notificaciones-judiciales:menutoken/573e2f082d2fd'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'menutoken/573e2f082d2fd',
-    'router_path' => 'menutoken/%',
-    'link_title' => 'Notificaciones Judiciales',
-    'options' => array(
-      'cami' => array(
-        'pages' => '',
-      ),
-      'attributes' => array(),
-      'item_attributes' => array(
-        'data-inner-width' => '',
-        'data-inner-height' => '',
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'identifier' => 'main-menu_notificaciones-judiciales:menutoken/573e2f082d2fd',
-      'menu_token_link_path' => 'transparencia/atencion-ciudadano/notificaciones-judiciales',
-      'menu_token_data' => array(
-        'node' => array(
-          'type' => 'node',
-          'plugin' => 'node_user_defined',
-          'options' => array(
-            'id' => 2,
-          ),
-        ),
-      ),
-      'menu_token_options' => array(
-        'clear' => 1,
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_mecanismos-de-contacto:<front>',
-  );
+ 
   // Exported menu link: main-menu_ofertas-de-empleo:transparencia/organizacion.
   $menu_links['main-menu_ofertas-de-empleo:transparencia/organizacion'] = array(
     'menu_name' => 'main-menu',
@@ -1411,35 +1312,7 @@ transparencia/instrumentos-gestion-informacion-publica/Informe-pqr-denuncias-sol
     'customized' => 1,
     'parent_identifier' => 'main-menu_planeacin:transparencia/planeacion',
   );
-  // Exported menu link: main-menu_polticas-de-seguridad-de-la-informacin-y-proteccin-de-datos-pesonales:<front>.
-  $menu_links['main-menu_polticas-de-seguridad-de-la-informacin-y-proteccin-de-datos-pesonales:<front>'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Políticas de seguridad de la información y protección de datos pesonales',
-    'options' => array(
-      'cami' => array(
-        'pages' => '',
-      ),
-      'attributes' => array(),
-      'item_attributes' => array(
-        'data-inner-width' => '',
-        'data-inner-height' => '',
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'identifier' => 'main-menu_polticas-de-seguridad-de-la-informacin-y-proteccin-de-datos-pesonales:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -46,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_mecanismos-de-contacto:<front>',
-  );
+ 
   // Exported menu link: main-menu_preguntas-frecuentes:transparencia/informacion-interes/faqs.
   $menu_links['main-menu_preguntas-frecuentes:transparencia/informacion-interes/faqs'] = array(
     'menu_name' => 'main-menu',
@@ -2109,7 +1982,6 @@ transparencia/tramites-servicios/*',
   // Translatables
   // Included for use with string extractors like potx.
   t('Atención al Ciudadano');
-  t('Atención al ciudadano');
   t('Calendario de Actividades');
   t('Contratación');
   t('Control');

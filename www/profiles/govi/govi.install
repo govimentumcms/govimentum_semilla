@@ -307,7 +307,11 @@ function govi_install_institutional_features() {
         'Plan de Servicio al Ciudadano',
         'Plan Estratégico',
         'Plan Anticorrupción y Atención al Ciudadano',
-    );
+		'Manuales',
+		'Plan antitrámites',
+		'Políticas y lineamientos sectoriales',
+		'Plan de gasto público',
+		);
 
     $terminos['periodicidad'] = array(
         'Cuatrienal',

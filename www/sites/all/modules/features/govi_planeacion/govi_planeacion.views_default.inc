@@ -535,6 +535,15 @@ function govi_planeacion_views_default_views() {
     0 => '33',
   );
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['vocabulary'] = 'planeacion_clasificacion';
+  /* Filter criterion: Content: Clasificación de planes (field_planeacion_clasi_planes) */
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['id'] = 'field_planeacion_clasi_planes_tid';
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['table'] = 'field_data_field_planeacion_clasi_planes';
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['field'] = 'field_planeacion_clasi_planes_tid';
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['value'] = array(
+    0 => '46',
+  );
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['vocabulary'] = 'planeacion_clasificacion_planes';
   $handler->display->display_options['path'] = 'transparencia/planeacion/planes';
 
   /* Display: Programas y proyectos */
@@ -1261,6 +1270,198 @@ function govi_planeacion_views_default_views() {
   );
   $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['vocabulary'] = 'planeacion_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/planeacion/informes-empalme';
+
+  /* Display: Plan de gasto publico */
+  $handler = $view->new_display('page', 'Plan de gasto publico', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Planes';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_planeacion_clasi_planes',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['class'] = 'accordion-content';
+  $handler->display->display_options['style_options']['wrapper_class'] = 'item-list fondov2';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Nombre';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
+  /* Field: Content: Descripción */
+  $handler->display->display_options['fields']['field_planeacion_descripcion']['id'] = 'field_planeacion_descripcion';
+  $handler->display->display_options['fields']['field_planeacion_descripcion']['table'] = 'field_data_field_planeacion_descripcion';
+  $handler->display->display_options['fields']['field_planeacion_descripcion']['field'] = 'field_planeacion_descripcion';
+  $handler->display->display_options['fields']['field_planeacion_descripcion']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_planeacion_descripcion']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_planeacion_descripcion']['alter']['max_length'] = '150';
+  $handler->display->display_options['fields']['field_planeacion_descripcion']['alter']['trim'] = TRUE;
+  /* Field: Content: Periodicidad */
+  $handler->display->display_options['fields']['field_planeacion_periodicidad']['id'] = 'field_planeacion_periodicidad';
+  $handler->display->display_options['fields']['field_planeacion_periodicidad']['table'] = 'field_data_field_planeacion_periodicidad';
+  $handler->display->display_options['fields']['field_planeacion_periodicidad']['field'] = 'field_planeacion_periodicidad';
+  $handler->display->display_options['fields']['field_planeacion_periodicidad']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_planeacion_periodicidad']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Archivo Adjunto */
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['id'] = 'field_archivo_adjunto_planeacion';
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['table'] = 'field_data_field_archivo_adjunto_planeacion';
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['field'] = 'field_archivo_adjunto_planeacion';
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['alter']['text'] = ' Descargar ';
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['alter']['path'] = '[field_archivo_adjunto_planeacion]';
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['alter']['alt'] = 'Descargar';
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['alter']['link_class'] = 'icon-download pure-button';
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_archivo_adjunto_planeacion']['type'] = 'file_url_plain';
+  /* Field: Content: Enlace externo */
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['id'] = 'field_enlace_externo_planeacion';
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['table'] = 'field_data_field_enlace_externo_planeacion';
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['field'] = 'field_enlace_externo_planeacion';
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['label'] = 'Enlace';
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['alter']['text'] = ' Ver más';
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['alter']['path'] = '[field_enlace_externo_planeacion-url]';
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['alter']['alt'] = 'Ir a la localización del documento';
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['alter']['link_class'] = 'icon-view pure-button';
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_enlace_externo_planeacion']['type'] = 'link_plain';
+  /* Field: Content: Clasificación */
+  $handler->display->display_options['fields']['field_planeacion_clasificacion']['id'] = 'field_planeacion_clasificacion';
+  $handler->display->display_options['fields']['field_planeacion_clasificacion']['table'] = 'field_data_field_planeacion_clasificacion';
+  $handler->display->display_options['fields']['field_planeacion_clasificacion']['field'] = 'field_planeacion_clasificacion';
+  $handler->display->display_options['fields']['field_planeacion_clasificacion']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_planeacion_clasificacion']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Fecha Expedición */
+  $handler->display->display_options['fields']['field_planeacion_fecha_expe']['id'] = 'field_planeacion_fecha_expe';
+  $handler->display->display_options['fields']['field_planeacion_fecha_expe']['table'] = 'field_data_field_planeacion_fecha_expe';
+  $handler->display->display_options['fields']['field_planeacion_fecha_expe']['field'] = 'field_planeacion_fecha_expe';
+  $handler->display->display_options['fields']['field_planeacion_fecha_expe']['label'] = '';
+  $handler->display->display_options['fields']['field_planeacion_fecha_expe']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_planeacion_fecha_expe']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_planeacion_fecha_expe']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_planeacion_fecha_expe']['settings'] = array(
+    'format_type' => 'anho',
+    'custom_date_format' => '',
+    'fromto' => 'value2',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  /* Field: Content: Clasificación de planes */
+  $handler->display->display_options['fields']['field_planeacion_clasi_planes']['id'] = 'field_planeacion_clasi_planes';
+  $handler->display->display_options['fields']['field_planeacion_clasi_planes']['table'] = 'field_data_field_planeacion_clasi_planes';
+  $handler->display->display_options['fields']['field_planeacion_clasi_planes']['field'] = 'field_planeacion_clasi_planes';
+  $handler->display->display_options['fields']['field_planeacion_clasi_planes']['label'] = '';
+  $handler->display->display_options['fields']['field_planeacion_clasi_planes']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_planeacion_clasi_planes']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_planeacion_clasi_planes']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Clasificación Metas e Indicadores */
+  $handler->display->display_options['fields']['field_clasi_metas_indicadores']['id'] = 'field_clasi_metas_indicadores';
+  $handler->display->display_options['fields']['field_clasi_metas_indicadores']['table'] = 'field_data_field_clasi_metas_indicadores';
+  $handler->display->display_options['fields']['field_clasi_metas_indicadores']['field'] = 'field_clasi_metas_indicadores';
+  $handler->display->display_options['fields']['field_clasi_metas_indicadores']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_clasi_metas_indicadores']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Tipo de Recurso */
+  $handler->display->display_options['fields']['field_planeacion_tipo_de_recurso']['id'] = 'field_planeacion_tipo_de_recurso';
+  $handler->display->display_options['fields']['field_planeacion_tipo_de_recurso']['table'] = 'field_data_field_planeacion_tipo_de_recurso';
+  $handler->display->display_options['fields']['field_planeacion_tipo_de_recurso']['field'] = 'field_planeacion_tipo_de_recurso';
+  $handler->display->display_options['fields']['field_planeacion_tipo_de_recurso']['exclude'] = TRUE;
+  /* Field: Global: Fieldset */
+  $handler->display->display_options['fields']['fieldset']['id'] = 'fieldset';
+  $handler->display->display_options['fields']['fieldset']['table'] = 'views';
+  $handler->display->display_options['fields']['fieldset']['field'] = 'fieldset';
+  $handler->display->display_options['fields']['fieldset']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['fieldset']['alter']['text'] = '[field_planeacion_clasi_planes]';
+  $handler->display->display_options['fields']['fieldset']['children'] = array(
+    0 => 'nothing',
+  );
+  $handler->display->display_options['fields']['fieldset']['fieldset']['type'] = 'div';
+  $handler->display->display_options['fields']['fieldset']['fieldset']['classes'] = 'pure-g views-fieldset';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-15-24">
+<span>Descripción</span>
+<p>
+[field_planeacion_descripcion]
+<p>
+</div>
+<div class="pure-u-xl-4-24">
+<span>Periodicidad</span>
+<p>[field_planeacion_periodicidad] </p>
+</div>
+<div class="pure-u-xl-4-24 btnv2">
+[field_enlace_externo_planeacion] 
+[field_archivo_adjunto_planeacion]
+</div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Fecha Expedición -  start date (field_planeacion_fecha_expe) */
+  $handler->display->display_options['sorts']['field_planeacion_fecha_expe_value']['id'] = 'field_planeacion_fecha_expe_value';
+  $handler->display->display_options['sorts']['field_planeacion_fecha_expe_value']['table'] = 'field_data_field_planeacion_fecha_expe';
+  $handler->display->display_options['sorts']['field_planeacion_fecha_expe_value']['field'] = 'field_planeacion_fecha_expe_value';
+  $handler->display->display_options['sorts']['field_planeacion_fecha_expe_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'planeacion' => 'planeacion',
+  );
+  /* Filter criterion: Content: Clasificación (field_planeacion_clasificacion) */
+  $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['id'] = 'field_planeacion_clasificacion_tid';
+  $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['table'] = 'field_data_field_planeacion_clasificacion';
+  $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['field'] = 'field_planeacion_clasificacion_tid';
+  $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['value'] = array(
+    0 => '33',
+  );
+  $handler->display->display_options['filters']['field_planeacion_clasificacion_tid']['vocabulary'] = 'planeacion_clasificacion';
+  /* Filter criterion: Content: Clasificación de planes (field_planeacion_clasi_planes) */
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['id'] = 'field_planeacion_clasi_planes_tid';
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['table'] = 'field_data_field_planeacion_clasi_planes';
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['field'] = 'field_planeacion_clasi_planes_tid';
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['operator'] = 'and';
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['value'] = array(
+    0 => '46',
+  );
+  $handler->display->display_options['filters']['field_planeacion_clasi_planes_tid']['vocabulary'] = 'planeacion_clasificacion_planes';
+  $handler->display->display_options['path'] = 'transparencia/planeacion/plan-de-gasto-publico';
   $translatables['planeacion'] = array(
     t('Master'),
     t('Planeación'),
@@ -1340,6 +1541,7 @@ function govi_planeacion_views_default_views() {
     t('[field_clasi_metas_indicadores]'),
     t('Participación Ciudadana'),
     t('Informes de Empalme'),
+    t('Plan de gasto publico'),
   );
   $export['planeacion'] = $view;
 

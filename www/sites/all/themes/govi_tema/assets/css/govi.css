@@ -2163,6 +2163,20 @@ ol.site-map-menu { counter-reset: item }
     padding: 0px 4px;
 }
 
+.trasparenciaol{
+	    border: solid 1px #d8d8d8;
+    background: whitesmoke;
+    border-radius: 23px;
+}
+
+.trasparenciaol li{
+    margin: 10px 0em;
+}
+
+.trasparenciaol li:before{
+color:red;}
+
+
 
 
 

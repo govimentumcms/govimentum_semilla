@@ -36,7 +36,7 @@ transparencia/planeacion/informes-empalme/*',
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -45,
     'customized' => 1,
   );
   // Exported menu link: menu-menu-planeacion_metas-objetivos-e-indicadores:transparencia/planeacion/metas-objetivos-indicadores.
@@ -67,7 +67,7 @@ transparencia/planeacion/metas-objetivos-e-indicadores/*',
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -47,
     'customized' => 1,
   );
   // Exported menu link: menu-menu-planeacion_participacin-ciudadana:transparencia/planeacion/participacion-ciudadana.
@@ -98,15 +98,43 @@ transparencia/planeacion/participación-ciudadana/*',
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -46,
     'customized' => 1,
   );
-  // Exported menu link: menu-menu-planeacion_planes:transparencia/planeacion/planes.
-  $menu_links['menu-menu-planeacion_planes:transparencia/planeacion/planes'] = array(
+  // Exported menu link: menu-menu-planeacion_plan-de-gasto-pblico:transparencia/planeacion/plan-de-gasto-publico.
+  $menu_links['menu-menu-planeacion_plan-de-gasto-pblico:transparencia/planeacion/plan-de-gasto-publico'] = array(
+    'menu_name' => 'menu-menu-planeacion',
+    'link_path' => 'transparencia/planeacion/plan-de-gasto-publico',
+    'router_path' => 'transparencia/planeacion/plan-de-gasto-publico',
+    'link_title' => 'Plan de gasto público',
+    'options' => array(
+      'cami' => array(
+        'pages' => '',
+      ),
+      'attributes' => array(),
+      'item_attributes' => array(
+        'data-inner-width' => '',
+        'data-inner-height' => '',
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-menu-planeacion_plan-de-gasto-pblico:transparencia/planeacion/plan-de-gasto-publico',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-menu-planeacion_polticas-lineamientos-y-manuales:transparencia/planeacion/planes.
+  $menu_links['menu-menu-planeacion_polticas-lineamientos-y-manuales:transparencia/planeacion/planes'] = array(
     'menu_name' => 'menu-menu-planeacion',
     'link_path' => 'transparencia/planeacion/planes',
-    'router_path' => 'transparencia',
-    'link_title' => 'Planes',
+    'router_path' => 'transparencia/planeacion/planes',
+    'link_title' => 'Políticas, lineamientos y manuales',
     'options' => array(
       'cami' => array(
         'pages' => 'transparencia/planeacion/planes
@@ -120,7 +148,7 @@ transparencia/planeacion/planes/*',
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'menu-menu-planeacion_planes:transparencia/planeacion/planes',
+      'identifier' => 'menu-menu-planeacion_polticas-lineamientos-y-manuales:transparencia/planeacion/planes',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -158,7 +186,7 @@ transparencia/planeacion/programas-y-proyectos/*',
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -48,
     'customized' => 1,
   );
 
@@ -167,7 +195,8 @@ transparencia/planeacion/programas-y-proyectos/*',
   t('Informes de empalme');
   t('Metas, objetivos e indicadores');
   t('Participación ciudadana');
-  t('Planes');
+  t('Plan de gasto público');
+  t('Políticas, lineamientos y manuales');
   t('Programas y Proyectos');
 
   return $menu_links;

@@ -442,6 +442,52 @@ function govi_mecanismos_contacto_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Dirección */
+  $handler->display->display_options['fields']['field_atencion_direccion']['id'] = 'field_atencion_direccion';
+  $handler->display->display_options['fields']['field_atencion_direccion']['table'] = 'field_data_field_atencion_direccion';
+  $handler->display->display_options['fields']['field_atencion_direccion']['field'] = 'field_atencion_direccion';
+  /* Field: Content: Teléfonos */
+  $handler->display->display_options['fields']['field_atencion_telefono']['id'] = 'field_atencion_telefono';
+  $handler->display->display_options['fields']['field_atencion_telefono']['table'] = 'field_data_field_atencion_telefono';
+  $handler->display->display_options['fields']['field_atencion_telefono']['field'] = 'field_atencion_telefono';
+  $handler->display->display_options['fields']['field_atencion_telefono']['label'] = 'Teléfono';
+  $handler->display->display_options['fields']['field_atencion_telefono']['delta_offset'] = '0';
+  /* Field: Content: Fax */
+  $handler->display->display_options['fields']['field_atencion_fax']['id'] = 'field_atencion_fax';
+  $handler->display->display_options['fields']['field_atencion_fax']['table'] = 'field_data_field_atencion_fax';
+  $handler->display->display_options['fields']['field_atencion_fax']['field'] = 'field_atencion_fax';
+  $handler->display->display_options['fields']['field_atencion_fax']['delta_offset'] = '0';
+  /* Field: Content: Linea Gratuita */
+  $handler->display->display_options['fields']['field_atencion_linea_gratuita']['id'] = 'field_atencion_linea_gratuita';
+  $handler->display->display_options['fields']['field_atencion_linea_gratuita']['table'] = 'field_data_field_atencion_linea_gratuita';
+  $handler->display->display_options['fields']['field_atencion_linea_gratuita']['field'] = 'field_atencion_linea_gratuita';
+  $handler->display->display_options['fields']['field_atencion_linea_gratuita']['delta_offset'] = '0';
+  /* Field: Content: Correo electrónico institucional */
+  $handler->display->display_options['fields']['field_atencion_correo']['id'] = 'field_atencion_correo';
+  $handler->display->display_options['fields']['field_atencion_correo']['table'] = 'field_data_field_atencion_correo';
+  $handler->display->display_options['fields']['field_atencion_correo']['field'] = 'field_atencion_correo';
+  $handler->display->display_options['fields']['field_atencion_correo']['click_sort_column'] = 'url';
+  /* Field: Content: Correo electrónico notificaciones judiciales */
+  $handler->display->display_options['fields']['field_correo_judicial']['id'] = 'field_correo_judicial';
+  $handler->display->display_options['fields']['field_correo_judicial']['table'] = 'field_data_field_correo_judicial';
+  $handler->display->display_options['fields']['field_correo_judicial']['field'] = 'field_correo_judicial';
+  /* Field: Content: Horario de Atención */
+  $handler->display->display_options['fields']['field_atencion_horario']['id'] = 'field_atencion_horario';
+  $handler->display->display_options['fields']['field_atencion_horario']['table'] = 'field_data_field_atencion_horario';
+  $handler->display->display_options['fields']['field_atencion_horario']['field'] = 'field_atencion_horario';
+  /* Field: Content: Departamento */
+  $handler->display->display_options['fields']['field_atencion_departamento']['id'] = 'field_atencion_departamento';
+  $handler->display->display_options['fields']['field_atencion_departamento']['table'] = 'field_data_field_atencion_departamento';
+  $handler->display->display_options['fields']['field_atencion_departamento']['field'] = 'field_atencion_departamento';
+  /* Field: Content: Ciudad */
+  $handler->display->display_options['fields']['field_atencion_ciudad']['id'] = 'field_atencion_ciudad';
+  $handler->display->display_options['fields']['field_atencion_ciudad']['table'] = 'field_data_field_atencion_ciudad';
+  $handler->display->display_options['fields']['field_atencion_ciudad']['field'] = 'field_atencion_ciudad';
+  /* Field: Content: Código postal */
+  $handler->display->display_options['fields']['field_atencion_codigo_postal']['id'] = 'field_atencion_codigo_postal';
+  $handler->display->display_options['fields']['field_atencion_codigo_postal']['table'] = 'field_data_field_atencion_codigo_postal';
+  $handler->display->display_options['fields']['field_atencion_codigo_postal']['field'] = 'field_atencion_codigo_postal';
   $handler->display->display_options['block_description'] = 'Pie Información de la Entidad';
 
   /* Display: Localización fisica, sucursales, regionales */
@@ -654,10 +700,11 @@ function govi_mecanismos_contacto_views_default_views() {
     t('Horario de Atención'),
     t('Ciudad'),
     t('Block'),
+    t('Departamento'),
+    t('Código postal'),
     t('Pie Información de la Entidad'),
     t('Localización fisica, sucursales, regionales'),
     t('Nombre'),
-    t('Departamento'),
     t('Horario de atención'),
     t('Datos de contacto'),
     t('Teléfonos'),
@@ -665,7 +712,6 @@ function govi_mecanismos_contacto_views_default_views() {
     t('Atención al ciudadano'),
     t('Este display muestra la información de contacto de la sede principal de la Entidad'),
     t('A continuación se presentan los canales para la atención al ciudadano para recibir peticiones, quejas, reclamos, denuncias y solicitudes de información'),
-    t('Código postal'),
     t('Ver Mapa'),
     t('Ubicación geográfica de la Entidad en un mapa del servicio del código postal nacional'),
   );

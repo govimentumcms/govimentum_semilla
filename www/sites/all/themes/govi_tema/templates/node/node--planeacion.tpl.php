@@ -105,67 +105,14 @@
       	</div>
     </div>
     <div class="pure-g">
-      	<div class="pure-u-1-2">
-	    <div class="field">
-
-	    <?php 
-	    $clasificacion = $content['field_planeacion_clasificacion']['#items'][0]['taxonomy_term'];
-	    	 	
-	    	 	if(!empty($content['field_planeacion_clasi_planes'])) {
-
-	    	 			switch ($node->field_planeacion_clasi_planes['und'][0]['taxonomy_term']->name) {
-	    	 				case 'Plan Anticorrupción y Atención al Ciudadano':
-	    	 					$tipo = $content['field_planeacion_clasi_planes']['#items'][0]['taxonomy_term'];
-		    					$url = '/transparencia/planeacion/planes';
-	    	 				break;
-	    	 				case 'Plan de Acción':
-	    	 					$tipo = $content['field_planeacion_clasi_planes']['#items'][0]['taxonomy_term'];
-		    					$url = '/transparencia/planeacion/planes';
-	    	 				break;
-	    	 				case 'Plan de Rencición de Cuentas':
-	    	 					$tipo = $content['field_planeacion_clasi_planes']['#items'][0]['taxonomy_term'];
-		    					$url = '/transparencia/planeacion/planes';
-	    	 				break;
-	    	 				case 'Plan de Servicio al Ciudadano':
-	    	 					$tipo = $content['field_planeacion_clasi_planes']['#items'][0]['taxonomy_term'];
-		    					$url = '/transparencia/planeacion/planes';
-	    	 				break;
-	    	 				case 'Plan Estratégico':
-	    	 					$tipo = $content['field_planeacion_clasi_planes']['#items'][0]['taxonomy_term'];
-		    					$url = '/transparencia/planeacion/planes';
-	    	 				break;
-	    	 				default;
-	    	 				break;	
-	    	 			}
-	    	 		$base = $GLOBALS['base_url']; 
-	    			print '<p>Este documento es de tipo <a href="'.$base.'/taxonomy/term/'.$tipo->tid.'"'.'title="Consultar lista de'.$tipo->name.'">'.$tipo->name.'</a> y pertenece a <a href="'.$base.$url.'"'.'title="Volver a la clasificación de'.$clasificacion->name.'">'.$clasificacion->name.'</a> de Planeación de la Entidad.</p>';
-	    	 	}
-
-	    	 	if(!empty($content['field_clasi_metas_indicadores'])) {
-
-	    	 		switch ($node->field_clasi_metas_indicadores['und'][0]['taxonomy_term']->name) {
-	    	 			case 'Auditorias Externas':
-	    	 				$tipo = $content['field_clasi_metas_indicadores']['#items'][0]['taxonomy_term'];
-		    				$url = '/transparencia/planeacion/metas-objetivos-indicadores';
-	    	 			break;
-	    	 			case 'Resultado de Indicadores':
-	    	 				$tipo = $content['field_clasi_metas_indicadores']['#items'][0]['taxonomy_term'];
-		    				$url = '/transparencia/planeacion/metas-objetivos-indicadores';
-	    	 			break;
-	    	 			case 'Seguimiento a la planeación':
-	    	 				$tipo = $content['field_clasi_metas_indicadores']['#items'][0]['taxonomy_term'];
-		    				$url = '/transparencia/planeacion/metas-objetivos-indicadores';
-	    	 			break;
-	    	 			default;
-	    	 			break;
-	    	 		}
-	    	 		$base = $GLOBALS['base_url']; 
-	    			print '<p>Este documento es de tipo <a href="'.$base.'/taxonomy/term/'.$tipo->tid.'"'.'title="Consultar lista de'.$tipo->name.'">'.$tipo->name.'</a> y pertenece a <a href="'.$base.$url.'"'.'title="Volver a la clasificación de'.$clasificacion->name.'">'.$clasificacion->name.'</a> de Planeación de la Entidad.</p>';
-	    	 	}
-	    ?>
-
-	    </div>
-
+      	<div class="pure-u-1-2">	  
+	 	    <div class="field">
+	<p>Este documento es de tipo Planeación y pertenece a:
+	  <?php print render($content['field_planeacion_clasi_planes']); ?>
+	    </p>
+	    </div>    	    
+	    
+	  
 	    	    
 	    
 		</div>
