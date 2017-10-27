@@ -1286,7 +1286,7 @@ transparencia/instrumentos-gestion-informacion-publica/Informe-pqr-denuncias-sol
     'menu_name' => 'main-menu',
     'link_path' => 'transparencia/planeacion/planes',
     'router_path' => 'transparencia',
-    'link_title' => 'Planes',
+    'link_title' => 'Políticas, lineamientos y manuales',
     'options' => array(
       'cami' => array(
         'pages' => '',
@@ -1309,6 +1309,37 @@ transparencia/instrumentos-gestion-informacion-publica/Informe-pqr-denuncias-sol
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -50,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_planeacin:transparencia/planeacion',
+  );
+  // Exported menu link: main-menu_plan-de-gasto-publico:transparencia/planeacion/plan-de-gasto-publico.
+  $menu_links['main-menu_planes:transparencia/planeacion/plan-de-gasto-publico'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'transparencia/planeacion/plan-de-gasto-publico',
+    'router_path' => 'transparencia',
+    'link_title' => 'Plan de Gasto Público',
+    'options' => array(
+      'cami' => array(
+        'pages' => '',
+      ),
+      'attributes' => array(
+        'title' => 'Plan de Gasto Público',
+      ),
+      'item_attributes' => array(
+        'data-inner-width' => '',
+        'data-inner-height' => '',
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'main-menu_plan-de-gasto-publico:transparencia/planeacion/plan-de-gasto-publico',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
     'customized' => 1,
     'parent_identifier' => 'main-menu_planeacin:transparencia/planeacion',
   );

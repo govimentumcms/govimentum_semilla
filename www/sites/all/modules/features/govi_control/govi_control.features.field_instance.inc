@@ -144,6 +144,132 @@ function govi_control_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-control-field_control_demandas'.
+  $field_instances['node-control-field_control_demandas'] = array(
+    'bundle' => 'control',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_control_demandas',
+    'label' => 'Número de demandas',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-control-field_control_demandas_cuantia'.
+  $field_instances['node-control-field_control_demandas_cuantia'] = array(
+    'bundle' => 'control',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_control_demandas_cuantia',
+    'label' => 'Pretención o cuantia de la demanda',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-control-field_control_demandas_estado'.
+  $field_instances['node-control-field_control_demandas_estado'] = array(
+    'bundle' => 'control',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_control_demandas_estado',
+    'label' => 'Estado de Demandas',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-control-field_control_descripcion'.
   $field_instances['node-control-field_control_descripcion'] = array(
     'bundle' => 'control',
@@ -282,6 +408,48 @@ function govi_control_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-control-field_control_riesgo'.
+  $field_instances['node-control-field_control_riesgo'] = array(
+    'bundle' => 'control',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_control_riesgo',
+    'label' => 'Riesgo de Perdida',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-control-field_control_tipo_de_recurso'.
   $field_instances['node-control-field_control_tipo_de_recurso'] = array(
     'bundle' => 'control',
@@ -364,8 +532,12 @@ function govi_control_field_default_field_instances() {
   t('Digite la URL.');
   t('Digite la descripción.');
   t('Enlace externo');
+  t('Estado de Demandas');
   t('Fecha de Expedición');
+  t('Número de demandas');
   t('Periodicidad');
+  t('Pretención o cuantia de la demanda');
+  t('Riesgo de Perdida');
   t('Seleccione el archivo adjunto.');
   t('Seleccione el tipo de recurso.');
   t('Seleccione la fecha de expedición.');

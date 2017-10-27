@@ -91,6 +91,8 @@
 	</div>
       	<div class="pure-u-1-1">
 	    <?php print render($content['field_control_descripcion']); ?>
+				<br>
+		 <?php print render($content['group_demandas']); ?>
       	</div>
     </div>
     <div class="pure-g">
@@ -113,6 +115,10 @@
 		?>
 
 	    <?php endif; ?>
+			   
+
+		
+		
     	</div>
     </div>
 </div>

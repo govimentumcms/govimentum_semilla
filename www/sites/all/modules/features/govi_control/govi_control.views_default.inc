@@ -372,7 +372,7 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
-    0 => '63',
+    0 => '67',
   );
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['vocabulary'] = 'control_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/control/informes-gestion-evaluacion-auditoria';
@@ -529,7 +529,7 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
-    0 => '64',
+    0 => '68',
   );
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['vocabulary'] = 'control_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/control/reportes-control-interno';
@@ -692,7 +692,7 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
-    0 => '65',
+    0 => '69',
   );
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['vocabulary'] = 'control_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/control/planes-mejoramiento';
@@ -854,7 +854,7 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
-    0 => '66',
+    0 => '70',
   );
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['operator_id'] = 'field_control_clasificacion_tid_op';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['label'] = 'Clasificación (field_control_clasificacion)';
@@ -1020,7 +1020,7 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
-    0 => '67',
+    0 => '71',
   );
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['operator_id'] = 'field_control_clasificacion_tid_op';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['label'] = 'Clasificación (field_control_clasificacion)';
@@ -1137,6 +1137,38 @@ function govi_control_views_default_views() {
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['table'] = 'field_data_field_control_tipo_de_recurso';
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['field'] = 'field_control_tipo_de_recurso';
   $handler->display->display_options['fields']['field_control_tipo_de_recurso']['exclude'] = TRUE;
+  /* Field: Content: Estado de Demandas */
+  $handler->display->display_options['fields']['field_control_demandas_estado']['id'] = 'field_control_demandas_estado';
+  $handler->display->display_options['fields']['field_control_demandas_estado']['table'] = 'field_data_field_control_demandas_estado';
+  $handler->display->display_options['fields']['field_control_demandas_estado']['field'] = 'field_control_demandas_estado';
+  $handler->display->display_options['fields']['field_control_demandas_estado']['label'] = '';
+  $handler->display->display_options['fields']['field_control_demandas_estado']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_control_demandas_estado']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_control_demandas_estado']['hide_empty'] = TRUE;
+  /* Field: Content: Número de demandas */
+  $handler->display->display_options['fields']['field_control_demandas']['id'] = 'field_control_demandas';
+  $handler->display->display_options['fields']['field_control_demandas']['table'] = 'field_data_field_control_demandas';
+  $handler->display->display_options['fields']['field_control_demandas']['field'] = 'field_control_demandas';
+  $handler->display->display_options['fields']['field_control_demandas']['label'] = '';
+  $handler->display->display_options['fields']['field_control_demandas']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_control_demandas']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_control_demandas']['hide_empty'] = TRUE;
+  /* Field: Content: Pretención o cuantia de la demanda */
+  $handler->display->display_options['fields']['field_control_demandas_cuantia']['id'] = 'field_control_demandas_cuantia';
+  $handler->display->display_options['fields']['field_control_demandas_cuantia']['table'] = 'field_data_field_control_demandas_cuantia';
+  $handler->display->display_options['fields']['field_control_demandas_cuantia']['field'] = 'field_control_demandas_cuantia';
+  $handler->display->display_options['fields']['field_control_demandas_cuantia']['label'] = '';
+  $handler->display->display_options['fields']['field_control_demandas_cuantia']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_control_demandas_cuantia']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_control_demandas_cuantia']['hide_empty'] = TRUE;
+  /* Field: Content: Riesgo de Perdida */
+  $handler->display->display_options['fields']['field_control_riesgo']['id'] = 'field_control_riesgo';
+  $handler->display->display_options['fields']['field_control_riesgo']['table'] = 'field_data_field_control_riesgo';
+  $handler->display->display_options['fields']['field_control_riesgo']['field'] = 'field_control_riesgo';
+  $handler->display->display_options['fields']['field_control_riesgo']['label'] = '';
+  $handler->display->display_options['fields']['field_control_riesgo']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_control_riesgo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_control_riesgo']['hide_empty'] = TRUE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -1155,6 +1187,12 @@ function govi_control_views_default_views() {
 <div class="pure-u-xl-4-24 btnv2">
 [field_control_archivo_adjunto]
 [field_control_enlace_externo]
+</div>
+<div class="pure-u-xl-1 demandas">
+Número de demandas: [field_control_demandas] <br>
+Estado de las Demandas: [field_control_demandas_estado]<br>
+Cuantia:[field_control_demandas_cuantia] <br>
+Riesgo de perdida:[field_control_riesgo] 
 </div>
 </div>
 ';
@@ -1186,7 +1224,7 @@ function govi_control_views_default_views() {
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['table'] = 'field_data_field_control_clasificacion';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['field'] = 'field_control_clasificacion_tid';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['value'] = array(
-    0 => '68',
+    0 => '72',
   );
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['operator_id'] = 'field_control_clasificacion_tid_op';
   $handler->display->display_options['filters']['field_control_clasificacion_tid']['expose']['label'] = 'Clasificación (field_control_clasificacion)';
@@ -1256,6 +1294,28 @@ function govi_control_views_default_views() {
     t('Clasificación (field_control_clasificacion)'),
     t('Información para población vulnerable'),
     t('Defensa judicial'),
+    t('<div class="acordionv2">
+<div class="pure-u-xl-1"><h2>[title]</h2></div>
+<div class="pure-u-xl-15-24">
+<p>Descripción</p>
+[field_control_descripcion] 
+</div>
+<div class="pure-u-xl-4-24">
+<p>Periodicidad</p>
+[field_control_periodicidad]  
+</div>
+<div class="pure-u-xl-4-24 btnv2">
+[field_control_archivo_adjunto]
+[field_control_enlace_externo]
+</div>
+<div class="pure-u-xl-1 demandas">
+Número de demandas: [field_control_demandas] <br>
+Estado de las Demandas: [field_control_demandas_estado]<br>
+Cuantia:[field_control_demandas_cuantia] <br>
+Riesgo de perdida:[field_control_riesgo] 
+</div>
+</div>
+'),
   );
   $export['control'] = $view;
 

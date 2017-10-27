@@ -136,7 +136,7 @@
 		//$target = $enlace['attributes']['target'];
 		?>
 
-		<a class="pure-button pure-button-primary" href="<?php print $url; ?>" title="<?php print $title; ?>" target="<?php print $target; ?>">Ir al documento completo</a>
+		<a class="pure-button pure-button-primary" href="<?php print $url; ?>" title="<?php print $title; ?>">Ir al documento completo</a>
 
 	    <?php elseif(!empty($content['field_archivo_adjunto_tram_serv'])): ?>
 

@@ -302,14 +302,14 @@ function govi_install_institutional_features() {
     );
 
     $terminos['planeacion_clasificacion_planes'] = array(
-        'Plan de Acción',
+        'Políticas y lineamientos sectoriales',
+		'Manuales',
+		'Plan Estratégico',
+		'Plan de Acción',
         'Plan de Rencición de Cuentas',
         'Plan de Servicio al Ciudadano',
-        'Plan Estratégico',
-        'Plan Anticorrupción y Atención al Ciudadano',
-		'Manuales',
-		'Plan antitrámites',
-		'Políticas y lineamientos sectoriales',
+		'Plan Anti Trámites',
+        'Plan Anticorrupción y Atención al Ciudadano',		
 		'Plan de gasto público',
 		);
 
