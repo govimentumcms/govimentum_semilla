@@ -1519,8 +1519,8 @@ a.created_by {
 }
 
 #block-menu-menu-menu-organizacion .content ul li.active a{
-	background-color: #003e65;
-	color: rgba(0,62,101,1);
+	background-color: #ffffff;
+    color: rgba(0,62,101,1) !important;
 }
 
 

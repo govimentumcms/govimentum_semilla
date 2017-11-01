@@ -41,7 +41,7 @@ function govi_tramites_servicios_content_defaults() {
     'field_clasificacion_tram_serv' => array(
       'und' => array(
         0 => array(
-          'tid' => 56,
+          'tid' => 60,
         ),
       ),
     ),
@@ -78,7 +78,7 @@ function govi_tramites_servicios_content_defaults() {
     'field_clasificacion_tram_serv' => array(
       'und' => array(
         0 => array(
-          'tid' => 56,
+          'tid' => 60,
         ),
       ),
     ),
@@ -140,7 +140,7 @@ function govi_tramites_servicios_content_defaults() {
     'field_clasificacion_tram_serv' => array(
       'und' => array(
         0 => array(
-          'tid' => 57,
+          'tid' => 61,
         ),
       ),
     ),
@@ -177,7 +177,7 @@ function govi_tramites_servicios_content_defaults() {
     'field_clasificacion_tram_serv' => array(
       'und' => array(
         0 => array(
-          'tid' => 57,
+          'tid' => 61,
         ),
       ),
     ),
