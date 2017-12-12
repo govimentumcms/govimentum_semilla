@@ -18,94 +18,6 @@ function govi_sdqs_admin_config_main_form($form, &$form_state) {
         drupal_set_message($msg, 'warning');
     }
     
-    if (empty(variable_get('sdqs_env') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Seleccione un ambiente.';
-        drupal_set_message($msg, 'warning');
-    }
-
-    if (empty(variable_get('sdqs_user') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Defina un usuario válido.';
-
-        drupal_set_message($msg, 'warning');
-    }
-
-    if (empty(variable_get('sdqs_password') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Defina una contraseña válida.';
-
-        drupal_set_message($msg, 'warning');
-    }
-
-
-    if (empty(variable_get('sdqs_entidad') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Seleccione una entidad.';
-
-        drupal_set_message($msg, 'warning');
-    }
-
-    if (empty(variable_get('sdqs_dependencia') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Seleccione una Dependencia.';
-
-        drupal_set_message($msg, 'warning');
-    }
-
-    if (empty(variable_get('sdqs_tema') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Seleccione Tema Principal.';
-
-        drupal_set_message($msg, 'warning');
-    }
-
-    if (empty(variable_get('govi_sdqs_lista_entidades')) || empty(variable_get('govi_sdqs_lista_dependencias')) && end(($actual_argument)) != 'ajax') {
-        $msg = '';
-        $msg .= 'Seleccione getListaEntidad para actualizar.';
-
-        drupal_set_message($msg, 'warning');
-    }
-
-
-    if (empty(variable_get('govi_sdqs_lista_ciudades') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Seleccione getListaCiudad para actualizar.';
-
-        drupal_set_message($msg, 'warning');
-    }
-
-    if (empty(variable_get('govi_sdqs_lista_departamentos') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Seleccione getListaDepatamento para actualizar.';
-
-        drupal_set_message($msg, 'warning');
-    }    
-    if (empty(variable_get('govi_sdqs_lista_paises') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Seleccione getListaPais para actualizar.';
-
-        drupal_set_message($msg, 'warning');
-    }
-    if (empty(variable_get('govi_sdqs_lista_tema') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Seleccione getListaTema para actualizar.';
-
-        drupal_set_message($msg, 'warning');
-    }
-    if (empty(variable_get('govi_sdqs_lista_tipos_id') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Seleccione getListaTipoIdentificacion para actualizar.';
-
-        drupal_set_message($msg, 'warning');
-    } 
-    if (empty(variable_get('govi_sdqs_lista_tipo_peticion') && end(($actual_argument)) != 'ajax')) {
-        $msg = '';
-        $msg .= 'Seleccione getListaTipoPeticion para actualizar.';
-
-        drupal_set_message($msg, 'warning');
-    }    
-
     $form['#attached']['css'] = array(
         drupal_get_path('module', 'govi_sdqs').'/assets/css/govi-sdqs.admin.css',
     );
@@ -211,12 +123,13 @@ function govi_sdqs_admin_config_main_form($form, &$form_state) {
     }
 
 
-if(empty(variable_get('sdqs_entidad'))) {
-    print '<div class="messages warning">
-<h2 class="element-invisible">Warning message</h2>
-Seleccione una entidad
-</b></div>';
-}
+    if(!empty(variable_get('sdqs_entidad'))) {
+        $form['wsdl_config']['entidad_seleccionada'] = array(
+            '#type' => 'item',
+            '#title'=> t('Entidad seleccionada'),
+            '#markup' => (!empty(variable_get('sdqs_entidad')) ? $opts_entidades[variable_get('sdqs_entidad')]: 'No ha seleccionado una entidad.').' '.'<a class="change-item" href="#" data-change="form-item-codigo-entidad"  >cambiar</a>',
+        );    
+    }
 
 
     $form['wsdl_config']['codigo_entidad'] = array(
@@ -226,6 +139,7 @@ Seleccione una entidad
         '#options' => !empty($opts_entidades) ? $opts_entidades : array(),
         '#required' => TRUE,
         '#default_value' => variable_get('sdqs_entidad'),
+        '#attributes' => array('class' => ( Array(!empty(variable_get('sdqs_entidad')) ? 'hide' : 'show')) ),
         '#ajax' => array(
             'event' => 'change',
             'effect' => 'fade',
@@ -240,6 +154,15 @@ Seleccione una entidad
 
     $opts_dependencias = variable_get('govi_sdqs_lista_dependencias');
 
+
+    if(!empty(variable_get('sdqs_dependencia'))) {
+        $form['wsdl_config']['dependencia_seleccionada'] = array(
+            '#type' => 'item',
+            '#title'=> t('Dependencia seleccionada'),
+            '#markup' => (!empty(variable_get('sdqs_dependencia')) ? $opts_dependencias[variable_get('sdqs_dependencia')]: 'No ha seleccionado una dependencia.').' '.'<a class="change-item" data-change="form-item-codigo-dependencia" href="#"  >cambiar</a>',
+        );    
+    }
+
     $form['wsdl_config']['codigo_dependencia'] = array(
         '#prefix' => '<div id="wrapper-dependencia">',
         '#suffix' => '</div>',
@@ -247,6 +170,7 @@ Seleccione una entidad
         '#title' => 'Por favor seleccione la dependencia',
         '#default_value' => variable_get('sdqs_dependencia'),
         '#options' => !empty($opts_dependencias) ? $opts_dependencias : array(),
+        '#attributes' => array('class' => (Array(!empty(variable_get('sdqs_dependencia')) ? 'hide' : 'show'))),
         '#validated' => TRUE
     );
 
@@ -256,6 +180,13 @@ Seleccione una entidad
         }
 
     }
+    if(!empty(variable_get('sdqs_tema'))) {
+        $form['wsdl_config']['tema_seleccionado'] = array(
+            '#type' => 'item',
+            '#title'=> t('Dependencia seleccionada'),
+            '#markup' => (!empty(variable_get('sdqs_tema')) ? $opts_temas[variable_get('sdqs_tema')]: 'No ha seleccionado una tema.').' '.'<a class="change-item" data-change="form-item-codigo-tema" href="#"  >cambiar</a>',
+        );    
+    }
 
     $form['wsdl_config']['codigo_tema'] = array(
         '#prefix' => '<div id="wrapper-tema">',
@@ -264,6 +195,8 @@ Seleccione una entidad
         '#title' => 'Por favor seleccione el tema principal de su dependencia',
         '#default_value' => variable_get('sdqs_tema'),
         '#options' => !empty($opts_temas) ? $opts_temas : array(),
+        '#attributes' => array('class' => ( Array(!empty(variable_get('sdqs_tema')) ? 'hide' : 'show')) ),
+
         '#validated' => TRUE
     );
     $form['apariencia'] = array(
@@ -298,8 +231,10 @@ Seleccione una entidad
         '#type' => 'submit',
         '#value' => 'Guardar',
     );
-
-
+    
+    $path = drupal_get_path('module', 'govi_sdqs');
+    $js = $path . '/assets/js/govi-sdqs-form-admin.js';
+    drupal_add_js($js);
     return $form;
 }
 
