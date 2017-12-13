@@ -8,6 +8,7 @@ function govi_sdqs_admin_config_main_form($form, &$form_state) {
     $entidades = variable_get('govi_sdqs_lista_entidades');
     $tipos_peticion = variable_get('govi_sdqs_lista_tipo_peticion');
     $tipos_id = variable_get('govi_sdqs_lista_tipos_id');
+    $path_modulo = drupal_get_path('module', 'govi_sdqs');
     
     $actual_argument =arg();
 
@@ -19,7 +20,7 @@ function govi_sdqs_admin_config_main_form($form, &$form_state) {
     }
     
     $form['#attached']['css'] = array(
-        drupal_get_path('module', 'govi_sdqs').'/assets/css/govi-sdqs.admin.css',
+        $path_modulo.'/assets/css/govi-sdqs.admin.css',
     );
 
     $form['wsdl_config'] = array(
@@ -96,10 +97,7 @@ function govi_sdqs_admin_config_main_form($form, &$form_state) {
         '#required' => TRUE,
         '#default_value' => variable_get('sdqs_env', 'test'),
     );
-
-    $form['wsdl_config']['get_codes'] = array(
-        '#type' => 'checkboxes',
-        '#options' => drupal_map_assoc(array(
+    $lista_operaciones = array(
 
             'getListaEntidad',
             'getListaTipoPeticion',
@@ -109,7 +107,11 @@ function govi_sdqs_admin_config_main_form($form, &$form_state) {
             'getListaDepatamento',
             'getListaCiudad',
 
-        )),
+        );
+
+    $form['wsdl_config']['get_codes'] = array(
+        '#type' => 'checkboxes',
+        '#options' => drupal_map_assoc($lista_operaciones),
         '#title' => 'Seleccione la lista de valores a actualizar. Esta opción consulta y trae los siguientes contenidos del servicio web y luego los almacena  localmente .(Estos valores serán almacendados como variables en el sistema de Drupal)',
     );
 
@@ -199,33 +201,6 @@ function govi_sdqs_admin_config_main_form($form, &$form_state) {
 
         '#validated' => TRUE
     );
-    $form['apariencia'] = array(
-        '#type' => 'fieldset',
-        '#title' => 'Con esta opción puede cambiar la apariencia del módulo SDQS',
-    );
-
-    $form['apariencia']['tema'] = array(
-        '#type' => 'select',
-        '#title' => 'Seleccione el tema que desea usar para la visualización del módulo',
-        '#options' => array(
-            'light' => 'light',
-            'dark' => 'dark'
-        ),
-        '#ajax' => array(
-            'event' => 'change',
-            'effect' => 'fade',
-            'wrapper' => 'govi-sdqs-tema-thumb',
-            'method' => 'replace',
-            'callback' => 'govi_sdqs_tema_cambiar_apariencia',
-        ),
-        '#default_value' => variable_get('govi_sdqs_tema', 'dark'),
-        '#required' => TRUE
-
-    );
-
-    $form['apariencia']['previsualizacion'] = array(
-        '#markup' => '<div id="govi-sdqs-tema-thumb" class="'.variable_get('govi_sdqs_tema').'"></div>',
-    );
 
     $form['submit'] = array(
         '#type' => 'submit',
@@ -270,7 +245,6 @@ function govi_sdqs_obtener_info_entidad($form, $form_state) {
 
         $form['wsdl_config']['codigo_dependencia']['#options'] = $opts_dependencias;
 
-        drupal_set_message('Debe guardar el formulario para que los cambios tengan efecto', 'warning');
 
         // Obtiene el sector al que la entidad pertenece
         foreach ($entidades as $item) {
@@ -303,7 +277,10 @@ function govi_sdqs_admin_config_main_form_submit($form, &$form_state) {
     $env = $form_state['values']['sdqs_env'];
     $opts = $form_state['values']['get_codes'];
     $entidad = $form_state['values']['codigo_entidad'];
-    $tema = $form_state['values']['tema'];
+    if (in_array("tema", $form_state['values'])) {
+      $tema = $form_state['values']['tema'];
+    }
+
     $dependencia =  $form_state['values']['codigo_dependencia'];
     $tema_principal = $form_state['values']['codigo_tema'];
     $actual_env = variable_get('sdqs_env');
@@ -340,7 +317,9 @@ function govi_sdqs_admin_config_main_form_submit($form, &$form_state) {
     variable_set('sdqs_env', $env);
     variable_set('sdqs_entidad', $entidad);
     variable_set('sdqs_dependencia', $dependencia);
-    variable_set('govi_sdqs_tema', $tema);
+    if (!empty($tema)) {
+      variable_set('govi_sdqs_tema', $tema);
+    }
     variable_set('sdqs_tema', $tema_principal);
 
     $services = _create_services_descriptions($user, $passwd, $env);
@@ -505,7 +484,8 @@ function _getOperationgetListaDepatamento($services){
 function _get_operations_data($opts, $services) {
 
     $consultaWS = wsclient_service_load($services['service_consulta']->name);
-    foreach ($opts as $op) {
+
+    foreach ($opts as $op => $value) {
         if (!empty($op)) {
             $results = NULL;
             $arguments = array();
