@@ -1,4 +1,3 @@
-
     <header id="encabezado">
       <section class="encabezado-a pure-g">
       <div class="contenedor">
@@ -92,7 +91,7 @@
       </section>
 
     </header>
-
+    <?php print render($page['help']); ?>
     <!-- Espacio para mostrar los mensajes del sistema -->
     <?php if ($messages): ?>
 	<div id="messages"><div class="section clearfix">
