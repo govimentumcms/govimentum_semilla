@@ -21,7 +21,7 @@ stylesheets[all][] = assets/css/micss.css
 scripts[] = assets/js/govi.js
 
 ;-------------------------------
-
+regions[help] = Ayuda
 regions[encabezado_a_1]		= 'Encabezado A-1'
 regions[encabezado_a_2]		= 'Encabezado A-2'
 regions[encabezado_a_3]		= 'Encabezado A-3'
