@@ -45,8 +45,8 @@ function govi_form_install_configure_form_alter(&$form, $form_state) {
     $form['configure_content']['enable_content'] = array(
         '#type' => 'checkbox',
         '#title' => 'Instalar contenido de ejemplo',
-        '#description' => 'Pude instalar contenido de ejemplo para conocer el alcance de la arquitectura de información implementada por en las características funcionales de la Distribución. <br/> Seleccione esta opción si es la primera vez que instala Govimentum',
-        '#default_value' => TRUE
+        '#description' => '<br/>Active esta opción para instalar contenido de ejemplo en el sitio web. Recomendamos habilitar este contenido en un ambiente de pruebas para conocer como se presenta la información en los bloques temáticos de las secciones de Transparencia y Acceso a la Información Pública, Noticias, Eventos, Enlaces destacados, etc. No utilice este contenido de ejemplo en el ambiente de producción ya que pude interferir con el posicionamiento y accesibilidad web de los contenidos oficiales de la Entidad',
+        '#default_value' => FALSE
     );
         
     // Crea nuevo campo para configuración del proxy
