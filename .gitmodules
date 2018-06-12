@@ -58,19 +58,19 @@
 	path = www/sites/all/modules/contrib/govi_sdqs
 	url = https://gitlab.com/DDCMS_Govimentum/govi_sdqs
        branch = master
-[submodule "www/sites/all/modules/contrib/govi_servicio_al_ciudadano"]
-	path = www/sites/all/modules/contrib/govi_servicio_al_ciudadano
+[submodule "www/sites/all/modules/features/govi_servicio_al_ciudadano"]
+	path = www/sites/all/modules/features/govi_servicio_al_ciudadano
 	url = https://gitlab.com/DDCMS_Govimentum/govi_servicio_al_ciudadano
        branch = master
-[submodule "www/sites/all/modules/contrib/govi_slideshow_principal"]
-	path = www/sites/all/modules/contrib/govi_slideshow_principal
+[submodule "www/sites/all/modules/features/govi_slideshow_principal"]
+	path = www/sites/all/modules/features/govi_slideshow_principal
 	url = https://gitlab.com/DDCMS_Govimentum/govi_slideshow_principal
        branch = master
-[submodule "www/sites/all/modules/contrib/govi_transparencia"]
-	path = www/sites/all/modules/contrib/govi_transparencia
+[submodule "www/sites/all/modules/features/govi_transparencia"]
+	path = www/sites/all/modules/features/govi_transparencia
 	url = https://gitlab.com/DDCMS_Govimentum/govi_transparencia
        branch = master
-[submodule "www/sites/all/modules/contrib/govi_tramites_servicios"]
-	path = www/sites/all/modules/contrib/govi_tramites_servicios
+[submodule "www/sites/all/modules/features/govi_tramites_servicios"]
+	path = www/sites/all/modules/features/govi_tramites_servicios
 	url = https://gitlab.com/DDCMS_Govimentum/govi_tramites_servicios
        branch = master
