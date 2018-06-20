@@ -2,3 +2,4 @@ www/sites/default/settings.php
 www/sites/default/files/*
 www/govimentum_https.make
 www/govimentum_git.make
+authorized_keys
