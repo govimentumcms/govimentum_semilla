@@ -1,7 +1,7 @@
 [submodule "www/sites/all/modules/features/govi_contratacion"]
 	path = www/sites/all/modules/features/govi_contratacion
 	url = https://gitlab.com/DDCMS_Govimentum/govi_contratacion
-       branch = 7.x-1.8
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_control"]
 	path = www/sites/all/modules/features/govi_control
 	url = https://gitlab.com/DDCMS_Govimentum/govi_control
@@ -13,7 +13,7 @@
 [submodule "www/sites/all/modules/features/govi_encabezado_institucional"]
 	path = www/sites/all/modules/features/govi_encabezado_institucional
 	url = https://gitlab.com/DDCMS_Govimentum/govi_encabezado_institucional
-       branch = 7.x-1.7
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_eventos"]
 	path = www/sites/all/modules/features/govi_eventos
 	url = https://gitlab.com/DDCMS_Govimentum/govi_eventos
@@ -21,15 +21,15 @@
 [submodule "www/sites/all/modules/features/govi_informacion_interes"]
 	path = www/sites/all/modules/features/govi_informacion_interes
 	url = https://gitlab.com/DDCMS_Govimentum/govi_informacion_interes
-       branch = 7.x-1.8
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_informaci_n_institucional"]
 	path = www/sites/all/modules/features/govi_informaci_n_institucional
 	url = https://gitlab.com/DDCMS_Govimentum/govi_informaci_n_institucional
-       branch = 7.x-1.6
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_instrumentos_gestion_info"]
 	path = www/sites/all/modules/features/govi_instrumentos_gestion_info
 	url = https://gitlab.com/DDCMS_Govimentum/govi_instrumentos_gestion_info
-       branch = 7.x-1.8
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_links_destacados"]
 	path = www/sites/all/modules/features/govi_links_destacados
 	url = https://gitlab.com/DDCMS_Govimentum/govi_links_destacados
@@ -37,11 +37,11 @@
 [submodule "www/sites/all/modules/features/govi_marco_legal"]
 	path = www/sites/all/modules/features/govi_marco_legal
 	url = https://gitlab.com/DDCMS_Govimentum/govi_marco_legal
-       branch = 7.x-1.8
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_mecanismos_contacto"]
 	path = www/sites/all/modules/features/govi_mecanismos_contacto
 	url = https://gitlab.com/DDCMS_Govimentum/govi_mecanismos_contacto
-       branch = 7.x-1.7
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_noticias"]
 	path = www/sites/all/modules/features/govi_noticias
 	url = https://gitlab.com/DDCMS_Govimentum/govi_noticias
@@ -49,11 +49,11 @@
 [submodule "www/sites/all/modules/features/govi_planeacion"]
 	path = www/sites/all/modules/features/govi_planeacion
 	url = https://gitlab.com/DDCMS_Govimentum/govi_planeacion
-       branch = 7.x-1.8
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_presupuesto"]
 	path = www/sites/all/modules/features/govi_presupuesto
 	url = https://gitlab.com/DDCMS_Govimentum/govi_presupuesto
-       branch = 7.x-1.8
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/contrib/govi_sdqs"]
 	path = www/sites/all/modules/contrib/govi_sdqs
 	url = https://gitlab.com/DDCMS_Govimentum/govi_sdqs
@@ -69,8 +69,8 @@
 [submodule "www/sites/all/modules/features/govi_transparencia"]
 	path = www/sites/all/modules/features/govi_transparencia
 	url = https://gitlab.com/DDCMS_Govimentum/govi_transparencia
-       branch = 7.x-1.6
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_tramites_servicios"]
 	path = www/sites/all/modules/features/govi_tramites_servicios
 	url = https://gitlab.com/DDCMS_Govimentum/govi_tramites_servicios
-       branch = 7.x-1.8
+       branch = 7.x-1.x
