@@ -57,7 +57,7 @@
 [submodule "www/sites/all/modules/contrib/govi_sdqs"]
 	path = www/sites/all/modules/contrib/govi_sdqs
 	url = https://gitlab.com/DDCMS_Govimentum/govi_sdqs
-       branch = 7.x.2.x
+       branch = 7.x-2.x
 [submodule "www/sites/all/modules/features/govi_servicio_al_ciudadano"]
 	path = www/sites/all/modules/features/govi_servicio_al_ciudadano
 	url = https://gitlab.com/DDCMS_Govimentum/govi_servicio_al_ciudadano
