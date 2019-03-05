@@ -76,7 +76,7 @@
 
         <div class="encabezado-c-1 pure-u-sm-1 pure-u-md-1 pure-u-lg-1 pure-u-xl-1" role="navigation" aria-label="Menu">
 
-            <a href="#" id="toggles" class="menu-toggle custom-toggle">&nbsp;<hr class="bar">
+            <a href="#" id="toggles" class="menu-toggle custom-toggle" title="Expandir menu" aria-label=" expandir menu"><hr class="bar">
                 <hr class="bar"></a>
 
                 <div id="menu-principal" class="pure-menu pure-menu-horizontal custom-can-transform menu-transform">
