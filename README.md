@@ -84,7 +84,7 @@ La instalación de Govimentum es un proceso guiado de 6 pasos que facilita al we
 
 # Documentación del proyecto
 
-* En la [Wiki](https://gitlab.com/distribucion_distrital_cms/govimentum_semilla/wikis/home) de Govimentum se encuentra información detallada sobre el proyecto, sus características funcionales, herramientas de desarrollo recomendadas, solución de problemas y canales de comunicación.
+* En la [Wiki](https://gitlab.com/distribucion_distrital_cms/govimentum_semilla/wikis/inicio) de Govimentum se encuentra información detallada sobre el proyecto, sus características funcionales, herramientas de desarrollo recomendadas, solución de problemas y canales de comunicación.
 
 * Asimismo, el [Sitio Web](http://govimentum.bogota.gov.co) del proyecto contiene material de consulta útil para facilitar el despliegue de Govimentum, su personalizacón y gestión de contenidos.
 
