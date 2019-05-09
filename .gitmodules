@@ -5,11 +5,11 @@
 [submodule "www/sites/all/modules/features/govi_control"]
 	path = www/sites/all/modules/features/govi_control
 	url = https://gitlab.com/DDCMS_Govimentum/govi_control
-       branch = master
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_directorio_funcionarios"]
 	path = www/sites/all/modules/features/govi_directorio_funcionarios
 	url = https://gitlab.com/DDCMS_Govimentum/govi_directorio_funcionarios
-       branch = master
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_encabezado_institucional"]
 	path = www/sites/all/modules/features/govi_encabezado_institucional
 	url = https://gitlab.com/DDCMS_Govimentum/govi_encabezado_institucional
@@ -61,7 +61,7 @@
 [submodule "www/sites/all/modules/features/govi_servicio_al_ciudadano"]
 	path = www/sites/all/modules/features/govi_servicio_al_ciudadano
 	url = https://gitlab.com/DDCMS_Govimentum/govi_servicio_al_ciudadano
-       branch = master
+       branch = 7.x-1.x
 [submodule "www/sites/all/modules/features/govi_slideshow_principal"]
 	path = www/sites/all/modules/features/govi_slideshow_principal
 	url = https://gitlab.com/DDCMS_Govimentum/govi_slideshow_principal
