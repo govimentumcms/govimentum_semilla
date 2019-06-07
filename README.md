@@ -23,7 +23,7 @@ Clonar el repositorio _govimentum_semilla_ de la Distribución CMS:
 
 `git clone git@gitlab.com:DDCMS_Govimentum/govimentum_semilla.git`
 
-El repositorio govimentum_semilla está compuesto de [varios submodulos de Git](https://gitlab.com/DDCMS_Govimentum/govimentum_semilla/tree/7.x-1.x/www/sites/all/modules/features) por cada una de las _características funcionales_ de Govimentum, excepto por el contenido predeterminado, las cuales están localizadas en el directorio `sites/all/modules/features`. Los subdirectorios de estos módulos estarán vacíos luego de haber sido clonado este repositorio por primera vez como se observa a continuación:
+El repositorio govimentum_semilla está compuesto de [varios submodulos de Git](https://github.com/govimentumcms/govimentum_semilla/tree/7.x-1.x/www/sites/all/modules/features) por cada una de las _características funcionales_ de Govimentum, excepto por el contenido predeterminado, las cuales están localizadas en el directorio `sites/all/modules/features`. Los subdirectorios de estos módulos estarán vacíos luego de haber sido clonado este repositorio por primera vez como se observa a continuación:
 
 ```shell
  tree sites/all/modules/features
@@ -65,11 +65,11 @@ Para evitar que el usuario ingrese sus credenciales para cada uno de los submodu
 
 Construir Govimentum mediante la descarga de sus componentes en el directorio `www` 
 
-`drush make https://gitlab.com/DDCMS_Govimentum/govimentum_semilla/raw/7.x-1.x/govimentum_https.make www`
+`drush make https://raw.githubusercontent.com/govimentumcms/govimentum_semilla/7.x-1.x/govimentum_https.make www`
 
 Construir Govimentum sobre una instalación de Drupal existente en el directorio `www`
 
-`drush make https://gitlab.com/DDCMS_Govimentum/govimentum_semilla/raw/7.x-1.x/govimentum_https.make www  --no-core`
+`drush make https://raw.githubusercontent.com/govimentumcms/govimentum_semilla/7.x-1.x/govimentum_https.make www  --no-core`
 
 # Instalación
 
@@ -84,11 +84,11 @@ La instalación de Govimentum es un proceso guiado de 6 pasos que facilita al we
 
 # Documentación del proyecto
 
-* En la [Wiki](https://gitlab.com/distribucion_distrital_cms/govimentum_semilla/wikis/inicio) de Govimentum se encuentra información detallada sobre el proyecto, sus características funcionales, herramientas de desarrollo recomendadas, solución de problemas y canales de comunicación.
+* En la [Wiki](https://github.com/govimentumcms/govimentum_semilla/wiki) de Govimentum se encuentra información detallada sobre el proyecto, sus características funcionales, herramientas de desarrollo recomendadas, solución de problemas y canales de comunicación.
 
 * Asimismo, el [Sitio Web](http://govimentum.bogota.gov.co) del proyecto contiene material de consulta útil para facilitar el despliegue de Govimentum, su personalizacón y gestión de contenidos.
 
 # Licencia
 
-* [GNU/GPL v3](https://gitlab.com/DDCMS_Govimentum/govimentum_semilla/blob/7.x-1.x/LICENSE)
+* [GNU/GPL v3](https://github.com/govimentumcms/govimentum_semilla/blob/7.x-1.x/LICENSE)
  
